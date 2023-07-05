@@ -13790,7 +13790,7 @@ html.tablet .ui-to-top {
 
 .rd-navbar-static .rd-nav-item.active .rd-nav-link {
 	color: #01b3a7;
-	background: transparent;
+	background: #000000;
 }
 
 .rd-navbar-static .rd-nav-item.active > .rd-navbar-submenu-toggle {
