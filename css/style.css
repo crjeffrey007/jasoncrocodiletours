@@ -3103,7 +3103,7 @@ hr {
 }
 
 .button-secondary.button-pipaluk::before, .button-secondary.button-pipaluk:focus::before {
-	background: #01b3a7;
+	background: #3F7652;
 	border-color: #151515;
 }
 
@@ -3817,9 +3817,9 @@ hr {
 }
 
 .button-black-outline:hover, .button-black-outline:active {
-	color: #151515;
-	background-color: #01b3a7;
-	border-color: #01b3a7;
+	color: #ffffff;
+	background-color: #3F7652;
+	border-color: #3F7652;
 }
 
 .button-black-outline.button-ujarak::before {
