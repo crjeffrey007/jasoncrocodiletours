@@ -13483,8 +13483,8 @@ html:not(.lt-ie10) .not-animated {
 	height: 40px;
 	font-size: 20px;
 	line-height: 38px;
-	color: #fef009;
-	background: #3F7652;
+	color: #3F7652;
+	background: #fef009;
 	overflow: hidden;
 	text-align: center;
 	text-decoration: none;
@@ -13494,7 +13494,7 @@ html:not(.lt-ie10) .not-animated {
 
 .ui-to-top:hover {
 	color: #3F7652;
-	background: #fef009;
+	background: #ffffff;
 	text-decoration: none;
 }
 
