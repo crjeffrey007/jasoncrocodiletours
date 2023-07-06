@@ -24687,3 +24687,27 @@ img.mfp-img {
 		display: none;
 	}
 }
+
+/* Estilos para el submenú */
+.rd-navbar-dropdown {
+  display: none;
+  position: absolute;
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+}
+
+/* Estilos para los ítems del submenú */
+.rd-navbar-dropdown li {
+  margin-bottom: 5px;
+}
+
+.rd-navbar-dropdown a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Estilos para mostrar el submenú al hacer hover */
+.rd-nav-item.rd-navbar--has-dropdown:hover .rd-navbar-dropdown {
+  display: block;
+}
