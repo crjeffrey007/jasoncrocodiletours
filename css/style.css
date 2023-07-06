@@ -17030,6 +17030,7 @@ html.rd-navbar-fixed-linked .page {
 .rd-navbar-corporate.rd-navbar-static .rd-navbar-main-outer {
 	padding-left: 15px;
 	padding-right: 15px;
+	background: #3F7652;
 }
 
 .rd-navbar-corporate.rd-navbar-static .rd-navbar-aside,
@@ -17074,7 +17075,7 @@ html.rd-navbar-fixed-linked .page {
 }
 
 .rd-navbar-corporate.rd-navbar-static .rd-navbar-main-outer {
-	background: #162e44;
+	background: #1c1c1c;
 }
 
 .rd-navbar-corporate.rd-navbar-static .rd-navbar-nav-wrap {
