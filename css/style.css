@@ -13483,8 +13483,8 @@ html:not(.lt-ie10) .not-animated {
 	height: 40px;
 	font-size: 20px;
 	line-height: 38px;
-	color: #ffffff;
-	background: #01b3a7;
+	color: #fef009;
+	background: #3F7652;
 	overflow: hidden;
 	text-align: center;
 	text-decoration: none;
@@ -13493,17 +13493,18 @@ html:not(.lt-ie10) .not-animated {
 }
 
 .ui-to-top:hover {
-	color: #ffffff;
-	background: #111111;
+	color: #3F7652;
+	background: #fef009;
 	text-decoration: none;
 }
 
 .ui-to-top:focus {
-	color: #ffffff;
+	color: #fef009;
 }
 
 .ui-to-top.active {
 	transform: translate3d(0, 0, 0);
+	background: #fef009;
 }
 
 html.mobile .ui-to-top,
@@ -17232,7 +17233,7 @@ html.rd-navbar-fixed-linked .page {
 	font-family: "Montserrat", sans-serif, Arial, sans-serif;
 	text-transform: uppercase;
 	max-width: 100%;
-	color: #151515;
+	color: #fef009;
 	flex: 0 0 auto;
 }
 
@@ -17241,7 +17242,7 @@ html.rd-navbar-fixed-linked .page {
 	text-align: center;
 	font-size: 24px;
 	line-height: 1;
-	color: #01b3a7;
+	color: #fef009;
 }
 
 .rd-navbar-corporate-contacts p,
@@ -17263,11 +17264,11 @@ html.rd-navbar-fixed-linked .page {
 }
 
 .rd-navbar-corporate-contacts a, .rd-navbar-corporate-contacts a:focus, .rd-navbar-corporate-contacts a:active {
-	color: #151515;
+	color: #fef009;
 }
 
 .rd-navbar-corporate-contacts a:hover {
-	color: #50ba87;
+	color: #ffffff;
 }
 
 .rd-navbar-corporate-contacts li + li {
