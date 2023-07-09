@@ -24715,3 +24715,18 @@ img.mfp-img {
 .rd-nav-item.rd-navbar--has-dropdown:hover .rd-navbar-dropdown {
   display: block;
 }
+
+.tripadvisor-text {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff; /* Cambio de color de la fuente a blanco */
+}
+
+.icon {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.icon i {
+  color: #fff; /* Cambio de color del icono a blanco */
+}
