@@ -12876,6 +12876,8 @@ html [class*='section-'].section-top-0 {
 .oh {
 	position: relative;
 	overflow: hidden;
+        margin-top: 20px;
+        padding-top: 30px;
 }
 
 @media (min-width: 992px) {
