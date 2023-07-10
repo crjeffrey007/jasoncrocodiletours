@@ -17181,7 +17181,7 @@ html.rd-navbar-fixed-linked .page {
 
 .rd-navbar-corporate.rd-navbar-static .rd-nav-link:hover {
 	color: #fef107;
-	background: #3F7652;
+	background: #010101;
 	transition: all ease 0.35s;
 }
 
@@ -24696,7 +24696,7 @@ img.mfp-img {
 .rd-navbar-dropdown {
   display: none;
   position: absolute;
-  background-color: #000;
+  background-color: #010101;
   color: #fff;
   padding: 10px;
 }
@@ -24714,6 +24714,8 @@ img.mfp-img {
 /* Estilos para mostrar el submenú al hacer hover */
 .rd-nav-item.rd-navbar--has-dropdown:hover .rd-navbar-dropdown {
   display: block;
+  background: #010101;
+  color: #fef107;
 }
 
 .tripadvisor-text {
