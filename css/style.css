@@ -17171,7 +17171,7 @@ html.rd-navbar-fixed-linked .page {
 	height: 0;
 	width: 100%;
 	background: #010101;
-	border-top: 3px solid #fef107;
+	border-top: 3px solid #407652;
 	transform: translate3d(-100%, 0, 0);
 	transition: all 0.35s cubic-bezier(0.05, 0.29, 0.11, 1.54), height 0.3s ease;
 	visibility: hidden;
