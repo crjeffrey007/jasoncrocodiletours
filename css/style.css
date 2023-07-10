@@ -13783,21 +13783,21 @@ html.tablet .ui-to-top {
 }
 
 .rd-navbar-static .rd-nav-item.focus .rd-nav-link, .rd-navbar-static .rd-nav-item.opened .rd-nav-link {
-	color: #01b3a7;
+	color: #fef107;
 	background: transparent;
 }
 
 .rd-navbar-static .rd-nav-item.focus > .rd-navbar-submenu-toggle, .rd-navbar-static .rd-nav-item.opened > .rd-navbar-submenu-toggle {
-	color: #01b3a7;
+	color: #fef107;
 }
 
 .rd-navbar-static .rd-nav-item.active .rd-nav-link {
-	color: #01b3a7;
-	background: #407652;
+	color: #fef107;
+	background: #010101;
 }
 
 .rd-navbar-static .rd-nav-item.active > .rd-navbar-submenu-toggle {
-	color: #01b3a7;
+	color: #fef107;
 }
 
 .rd-navbar-static .rd-nav-item.focus > .rd-navbar-submenu-toggle::before,
@@ -13822,7 +13822,7 @@ html.tablet .ui-to-top {
 }
 
 .rd-navbar-static .rd-nav-item > .rd-navbar-submenu-toggle:hover {
-	color: #01b3a7;
+	color: #fef107;
 }
 
 .rd-navbar-static .rd-nav-item > .rd-navbar-submenu {
@@ -13845,7 +13845,7 @@ html.tablet .ui-to-top {
 }
 
 .rd-navbar-static .rd-nav-link:hover {
-	color: #01b3a7;
+	color: #fef107;
 }
 
 .rd-navbar-static .rd-menu {
