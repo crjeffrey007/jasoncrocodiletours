@@ -17033,7 +17033,7 @@ html.rd-navbar-fixed-linked .page {
 .rd-navbar-corporate.rd-navbar-static .rd-navbar-main-outer {
 	padding-left: 15px;
 	padding-right: 15px;
-	background: #3F7652;
+	background: #010101;
 }
 
 .rd-navbar-corporate.rd-navbar-static .rd-navbar-aside,
@@ -17078,7 +17078,7 @@ html.rd-navbar-fixed-linked .page {
 }
 
 .rd-navbar-corporate.rd-navbar-static .rd-navbar-main-outer {
-	background: #1c1c1c;
+	background: #3F7652;
 }
 
 .rd-navbar-corporate.rd-navbar-static .rd-navbar-nav-wrap {
@@ -17180,8 +17180,8 @@ html.rd-navbar-fixed-linked .page {
 }
 
 .rd-navbar-corporate.rd-navbar-static .rd-nav-link:hover {
-	color: #ffffff;
-	background: rgba(255, 255, 255, 0.11);
+	color: #fef107;
+	background: #3F7652;
 	transition: all ease 0.35s;
 }
 
