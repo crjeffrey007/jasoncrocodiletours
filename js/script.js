@@ -897,7 +897,7 @@
   window.addEventListener('scroll', function() {
     var scrollPosition = window.pageYOffset;
 
-    if (scrollPosition >= 300 && scrollPosition <= 400) {
+    if (scrollPosition >= 500 && scrollPosition <= 550) {
       header.classList.add('hide-header');
     } else {
       header.classList.remove('hide-header');
