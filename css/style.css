@@ -24732,3 +24732,7 @@ img.mfp-img {
 .icon i {
   color: #fff; /* Cambio de color del icono a blanco */
 }
+
+.hide-header {
+   display: none !important;
+}
