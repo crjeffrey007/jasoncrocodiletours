@@ -891,6 +891,20 @@
 			}
 		}
 
+		document.addEventListener('DOMContentLoaded', function() {
+  var header = document.querySelector('.page-header');
+
+  window.addEventListener('scroll', function() {
+    var scrollPosition = window.pageYOffset;
+
+    if (scrollPosition >= 300 && scrollPosition <= 400) {
+      header.classList.add('hide-header');
+    } else {
+      header.classList.remove('hide-header');
+    }
+  });
+});
+
 		// Swiper
 		if (plugins.swiper.length) {
 			for (var i = 0; i < plugins.swiper.length; i++) {
