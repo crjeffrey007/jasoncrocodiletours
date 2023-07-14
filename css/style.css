@@ -18573,7 +18573,7 @@ html.rd-navbar-fixed-linked .page {
 }
 
 .section.swiper-container.swiper-slider.swiper-slider-corporate {
-  margin-top: -75px; /* Ajusta este valor según la altura del menú */
+  margin-top: 0px; /* Ajusta este valor según la altura del menú */
 }
 
 @media (max-width: 991px) {
