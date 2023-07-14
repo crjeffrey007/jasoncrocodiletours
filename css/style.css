@@ -18572,6 +18572,21 @@ html.rd-navbar-fixed-linked .page {
 	}
 }
 
+.section.swiper-container.swiper-slider.swiper-slider-corporate {
+  margin-top: -75px; /* Ajusta este valor según la altura del menú */
+}
+
+@media (max-width: 991px) {
+  .section.swiper-container.swiper-slider.swiper-slider-corporate {
+    margin-top: -55px; /* Ajusta este valor según la altura del menú en dispositivos móviles */
+  }
+}
+
+@media (max-width: 767px) {
+  .section.swiper-container.swiper-slider.swiper-slider-corporate {
+    margin-top: -45px; /* Ajusta este valor según la altura del menú en dispositivos móviles más pequeños */
+  }
+}
 /*
 *
 * Search Results
