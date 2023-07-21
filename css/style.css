@@ -26819,5 +26819,10 @@ html.rd-navbar-fixed-linked .page {
 	padding-top: 55px;
 }
 
+.rd-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 
 
