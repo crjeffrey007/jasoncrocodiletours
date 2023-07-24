@@ -11402,6 +11402,7 @@ h2.title-modern > span {
 	overflow: hidden;
 	min-height: 100vh;
 	text-align: center;
+	background: #000000;
 }
 
 [data-x-mode] .page {
