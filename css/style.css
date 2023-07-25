@@ -7785,6 +7785,7 @@ textarea.textarea-lg {
 	text-align: center;
 	background-color: #cccccc;
 	z-index: 1;
+	text-shadow: 2px 2px 6px black;
 }
 
 .breadcrumbs-custom-path {
