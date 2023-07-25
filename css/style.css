@@ -18371,7 +18371,7 @@ html.rd-navbar-fixed-linked .page {
 	.swiper-slider-corporate h2 span {
 		font-size: 64px;
 		line-height: 1.1;
-	}
+		text-shadow: 2px 2px 6px black;
 }
 
 .swiper-slider-corporate h6 + h2 {
