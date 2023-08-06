@@ -117,7 +117,7 @@ h1, h2, h3, h4, h5, h6, [class*='heading-'] {
 	font-weight: 600;
 	font-family: "Montserrat", sans-serif, Arial, sans-serif;
 	letter-spacing: normal;
-	color: #151515;
+	color: yellow;
 }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, [class*='heading-'] a {
@@ -197,6 +197,7 @@ h3,
 	h3,
 	.heading-3 {
 		font-size: 30px;
+		background: 
 	}
 }
 
@@ -12156,6 +12157,7 @@ html [class*='section-'].section-top-0 {
 	}
 	.desktop .section-top-1 {
 		padding-top: 0;
+		background: #407652;
 	}
 }
 
@@ -12894,6 +12896,7 @@ html [class*='section-'].section-top-0 {
 
 .section-relative {
 	position: relative;
+	background: #010101;
 }
 
 .text-width-extra-small {
