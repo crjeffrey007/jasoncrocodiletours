@@ -155,6 +155,7 @@ h1,
 	.heading-1 {
 		font-size: 64px;
 		line-height: 1.2;
+		color: white;
 	}
 }
 
@@ -12136,6 +12137,7 @@ html [class*='section-'].section-top-0 {
 	}
 	.section-sm.section-first {
 		padding-top: 100px;
+		background: #010101;
 	}
 	.section-sm.section-last {
 		padding-bottom: 100px;
