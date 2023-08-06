@@ -11674,6 +11674,7 @@ h5 + p {
 
 h6 + p {
 	margin-top: 17px;
+	color: white;
 }
 
 h3.font-weight-normal + p {
