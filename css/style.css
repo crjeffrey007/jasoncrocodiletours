@@ -24772,3 +24772,8 @@ img.mfp-img {
   .testimonial-heading1 {
     color: #010101;
   }
+
+    .slick-slide img {
+      max-width: 100%;
+      height: auto;
+    }
