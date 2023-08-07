@@ -10149,6 +10149,8 @@ h5 + .list-popular-product {
 @media (min-width: 1200px) {
 	.cta-box-wrap .list-marked-2 li .box-categories-title {
 		font-size: 24px;
+		color: yellow;
+		background: #010101;
 	}
 }
 
@@ -10164,11 +10166,11 @@ h5 + .list-popular-product {
 	font-weight: 500;
 	font-size: 16px;
 	text-transform: none;
-	color: #151515;
+	color: yellow;
 }
 
 .cta-box-wrap + .link-classic:focus, .cta-box-wrap + .link-classic:active {
-	color: #151515;
+	color: white;
 }
 
 .cta-box-wrap + .link-classic span {
@@ -10176,7 +10178,7 @@ h5 + .list-popular-product {
 }
 
 .cta-box-wrap + .link-classic span:before {
-	background-color: #151515;
+	background-color: white;
 }
 
 .cta-box-wrap + .link-classic span:after {
