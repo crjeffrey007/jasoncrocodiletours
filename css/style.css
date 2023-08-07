@@ -24841,3 +24841,17 @@ img.mfp-img {
     .carousel-control {
       cursor: pointer;
     }
+
+/* Estilos para pantallas más pequeñas, ajustar el valor de 768px según sea necesario */
+@media (max-width: 768px) {
+  .rd-navbar-brand img {
+    max-height: 80px;
+  }
+}
+
+/* Estilos para pantallas más grandes, ajustar el valor de 992px según sea necesario */
+@media (min-width: 992px) {
+  .rd-navbar-brand img {
+    max-height: 105px;
+  }
+}
