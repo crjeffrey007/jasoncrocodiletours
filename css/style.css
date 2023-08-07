@@ -24817,7 +24817,25 @@ img.mfp-img {
       background-position: center;
     }
 
-    .owl-carousel img {
-      max-width: 100%;
+    .carousel-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+    .carousel-track {
+      display: flex;
+      transition: transform 0.3s ease-in-out;
+    }
+    .carousel-item {
+      flex: 0 0 100%;
+      max-width: 270px;
+      margin: 0 15px;
+    }
+    .carousel-item img {
+      width: 100%;
       height: auto;
+    }
+    /* Estilos para los controles del carousel */
+    .carousel-control {
+      cursor: pointer;
     }
