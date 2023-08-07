@@ -34,6 +34,7 @@ label {
 
 p {
 	margin: 0;
+	color: white;
 }
 
 ul,
@@ -3814,9 +3815,9 @@ hr {
 }
 
 .button-black-outline, .button-black-outline:focus {
-	color: #151515;
+	color: yellow;
 	background-color: transparent;
-	border-color: #151515;
+	border-color: yellow;
 }
 
 .button-black-outline:hover, .button-black-outline:active {
