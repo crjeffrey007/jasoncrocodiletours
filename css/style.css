@@ -3109,11 +3109,10 @@ hr {
 
 .button-secondary.button-pipaluk::before, .button-secondary.button-pipaluk:focus::before {
 	background: #3F7652;
-	border-color: #151515;
+	color: yellow;
 }
 
 .button-secondary.button-pipaluk::after, .button-secondary.button-pipaluk:focus::after {
-	border-color: #151515;
 }
 
 .button-secondary.button-pipaluk:hover, .button-secondary.button-pipaluk:active {
