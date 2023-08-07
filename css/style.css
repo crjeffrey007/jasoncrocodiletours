@@ -47,6 +47,7 @@ ol {
 ul li,
 ol li {
 	display: block;
+	color: white;
 }
 
 dl {
