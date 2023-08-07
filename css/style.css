@@ -11690,6 +11690,7 @@ p + .heading-2 {
 
 p + p {
 	margin-top: 12px;
+	color: white;
 }
 
 img + p {
