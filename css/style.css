@@ -3117,8 +3117,8 @@ hr {
 }
 
 .button-secondary.button-pipaluk:hover, .button-secondary.button-pipaluk:active {
-	color: yellow;
-	background: transparent;
+	color: #3F7652;
+	background: yellow;
 	border-color: yellow;
 }
 
