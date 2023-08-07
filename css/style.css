@@ -22849,10 +22849,18 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 	transform: translate3d(-50%, 0, 0);
 }
 
-.parallax-content {
-	position: relative;
-	z-index: 1;
-}
+    .parallax-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
 
 /*
 *
@@ -24776,4 +24784,25 @@ img.mfp-img {
     .slick-slide img {
       max-width: 100%;
       height: auto;
+    }
+
+    .heading-2 {
+      font-size: 2rem;
+      font-weight: normal;
+      margin-bottom: 10px;
+    }
+    .text-width-medium {
+      font-size: 1.2rem;
+      line-height: 1.5;
+      max-width: 500px;
+    }
+    .button1 {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      font-weight: bold;
     }
