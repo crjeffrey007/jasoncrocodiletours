@@ -1143,7 +1143,7 @@ a[href*='tel'], a[href*='mailto'] {
 }
 
 .box-contacts-link a, .box-contacts-link a:focus, .box-contacts-link a:active {
-	color: inherit;
+	color: yellow;
 }
 
 .box-contacts-link a:hover {
