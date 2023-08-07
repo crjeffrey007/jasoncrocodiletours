@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
       <!-- OpenGraph Metadata -->
   <meta property="og:title" content="Jason Crocodile Tours">
@@ -317,8 +316,8 @@
   <section class="section section-sm section-top-0 section-fluid section-relative bg-gray-4">
     <div class="container-fluid">
       <h3>Jason's Collaborations in...</h3>
-      <!-- Slick Carousel-->
-      <div class="slick-carousel owl-dots-secondary" data-items="1" data-sm-items="2" data-md-items="3" data-lg-items="4" data-xl-items="5" data-xxl-items="6" data-stage-padding="15" data-xxl-stage-padding="0" data-margin="30" data-autoplay="true" data-nav="true" data-dots="true">
+      <!-- Owl Carousel -->
+      <div class="owl-carousel owl-classic owl-dots-secondary" data-items="1" data-sm-items="2" data-md-items="3" data-lg-items="4" data-xl-items="5" data-xxl-items="6" data-stage-padding="15" data-xxl-stage-padding="0" data-margin="30" data-autoplay="true" data-nav="true" data-dots="true">
         <!-- Thumbnail Classic-->
         <article class="thumbnail thumbnail-mary">
           <div class="thumbnail-mary-figure"><img src="images/gallery-image-1-270x195.jpg" alt="" width="270" height="195"/>
@@ -352,6 +351,47 @@
       </div>
     </div>
   </section>
+
+  <!-- Agregar el enlace a la librería Owl Carousel -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script>
+    // Inicializar el carrusel con Owl Carousel
+    document.addEventListener("DOMContentLoaded", function () {
+      const carousel = document.querySelector(".owl-carousel");
+      const options = {
+        responsive: {
+          0: {
+            items: 1
+          },
+          576: {
+            items: 2
+          },
+          768: {
+            items: 3
+          },
+          992: {
+            items: 4
+          },
+          1200: {
+            items: 5
+          },
+          1400: {
+            items: 6
+          }
+        },
+        margin: 30,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        autoplayHoverPause: true,
+        nav: true,
+        dots: true
+      };
+      if (carousel) {
+        // Inicializar el carrusel solo si existe el elemento
+        $(carousel).owlCarousel(options);
+      }
+    });
+  </script>
       <!-- Section Subscribe-->
   <section class="section1 bg-default text-center offset-top-50">
     <div class="parallax-container" style="background-image: url('images/parallax-1-1920x850.jpg');">
