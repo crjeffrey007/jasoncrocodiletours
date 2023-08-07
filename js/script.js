@@ -1405,39 +1405,30 @@
 	});
 }());
 
-    // Inicializar el carrusel con Slick Carousel
-    document.addEventListener("DOMContentLoaded", function () {
-      const carousel = document.querySelector(".slick-carousel");
-      const options = {
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        dots: true,
-        responsive: [
-          {
-            breakpoint: 1024,
-            settings: {
-              slidesToShow: 3,
-              slidesToScroll: 1,
-            },
-          },
-          {
-            breakpoint: 768,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 1,
-            },
-          },
-          {
-            breakpoint: 576,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-            },
-          },
-        ],
-      };
-      if (carousel) {
-        // Inicializar el carrusel solo si existe el elemento
-        $(carousel).slick(options);
-      }
-    });
+    // JavaScript para el funcionamiento del carousel
+    const carouselTrack = document.querySelector(".carousel-track");
+    const carouselItems = document.querySelectorAll(".carousel-item");
+    const prevButton = document.querySelector(".carousel-control span:first-child");
+    const nextButton = document.querySelector(".carousel-control span:last-child");
+    let currentIndex = 0;
+    
+    function moveLeft() {
+      if (currentIndex === 0) return;
+      currentIndex--;
+      updateCarouselPosition();
+    }
+    
+    function moveRight() {
+      if (currentIndex === carouselItems.length - 1) return;
+      currentIndex++;
+      updateCarouselPosition();
+    }
+    
+    function updateCarouselPosition() {
+      const itemWidth = carouselItems[0].clientWidth;
+      carouselTrack.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+    }
+    
+    // Añadir eventos a los botones de control
+    prevButton.addEventListener("click", moveLeft);
+    nextButton.addEventListener("click", moveRight);
