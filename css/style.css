@@ -24816,3 +24816,8 @@ img.mfp-img {
       background-size: cover;
       background-position: center;
     }
+
+    .owl-carousel img {
+      max-width: 100%;
+      height: auto;
+    }
