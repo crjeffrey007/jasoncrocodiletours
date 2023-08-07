@@ -1404,3 +1404,40 @@
 		}
 	});
 }());
+
+    // Inicializar el carrusel con Slick Carousel
+    document.addEventListener("DOMContentLoaded", function () {
+      const carousel = document.querySelector(".slick-carousel");
+      const options = {
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        dots: true,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 1,
+            },
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1,
+            },
+          },
+          {
+            breakpoint: 576,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            },
+          },
+        ],
+      };
+      if (carousel) {
+        // Inicializar el carrusel solo si existe el elemento
+        $(carousel).slick(options);
+      }
+    });
