@@ -24828,13 +24828,13 @@ img.mfp-img {
   }
 
   .gallery-item {
-    flex: 0 0 calc(50% - 30px); /* Mostrar 2 columnas en tablets y móviles */
+    flex: 0 0 calc(16.666% - 30px); /* Mostrar 6 columnas en una fila */
     margin: 15px;
   }
 
   /* Estilos adicionales para dispositivos móviles */
   @media (max-width: 768px) {
     .gallery-item {
-      flex: 0 0 calc(100% - 30px); /* Mostrar 1 columna en dispositivos móviles */
+      flex: 0 0 calc(33.333% - 30px); /* Mostrar 3 columnas en dispositivos móviles */
     }
   }
