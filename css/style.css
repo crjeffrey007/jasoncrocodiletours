@@ -24838,3 +24838,32 @@ img.mfp-img {
       flex: 0 0 calc(33.333% - 30px); /* Mostrar 3 columnas en dispositivos móviles */
     }
   }
+
+  /* Estilos del slider */
+  .slider-container {
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .slider {
+    display: flex;
+    flex-wrap: nowrap;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .slider-item {
+    flex: 0 0 100%;
+    margin-right: 30px;
+  }
+
+  /* Ajustar el margen derecho del último elemento */
+  .slider-item:last-child {
+    margin-right: 0;
+  }
+
+  /* Estilos para dispositivos móviles */
+  @media (max-width: 768px) {
+    .slider-item {
+      margin-right: 15px;
+    }
+  }
