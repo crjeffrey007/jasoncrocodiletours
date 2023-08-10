@@ -24820,12 +24820,6 @@ img.mfp-img {
     }
 
   /* Estilos de la galería */
-  .image-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: -15px; /* Para ajustar márgenes en dispositivos móviles */
-  }
 
   .gallery-item {
     flex: 0 0 calc(16.666% - 30px); /* Mostrar 6 columnas en una fila */
@@ -24865,5 +24859,33 @@ img.mfp-img {
   @media (max-width: 768px) {
     .slider-item {
       margin-right: 15px;
+    }
+  }
+
+  .image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: -10px; /* Espacio negativo para reducir el espacio entre elementos */
+  }
+
+  .gallery-item1 {
+    flex: 0 0 calc(33.333% - 20px); /* Mostrar 3 columnas en una fila */
+    margin: 10px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .gallery-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Estilos para dispositivos móviles */
+  @media (max-width: 768px) {
+    .gallery-item {
+      flex: 0 0 calc(50% - 20px); /* Mostrar 2 columnas en dispositivos móviles */
     }
   }
