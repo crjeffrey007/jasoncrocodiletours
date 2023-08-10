@@ -24818,3 +24818,23 @@ img.mfp-img {
       background-size: cover;
       background-position: center;
     }
+
+  /* Estilos de la galería */
+  .image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: -15px; /* Para ajustar márgenes en dispositivos móviles */
+  }
+
+  .gallery-item {
+    flex: 0 0 calc(50% - 30px); /* Mostrar 2 columnas en tablets y móviles */
+    margin: 15px;
+  }
+
+  /* Estilos adicionales para dispositivos móviles */
+  @media (max-width: 768px) {
+    .gallery-item {
+      flex: 0 0 calc(100% - 30px); /* Mostrar 1 columna en dispositivos móviles */
+    }
+  }
