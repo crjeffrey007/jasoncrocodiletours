@@ -12687,6 +12687,10 @@ html [class*='section-'].section-top-0 {
 .bg-default1 {
 	background-color: #407652;
 }
+
+.bg-default2 {
+	background-color: #ffffff;
+}
 .bg-gray-100 {
 	background-color: #f2f2f2;
 }
