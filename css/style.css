@@ -1148,12 +1148,20 @@ a[href*='tel'], a[href*='mailto'] {
 	color: yellow;
 }
 
+.box-contacts-link1 a, .box-contacts-link1 a:focus, .box-contacts-link1 a:active {
+	color: #407652;
+}
+
 .box-contacts-link a:hover {
 	color: #50ba87;
 }
 
 @media (min-width: 992px) {
 	.desktop .box-contacts {
+		box-shadow: none;
+		border: 1px solid #e1e1e1;
+	}
+	.desktop .box-contacts1 {
 		box-shadow: none;
 		border: 1px solid #e1e1e1;
 	}
