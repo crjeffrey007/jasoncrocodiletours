@@ -1130,6 +1130,11 @@ a[href*='tel'], a[href*='mailto'] {
 	color: #01b3a7;
 }
 
+.box-contacts-icon1 {
+	font-size: 60px;
+	line-height: 1;
+	color: #407652;
+}
 .box-contacts-decor {
 	margin: 30px auto;
 	height: 2px;
@@ -1163,7 +1168,7 @@ a[href*='tel'], a[href*='mailto'] {
 	}
 	.desktop .box-contacts1 {
 		box-shadow: none;
-		border: 1px solid #e1e1e1;
+		border: 1px solid #407652;
 	}
 	.desktop .box-contacts-decor {
 		margin-top: 17px;
