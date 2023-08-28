@@ -1432,3 +1432,13 @@
     // Añadir eventos a los botones de control
     prevButton.addEventListener("click", moveLeft);
     nextButton.addEventListener("click", moveRight);
+
+     const userLanguage = navigator.language || navigator.userLanguage;
+
+  //if (userLanguage.startsWith('es')) {
+    // Cargar contenido en español
+    //window.location.href = 'cr.html';
+  //} else {
+    // Cargar contenido en inglés (por defecto)
+   // window.location.href = 'index.html';
+ // }
