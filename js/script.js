@@ -1435,6 +1435,37 @@
 
      const userLanguage = navigator.language || navigator.userLanguage;
 
+// Chatbot Whatsapp
+const userInput = document.getElementById("user-input");
+const sendButton = document.getElementById("send-button");
+const chatBody = document.getElementById("chat-body");
+
+sendButton.addEventListener("click", () => {
+  const message = userInput.value;
+  if (message.trim() !== "") {
+    addUserMessage(message);
+    simulateBotResponse(message);
+    userInput.value = "";
+  }
+});
+
+function addUserMessage(message) {
+  const userMessage = `<div class="message user-message">${message}</div>`;
+  chatBody.innerHTML += userMessage;
+}
+
+function addBotMessage(message) {
+  const botMessage = `<div class="message bot-message">${message}</div>`;
+  chatBody.innerHTML += botMessage;
+}
+
+function simulateBotResponse(userMessage) {
+  // Simula una respuesta del chatbot (puedes personalizar esta función)
+  const botResponse = "¡Hola! He recibido tu mensaje: " + userMessage;
+  addBotMessage(botResponse);
+}
+
+
   //if (userLanguage.startsWith('es')) {
     // Cargar contenido en español
     //window.location.href = 'cr.html';
