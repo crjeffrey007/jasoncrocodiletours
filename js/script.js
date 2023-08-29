@@ -1465,6 +1465,15 @@ function simulateBotResponse(userMessage) {
   addBotMessage(botResponse);
 }
 
+const openChatButton = document.getElementById("open-chat");
+const chatPopup = document.getElementById("chat-popup");
+
+openChatButton.addEventListener("click", () => {
+  chatPopup.style.display = "block"; // Mostrar la ventana emergente
+});
+
+// También puedes agregar un botón "Cerrar" para ocultar la ventana emergente
+
 
   //if (userLanguage.startsWith('es')) {
     // Cargar contenido en español
