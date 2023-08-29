@@ -24906,3 +24906,8 @@ img.mfp-img {
       flex: 0 0 calc(50% - 20px); /* Mostrar 2 columnas en dispositivos móviles */
     }
   }
+
+video {
+  max-width: 100%;
+  height: auto;
+}
