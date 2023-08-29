@@ -24907,15 +24907,27 @@ img.mfp-img {
     }
   }
 
-video {
-  max-width: 100%;
-  height: auto;
+/* Estilos para la sección */
+.video-section {
+  display: flex; /* Muestra los elementos en fila */
+  justify-content: space-between; /* Espacio uniforme entre columnas */
+  max-width: 1200px; /* Limita el ancho máximo */
+  margin: 0 auto; /* Centra la sección horizontalmente */
+  padding: 20px; /* Espaciado interno */
 }
 
-/* Estilos para cada columna */
-.column {
-  flex: 1; /* Distribuye el espacio disponible en partes iguales */
-  padding: 20px; /* Espaciado interno de la columna */
-  border: 0px solid #ccc; /* Borde para visualización */
-  box-sizing: border-box; /* Incluye el borde en el tamaño total */
+/* Estilos para el video */
+.video-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 56.25%; /* Proporción 16:9 para video */
+}
+
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
