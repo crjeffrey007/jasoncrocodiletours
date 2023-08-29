@@ -24934,11 +24934,15 @@ video {
 
 /* Estilos para la ventana de chat */
 .chat-container {
-  width: 300px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin: 20px auto;
+  /* Estilos previos */
+  display: none; /* Ocultar por defecto */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
 }
+
 
 .chat-header {
   background-color: #f0f0f0;
@@ -24968,7 +24972,7 @@ input[type="text"] {
   border-radius: 3px;
 }
 
-button {
+button1 {
   background-color: #007bff;
   color: white;
   border: none;
