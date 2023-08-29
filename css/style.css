@@ -24911,3 +24911,14 @@ video {
   max-width: 100%;
   height: auto;
 }
+
+    /* Ajusta el ancho del video para que sea 100% responsivo */
+    .box-categories-content video {
+      width: 100%;
+      height: auto;
+    }
+
+    /* Añade espacio entre las columnas */
+    .box-categories-content .col-md-4 {
+      padding: 10px;
+    }
