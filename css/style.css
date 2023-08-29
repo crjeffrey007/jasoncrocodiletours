@@ -24911,3 +24911,11 @@ video {
   max-width: 100%;
   height: auto;
 }
+
+/* Estilos para cada columna */
+.column {
+  flex: 1; /* Distribuye el espacio disponible en partes iguales */
+  padding: 20px; /* Espaciado interno de la columna */
+  border: 0px solid #ccc; /* Borde para visualización */
+  box-sizing: border-box; /* Incluye el borde en el tamaño total */
+}
