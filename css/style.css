@@ -24907,27 +24907,7 @@ img.mfp-img {
     }
   }
 
-/* Estilos para la sección */
-.video-section {
-  display: flex; /* Muestra los elementos en fila */
-  justify-content: space-between; /* Espacio uniforme entre columnas */
-  max-width: 1200px; /* Limita el ancho máximo */
-  margin: 0 auto; /* Centra la sección horizontalmente */
-  padding: 20px; /* Espaciado interno */
-}
-
-/* Estilos para el video */
-.video-container {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  padding-top: 56.25%; /* Proporción 16:9 para video */
-}
-
 video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  height: auto;
 }
