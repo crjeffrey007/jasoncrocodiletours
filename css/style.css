@@ -13695,6 +13695,7 @@ html.tablet .ui-to-top {
 	cursor: pointer;
 	color: #151515;
 	display: none;
+	background: yellow;
 }
 
 .rd-navbar-collapse-toggle span {
@@ -15161,12 +15162,13 @@ html.tablet .ui-to-top {
 }
 
 .rd-navbar-fixed .rd-navbar-collapse {
-	background-color: #ffffff;
+	background-color: #010101;
 	box-shadow: 0 0 22px -4px rgba(0, 0, 0, 0.17);
 }
 
 .rd-navbar-fixed .rd-navbar-collapse {
 	color: #151515;
+	background: #010101;
 }
 
 html.rd-navbar-fixed-linked .page {
