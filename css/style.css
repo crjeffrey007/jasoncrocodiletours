@@ -24936,3 +24936,11 @@ video {
     .box-categories-content .col-md-4 {
       padding: 5px;
     }
+
+/* Estilo para el texto de introducción */
+.video-intro-text {
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 20px;
+}
