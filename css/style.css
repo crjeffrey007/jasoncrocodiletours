@@ -17383,6 +17383,12 @@ html.rd-navbar-fixed-linked .page {
 	box-sizing: content-box;
 }
 
+/* Hacer la imagen de fondo responsiva */
+.swiper-slide.context-dark {
+  background-size: cover;
+  background-position: center;
+}
+
 .swiper-container {
 	flex-shrink: 0;
 }
