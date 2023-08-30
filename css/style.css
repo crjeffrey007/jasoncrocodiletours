@@ -15121,7 +15121,7 @@ html.tablet .ui-to-top {
 .rd-navbar-fixed .rd-navbar-dropdown > li.active > a,
 .rd-navbar-fixed .rd-navbar-dropdown > li.opened > a {
 	color: #ffffff;
-	background: #407652;
+	background: yellow;
 }
 
 .rd-navbar-fixed .rd-navbar-megamenu .rd-megamenu-title {
