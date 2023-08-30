@@ -1438,10 +1438,10 @@
 
 // laguagues
 
-  //if (userLanguage.startsWith('es')) {
+    if (userLanguage.startsWith('es')) {
     // Cargar contenido en español
-    //window.location.href = 'cr.html';
-  //} else {
+    window.location.href = 'cr.html';
+    } else {
     // Cargar contenido en inglés (por defecto)
-   // window.location.href = 'index.html';
- // }
+    window.location.href = 'index.html';
+    }
