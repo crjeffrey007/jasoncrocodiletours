@@ -1436,7 +1436,7 @@
      const userLanguage = navigator.language || navigator.userLanguage;
 
 
-// laguagues
+// languagues
 
     if (userLanguage.startsWith('es')) {
     // Cargar contenido en español
@@ -1446,10 +1446,22 @@
     window.location.href = 'index.html';
     }
 
-      // Puedes agregar funciones JavaScript personalizadas aquí si es necesario
-// Por ejemplo, seguimiento de errores o análisis de registros
+// 404
 
-// Redirigir a la página principal después de unos segundos (opcional)
-setTimeout(function () {
-    window.location.href = "404.html";
-}, 5000); // Redirige después de 5 segundos (5000 milisegundos)
+document.addEventListener("DOMContentLoaded", function () {
+    // Redirigir a la página principal después de unos segundos (opcional)
+    setTimeout(function () {
+        window.location.href = "/";
+    }, 5000); // Redirige después de 5 segundos (5000 milisegundos)
+
+    // Capturar clics en enlaces
+    document.addEventListener("click", function (event) {
+        // Verificar si el enlace tiene un fragmento
+        if (event.target.tagName === "A" && event.target.hash) {
+            // Prevenir la acción predeterminada para que no se cargue la página
+            event.preventDefault();
+            // Puedes agregar lógica adicional aquí si es necesario
+            console.log("Enlace con fragmento clicado:", event.target.hash);
+        }
+    });
+});
