@@ -1445,3 +1445,11 @@
     // Cargar contenido en inglés (por defecto)
     window.location.href = 'index.html';
     }
+
+      // Puedes agregar funciones JavaScript personalizadas aquí si es necesario
+// Por ejemplo, seguimiento de errores o análisis de registros
+
+// Redirigir a la página principal después de unos segundos (opcional)
+setTimeout(function () {
+    window.location.href = "404.html";
+}, 5000); // Redirige después de 5 segundos (5000 milisegundos)
