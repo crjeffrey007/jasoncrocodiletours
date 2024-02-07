@@ -1464,4 +1464,15 @@ document.addEventListener("DOMContentLoaded", function () {
             console.log("Enlace con fragmento clicado:", event.target.hash);
         }
     });
+
+    // Redirigir a diferentes páginas de error 404 dependiendo del idioma de la página
+    var idioma = document.documentElement.lang;
+    var pagina404;
+    if (idioma === "es") {
+        pagina404 = "404-cr.html"; // Redirigir a la página de error 404 en español
+    } else {
+        pagina404 = "404.html"; // Redirigir a la página de error 404 en inglés
+    }
+    // Redirigir al usuario a la página de error 404 correspondiente
+    window.location.href = pagina404;
 });
