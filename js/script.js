@@ -1476,3 +1476,9 @@ document.addEventListener("DOMContentLoaded", function () {
     // Redirigir al usuario a la página de error 404 correspondiente
     window.location.href = pagina404;
 });
+
+// Verifica si la URL actual no incluye el prefijo "www"
+if (!window.location.hostname.startsWith('www.')) {
+    // Redirige al usuario a la versión con "www"
+    window.location.href = 'https://www.' + window.location.hostname + window.location.pathname;
+}
