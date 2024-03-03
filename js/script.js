@@ -1433,8 +1433,6 @@
     prevButton.addEventListener("click", moveLeft);
     nextButton.addEventListener("click", moveRight);
 
-     const userLanguage = navigator.language || navigator.userLanguage;
-
 
 // Obtener el idioma preferido del navegador del usuario
 var userLanguage = navigator.language || navigator.userLanguage;
