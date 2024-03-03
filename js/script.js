@@ -1478,4 +1478,4 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // redirect.js
-window.location.href = "https://tudominio.com/";
+window.location.href = "https://www.jasoncrocodiletours.com/";
