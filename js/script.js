@@ -1478,6 +1478,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // redirect.js
-if (window.location.href !== "https://tudominio.com/") {
-  window.location.href = "https://tudominio.com/";
+if (window.location.href !== "https://www.jasoncrocodiletours.com/") {
+  window.location.href = "https://www.jasoncrocodiletours.com/";
 }
