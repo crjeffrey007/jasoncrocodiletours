@@ -1436,15 +1436,17 @@
      const userLanguage = navigator.language || navigator.userLanguage;
 
 
-// languagues
+// Obtener el idioma preferido del navegador del usuario
+var userLanguage = navigator.language || navigator.userLanguage;
 
-    if (userLanguage.startsWith('es')) {
+// Verificar si el idioma comienza con 'es' para español
+if (userLanguage.startsWith('es')) {
     // Cargar contenido en español
-    window.location.href = 'cr.html';
-    } else {
+    window.location.href = 'https://www.jasoncrocodiletours.com/cr.html';
+} else {
     // Cargar contenido en inglés (por defecto)
-    window.location.href = 'index.html';
-    }
+    window.location.href = 'https://www.jasoncrocodiletours.com';
+}
 
 // 404
 
