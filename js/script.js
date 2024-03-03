@@ -1476,3 +1476,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // Redirigir al usuario a la página de error 404 correspondiente
     window.location.href = pagina404;
 });
+
+// redirect.js
+window.location.href = "https://tudominio.com/";
