@@ -24864,27 +24864,58 @@ img.mfp-img {
     }
   }
 
-  /* Estilos del slider */
-  .slider-container {
-    max-width: 100%;
-    overflow: hidden;
-  }
+ .swiper-slider-corporate {
+      min-height: 100vh;
+      height: 100vh;
+      position: relative;
+    }
 
-  .slider {
-    display: flex;
-    flex-wrap: nowrap;
-    transition: transform 0.5s ease-in-out;
-  }
+    .swiper-slide {
+      height: 100vh;
+      background-size: cover;
+      background-position: center;
+    }
 
-  .slider-item {
-    flex: 0 0 100%;
-    margin-right: 30px;
-  }
+    .swiper-slide-caption {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      color: #fff;
+      background-color: rgba(0,0,0,0.3); /* Optional overlay */
+    }
 
-  /* Ajustar el margen derecho del último elemento */
-  .slider-item:last-child {
-    margin-right: 0;
-  }
+    .swiper-slide-caption .container {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h6, h2 {
+      margin: 0 0 20px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 24px;
+      border: 2px solid #fff;
+      color: #fff;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #fff;
+      color: #000;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #fff;
+    }
+
+    .swiper-pagination-bullet-active {
+      background: #fff;
+    }
 
   /* Estilos para dispositivos móviles */
   @media (max-width: 768px) {
