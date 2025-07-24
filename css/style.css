@@ -24864,28 +24864,76 @@ img.mfp-img {
     }
   }
 
-.swiper-slide-caption {
-  display: block; /* Anula el centrado vertical */
-  height: 100%;
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.3); /* Optional overlay */
+ .swiper-slider-corporate {
+      min-height: 100vh;
+      height: 100vh;
+      position: relative;
+    }
+
+/* Ajustar verticalmente los textos del slider */
+.swiper-slide-caption.section-md {
+  padding-top: 5vh !important; /* Más arriba del slide */
+  padding-bottom: 0 !important;
 }
 
-.swiper-slide-caption .container {
-  padding-top: 10vh; /* Subir el contenido */
-  padding-left: 20px;
-  padding-right: 20px;
-  max-width: 1000px;
-  margin: 0 auto;
-  text-align: left;
+/* Asegurar que el botón no se baje mucho */
+.swiper-slide-caption .button {
+  margin-top: 1rem;
 }
 
-@media (max-width: 768px) {
-  .swiper-slide-caption .container {
-    padding-top: 20vh; /* más espacio en móvil si se necesita */
-    text-align: center;
+.swiper-slide {
+      height: 100vh;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .swiper-slide-caption {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      color: #fff;
+      background-color: rgba(0,0,0,0.3); /* Optional overlay */
+    }
+
+    .swiper-slide-caption .container {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h6, h2 {
+      margin: 0 0 20px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 24px;
+      border: 2px solid #fff;
+      color: #fff;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #fff;
+      color: #000;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #fff;
+    }
+
+    .swiper-pagination-bullet-active {
+      background: #fff;
+    }
+
+  /* Estilos para dispositivos móviles */
+  @media (max-width: 768px) {
+    .slider-item {
+      margin-right: 15px;
+    }
   }
-}
 
   .image-gallery {
     display: flex;
