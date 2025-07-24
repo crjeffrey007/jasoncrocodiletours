@@ -24872,7 +24872,7 @@ img.mfp-img {
 
 /* Ajustar verticalmente los textos del slider */
 .swiper-slide-caption.section-md {
-  padding-top: 40vh !important; /* Más arriba del slide */
+  padding-top: 35vh !important; /* Más arriba del slide */
   padding-bottom: 0 !important;
 }
 
