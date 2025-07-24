@@ -24870,7 +24870,18 @@ img.mfp-img {
       position: relative;
     }
 
-    .swiper-slide {
+/* Ajustar verticalmente los textos del slider */
+.swiper-slide-caption.section-md {
+  padding-top: 5vh !important; /* Más arriba del slide */
+  padding-bottom: 0 !important;
+}
+
+/* Asegurar que el botón no se baje mucho */
+.swiper-slide-caption .button {
+  margin-top: 1rem;
+}
+
+.swiper-slide {
       height: 100vh;
       background-size: cover;
       background-position: center;
