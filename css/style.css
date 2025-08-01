@@ -25078,3 +25078,39 @@ video {
       width: 100%;
     }
   }
+
+/* ===== BOTÓN BLANCO ===== */
+.swiper-slide .button {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover: invertir colores para efecto elegante */
+.swiper-slide .button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* ===== TEXTO CON SOMBRAS OSCURAS ===== */
+.swiper-slide-caption h2,
+.swiper-slide-caption h6,
+.swiper-slide .button {
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Opcional: fondo suave detrás del texto para mobile */
+@media (max-width: 768px) {
+  .swiper-slide-caption {
+    background: rgba(0, 0, 0, 0.25);
+    padding: 1rem;
+    border-radius: 8px;
+    display: inline-block;
+  }
+}
