@@ -24881,11 +24881,13 @@ img.mfp-img {
   margin-top: 1rem;
 }
 
+/* Ajustes generales para los slides */
 .swiper-slide {
-      height: 100vh;
-      background-size: cover;
-      background-position: center;
-    }
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100vh; /* alto completo de la ventana */
+}
 
     .swiper-slide-caption {
       display: flex;
@@ -24929,6 +24931,33 @@ img.mfp-img {
     }
 
   /* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+  .swiper-slide {
+    background-size: contain;      /* Ajusta la imagen entera */
+    background-position: center top;
+    background-repeat: no-repeat;
+    height: 60vh;                  /* reduce la altura en móvil */
+  }
+
+  .swiper-slide-caption {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .swiper-slide-caption h2 {
+    font-size: 1.5rem;
+  }
+
+  .swiper-slide-caption h6 {
+    font-size: 0.9rem;
+  }
+
+  .swiper-slide-caption .button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
   @media (max-width: 768px) {
     .slider-item {
       margin-right: 15px;
