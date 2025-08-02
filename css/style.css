@@ -25079,18 +25079,6 @@ video {
     }
   }
 
-/* ===== BOTÓN BLANCO ===== */
-.swiper-slide .button {
-  background-color: #fff;
-  color: #000;
-  border: none;
-  padding: 12px 24px;
-  border-radius: 4px;
-  font-weight: 600;
-  text-transform: uppercase;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
-}
 
 /* Hover: invertir colores para efecto elegante */
 .swiper-slide .button:hover {
