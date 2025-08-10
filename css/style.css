@@ -24990,15 +24990,15 @@ video {
   position: relative;
 }
 
-/* ===== Texto anclado abajo ===== */
+/* ===== Texto y botón anclados abajo en todos los dispositivos ===== */
 .swiper-slide-caption.section-md {
   position: absolute;
-  bottom: 30px; /* Distancia desde el fondo */
+  bottom: 20px; /* siempre al fondo */
   left: 0;
   width: 100%;
   padding: 1rem;
   text-align: center;
-  background: rgba(0, 0, 0, 0.25); /* capa ligera para legibilidad */
+  background: rgba(0, 0, 0, 0.25); /* capa suave para mejorar legibilidad */
   border-radius: 8px;
 }
 
@@ -25018,10 +25018,20 @@ video {
   color: #fff;
 }
 
+/* ===== Ajustes para tablets ===== */
+@media (max-width: 1024px) {
+  .swiper-slide {
+    height: 80vh;
+    background-size: contain; /* muestra más de la imagen */
+    background-position: center center;
+  }
+}
+
+/* ===== Ajustes para móviles ===== */
 @media (max-width: 768px) {
   .swiper-slide {
     height: 70vh;
-    background-size: cover;
+    background-size: contain; /* muestra imagen completa */
     background-position: center center;
   }
 
@@ -25031,6 +25041,11 @@ video {
 
   .swiper-slide-caption h6 {
     font-size: 0.9rem;
+  }
+
+  .swiper-slide-caption.section-md {
+    bottom: 10px; /* más pegado abajo en móvil */
+    padding: 0.8rem;
   }
 }
 
