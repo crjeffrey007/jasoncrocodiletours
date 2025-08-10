@@ -24975,7 +24975,7 @@ video {
     }
   }
 
-/* ===== Estilos generales del slider ===== */
+/* ===== Slider general ===== */
 .swiper-slider-corporate {
   min-height: 100vh;
   height: 100vh;
@@ -24983,7 +24983,7 @@ video {
 }
 
 .swiper-slide {
-  background-size: cover;
+  background-size: cover !important;
   background-position: center center;
   background-repeat: no-repeat;
   height: 100vh;
@@ -24993,7 +24993,7 @@ video {
 /* ===== Texto y botón siempre abajo ===== */
 .swiper-slide-caption.section-md {
   position: absolute;
-  bottom: 30px; /* lo deja abajo */
+  bottom: 30px;
   left: 0;
   width: 100%;
   text-align: center;
@@ -25002,6 +25002,7 @@ video {
 
 .swiper-slide-caption .container {
   display: inline-block;
+  background: rgba(0, 0, 0, 0.35);
   padding: 1rem 1.5rem;
   border-radius: 8px;
 }
@@ -25022,7 +25023,7 @@ video {
   color: #fff;
 }
 
-/* ===== Botón contorno blanco ===== */
+/* ===== Botón ===== */
 .swiper-slide-caption .button {
   display: inline-block;
   padding: 12px 24px;
@@ -25039,21 +25040,26 @@ video {
   color: #000;
 }
 
-/* ===== Ajustes para tablets ===== */
+/* ===== Ajustes para tablet ===== */
 @media (max-width: 1024px) {
   .swiper-slide {
     height: 80vh;
-    background-size: contain;
-    background-position: center center;
   }
 }
 
-/* ===== Ajustes para móviles ===== */
+/* ===== Ajustes para móvil ===== */
 @media (max-width: 768px) {
+  /* Imagen cubre toda la pantalla */
   .swiper-slide {
     height: 70vh;
-    background-size: contain;
+    background-size: cover !important;
     background-position: center center;
+  }
+
+  /* Texto más pequeño y abajo */
+  .swiper-slide-caption.section-md {
+    bottom: 15px;
+    padding: 0.5rem;
   }
 
   .swiper-slide-caption h2 {
@@ -25064,8 +25070,9 @@ video {
     font-size: 0.85rem;
   }
 
-  .swiper-slide-caption.section-md {
-    bottom: 15px;
+  .swiper-slide-caption .button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
   }
 }
 
