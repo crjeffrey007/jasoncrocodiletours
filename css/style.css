@@ -24975,105 +24975,96 @@ video {
     }
   }
 
-/* ===== Estilos generales ===== */
+/* ===== Ocultar/Mostrar sliders según dispositivo ===== */
+.slider-desktop { display: block; }
+.slider-mobile { display: none; }
+
+@media (max-width: 1024px) {
+  .slider-desktop { display: none; }
+  .slider-mobile { display: block; }
+}
+
+/* ===== Estilos generales para slides ===== */
 .swiper-slide {
   background-size: cover;
-  background-position: center center;
+  background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
   position: relative;
 }
 
-.swiper-slide-caption {
+.swiper-button-next,
+.swiper-button-prev { color: #fff; }
+.swiper-pagination-bullet-active { background: #fff; }
+
+/* ===== Slider Escritorio ===== */
+.slider-desktop .swiper-slide {
+  height: 100vh;
+}
+
+.slider-desktop .swiper-slide-caption {
   position: absolute;
-  bottom: 30px; /* Siempre abajo */
+  bottom: 30px;
   left: 0;
   width: 100%;
-  color: #fff;
   padding: 1rem 2rem;
+  background: rgba(0, 0, 0, 0.25);
+  color: #fff;
 }
 
-.swiper-slide-caption h2,
-.swiper-slide-caption h6 {
+.slider-desktop h2, .slider-desktop h6 {
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
-  margin: 0 0 10px;
 }
 
-.swiper-slide-caption h2 {
-  font-size: 2rem;
-  font-weight: bold;
-}
+.slider-desktop h2 { font-size: 2rem; }
+.slider-desktop h6 { font-size: 1rem; text-transform: uppercase; }
 
-.swiper-slide-caption h6 {
-  font-size: 1rem;
-  text-transform: uppercase;
-}
-
-/* Botón estilo escritorio */
-.swiper-slide-caption .button {
+.slider-desktop .button {
   display: inline-block;
   padding: 12px 24px;
   border: 2px solid #fff;
   color: #fff;
-  text-decoration: none;
-  font-size: 1rem;
   background: transparent;
   transition: all 0.3s ease;
 }
-
-.swiper-slide-caption .button:hover {
+.slider-desktop .button:hover {
   background: #fff;
   color: #000;
 }
 
-/* Flechas del slider */
-.swiper-button-next,
-.swiper-button-prev {
+/* ===== Slider Móvil ===== */
+.slider-mobile .swiper-slide {
+  height: 75vh;
+  background-size: cover;
+  background-position: center top;
+}
+
+.slider-mobile .mobile-caption {
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  width: 100%;
+  padding: 0.8rem 1rem;
+  background: rgba(0, 0, 0, 0.35);
   color: #fff;
 }
 
-.swiper-pagination-bullet-active {
+.slider-mobile h2, .slider-mobile h6 {
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9);
+}
+
+.slider-mobile h2 { font-size: 1.3rem; }
+.slider-mobile h6 { font-size: 0.85rem; }
+
+.slider-mobile .button {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 2px solid #fff;
+  color: #fff;
+  background: transparent;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+.slider-mobile .button:hover {
   background: #fff;
-}
-
-/* ===== Ajustes para tablets y móviles ===== */
-@media (max-width: 1024px) {
-  .swiper-slide {
-    height: 80vh;
-    background-size: cover;
-    background-position: center top;
-  }
-
-  .swiper-slide-caption {
-    bottom: 15px;
-    padding: 0.8rem 1rem;
-  }
-
-  .swiper-slide-caption h2 {
-    font-size: 1.4rem;
-  }
-
-  .swiper-slide-caption h6 {
-    font-size: 0.85rem;
-  }
-
-  .swiper-slide-caption .button {
-    font-size: 0.9rem;
-    padding: 8px 16px;
-  }
-}
-
-/* ===== Ajustes extra para pantallas muy pequeñas ===== */
-@media (max-width: 480px) {
-  .swiper-slide {
-    height: 75vh;
-  }
-
-  .swiper-slide-caption h2 {
-    font-size: 1.2rem;
-  }
-
-  .swiper-slide-caption h6 {
-    font-size: 0.8rem;
-  }
+  color: #000;
 }
