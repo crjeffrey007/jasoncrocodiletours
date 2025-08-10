@@ -25002,7 +25002,6 @@ video {
 
 .swiper-slide-caption .container {
   display: inline-block;
-  background: rgba(0, 0, 0, 0.35); /* capa oscura para legibilidad */
   padding: 1rem 1.5rem;
   border-radius: 8px;
 }
