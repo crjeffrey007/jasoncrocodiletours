@@ -24975,7 +24975,7 @@ video {
     }
   }
 
-/* Estilos generales */
+/* ===== ESTILOS GENERALES ===== */
 .swiper-slide {
   background-size: cover;
   background-position: center;
@@ -24983,80 +24983,89 @@ video {
   position: relative;
 }
 
-/* Flechas y paginación */
 .swiper-button-next,
-.swiper-button-prev { color: #fff; }
-.swiper-pagination-bullet-active { background: #fff; }
+.swiper-button-prev {
+  color: #fff;
+}
+.swiper-pagination-bullet-active {
+  background: #fff;
+}
 
-/* Escritorio */
+.swiper-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background: rgba(0, 0, 0, 0.25);
+  color: #fff;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+}
+
+.swiper-caption h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.swiper-caption h6 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid #fff;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.button:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* ===== ESCRITORIO ===== */
 @media (min-width: 1025px) {
   .swiper-slide {
     height: 100vh;
   }
-  .swiper-caption {
-    position: absolute;
-    bottom: 30px;
-    left: 0;
-    width: 100%;
-    padding: 1rem 2rem;
-    background: rgba(0, 0, 0, 0.25);
-    color: #fff;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
-  }
-  .swiper-caption h2 { font-size: 2rem; }
-  .swiper-caption h6 { font-size: 1rem; text-transform: uppercase; }
 }
 
-/* Móviles y tablets */
+/* ===== TABLET Y MOBILE ===== */
 @media (max-width: 1024px) {
   .swiper-slide {
-    height: auto; /* se ajusta al contenido */
-    background-size: contain; /* imagen completa */
-    background-position: center top;
+    height: 75vh;
+    background-size: cover !important; /* que cubra siempre */
+    background-position: center center;
   }
+
   .swiper-caption {
-    position: static; /* Debajo de la imagen */
-    padding: 1rem;
-    background: rgba(0,0,0,0.6);
-    color: #fff;
+    bottom: 10px; /* más cerca del borde inferior */
+    padding: 0.8rem;
     text-align: center;
   }
-  .swiper-caption h2 { font-size: 1.3rem; }
-  .swiper-caption h6 { font-size: 0.9rem; }
+
+  .swiper-caption h2 {
+    font-size: 1.3rem;
+  }
+
+  .swiper-caption h6 {
+    font-size: 0.9rem;
+  }
+
+  .button {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
 }
 
-/* Ajustes generales para mobile */
+/* ===== MOBILE PEQUEÑO ===== */
 @media (max-width: 768px) {
-  h1, h2, h3, h4, h5, h6 {
-    font-size: clamp(18px, 5vw, 28px); /* tamaño flexible */
-    line-height: 1.2;
-    word-break: break-word;
-    overflow-wrap: break-word;
-    text-align: center;
+  .swiper-slide {
+    height: 70vh;
   }
-
-  p, li, span, a, button {
-    font-size: clamp(14px, 4vw, 18px);
-    line-height: 1.4;
-    word-break: break-word;
-    overflow-wrap: break-word;
-  }
-
-  .vc_row, .wpb_row, .container, .content-area {
-    max-width: 100%;
-    padding-left: 10px;
-    padding-right: 10px;
-    box-sizing: border-box;
-  }
-
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .wpb_button, .btn, .vc_btn {
-    display: block;
-    width: 100%;
-    text-align: center;
+  .swiper-caption {
+    background: rgba(0,0,0,0.35);
   }
 }
