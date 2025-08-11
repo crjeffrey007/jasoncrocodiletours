@@ -1481,3 +1481,31 @@ document.addEventListener("DOMContentLoaded", function () {
 if (window.location.href !== "https://www.jasoncrocodiletours.com/") {
   window.location.href = "https://www.jasoncrocodiletours.com/";
 }
+
+var swiper = new Swiper('.swiper-container', {
+  loop: true,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  slidesPerView: 1, // por defecto
+  breakpoints: {
+    1025: {
+      slidesPerView: 1
+    },
+    768: {
+      slidesPerView: 1
+    },
+    320: {
+      slidesPerView: 1
+    }
+  }
+});
