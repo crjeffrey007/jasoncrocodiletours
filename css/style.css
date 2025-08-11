@@ -25036,12 +25036,12 @@ video {
 @media (max-width: 1024px) {
   .swiper-slide {
     height: 75vh;
-    background-size: cover !important;
+    background-size: cover !important; /* que cubra siempre */
     background-position: center center;
   }
 
   .swiper-caption {
-    bottom: 10px;
+    bottom: 10px; /* más cerca del borde inferior */
     padding: 0.8rem;
     text-align: center;
   }
@@ -25069,3 +25069,4 @@ video {
     background: rgba(0,0,0,0.35);
   }
 }
+
