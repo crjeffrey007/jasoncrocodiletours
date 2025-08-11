@@ -24975,16 +24975,7 @@ video {
     }
   }
 
-/* ===== Ocultar/Mostrar sliders según dispositivo ===== */
-.slider-desktop { display: block; }
-.slider-mobile { display: none; }
-
-@media (max-width: 1024px) {
-  .slider-desktop { display: none; }
-  .slider-mobile { display: block; }
-}
-
-/* ===== Estilos generales para slides ===== */
+/* Estilos generales */
 .swiper-slide {
   background-size: cover;
   background-position: center;
@@ -24992,79 +24983,44 @@ video {
   position: relative;
 }
 
+/* Flechas y paginación */
 .swiper-button-next,
 .swiper-button-prev { color: #fff; }
 .swiper-pagination-bullet-active { background: #fff; }
 
-/* ===== Slider Escritorio ===== */
-.slider-desktop .swiper-slide {
-  height: 100vh;
+/* Escritorio */
+@media (min-width: 1025px) {
+  .swiper-slide {
+    height: 100vh;
+  }
+  .swiper-caption {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+    background: rgba(0, 0, 0, 0.25);
+    color: #fff;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+  }
+  .swiper-caption h2 { font-size: 2rem; }
+  .swiper-caption h6 { font-size: 1rem; text-transform: uppercase; }
 }
 
-.slider-desktop .swiper-slide-caption {
-  position: absolute;
-  bottom: 30px;
-  left: 0;
-  width: 100%;
-  padding: 1rem 2rem;
-  background: rgba(0, 0, 0, 0.25);
-  color: #fff;
-}
-
-.slider-desktop h2, .slider-desktop h6 {
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
-}
-
-.slider-desktop h2 { font-size: 2rem; }
-.slider-desktop h6 { font-size: 1rem; text-transform: uppercase; }
-
-.slider-desktop .button {
-  display: inline-block;
-  padding: 12px 24px;
-  border: 2px solid #fff;
-  color: #fff;
-  background: transparent;
-  transition: all 0.3s ease;
-}
-.slider-desktop .button:hover {
-  background: #fff;
-  color: #000;
-}
-
-/* ===== Slider Móvil ===== */
-.slider-mobile .swiper-slide {
-  height: 75vh;
-  background-size: cover;
-  background-position: center top;
-}
-
-.slider-mobile .mobile-caption {
-  position: absolute;
-  bottom: 15px;
-  left: 0;
-  width: 100%;
-  padding: 0.8rem 1rem;
-  background: rgba(0, 0, 0, 0.35);
-  color: #fff;
-}
-
-.slider-mobile h2, .slider-mobile h6 {
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9);
-}
-
-.slider-mobile h2 { font-size: 1.3rem; }
-.slider-mobile h6 { font-size: 0.85rem; }
-
-.slider-mobile .button {
-  display: inline-block;
-  padding: 8px 16px;
-  border: 2px solid #fff;
-  color: #fff;
-  background: transparent;
-  font-size: 0.9rem;
-  transition: all 0.3s ease;
-}
-.slider-mobile .button:hover {
-  background: #fff;
-  color: #000;
+/* Móviles y tablets */
+@media (max-width: 1024px) {
+  .swiper-slide {
+    height: auto; /* se ajusta al contenido */
+    background-size: contain; /* imagen completa */
+    background-position: center top;
+  }
+  .swiper-caption {
+    position: static; /* Debajo de la imagen */
+    padding: 1rem;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    text-align: center;
+  }
+  .swiper-caption h2 { font-size: 1.3rem; }
+  .swiper-caption h6 { font-size: 0.9rem; }
 }
