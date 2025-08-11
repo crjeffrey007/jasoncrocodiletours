@@ -25036,12 +25036,12 @@ video {
 @media (max-width: 1024px) {
   .swiper-slide {
     height: 75vh;
-    background-size: cover !important; /* que cubra siempre */
+    background-size: cover !important;
     background-position: center center;
   }
 
   .swiper-caption {
-    bottom: 10px; /* más cerca del borde inferior */
+    bottom: 10px;
     padding: 0.8rem;
     text-align: center;
   }
