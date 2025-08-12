@@ -24975,97 +24975,88 @@ video {
     }
   }
 
-/* ===== ESTILOS GENERALES ===== */
-.swiper-slide {
-  background-size: cover;
-  background-position: center;
+/* ===== Mostrar/ocultar según dispositivo ===== */
+.slider-desktop { display: block; }
+.slider-mobile { display: none; }
+
+/* cuando sea tablet o menor (ajusta breakpoint si prefieres 768px) */
+@media (max-width: 1024px) {
+  .slider-desktop { display: none; }
+  .slider-mobile { display: block; }
+}
+
+/* ===== Estilos generales de slides ===== */
+.swiper-container .swiper-slide {
+  background-size: cover !important;
+  background-position: center center !important;
   background-repeat: no-repeat;
   position: relative;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-  color: #fff;
-}
-.swiper-pagination-bullet-active {
-  background: #fff;
-}
-
-.swiper-caption {
+/* Caption: siempre abajo */
+.caption {
   position: absolute;
-  bottom: 20px;
   left: 0;
   width: 100%;
-  padding: 1rem 1.5rem;
-  background: rgba(0, 0, 0, 0.25);
+  bottom: 18px;
+  padding: 12px 18px;
+  box-sizing: border-box;
+  text-align: center;
+  background: rgba(0,0,0,0.35); /* mejora lectura */
+  border-radius: 6px;
   color: #fff;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
 }
 
-.swiper-caption h2 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-.swiper-caption h6 {
-  font-size: 1rem;
+/* Tipografías */
+.caption h6 {
+  margin: 0 0 6px 0;
+  font-size: 0.95rem;
   text-transform: uppercase;
-  margin-bottom: 0.5rem;
+}
+.caption h2 {
+  margin: 0 0 10px 0;
+  font-size: 1.9rem;
+  line-height: 1.2;
 }
 
-.button {
+/* Botón estilo contorno blanco (mismo en móvil y escritorio) */
+.caption .button {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 10px 18px;
   border: 2px solid #fff;
   color: #fff;
+  background: transparent;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: all .25s ease;
 }
-.button:hover {
+.caption .button:hover {
   background: #fff;
   color: #000;
 }
 
-/* ===== ESCRITORIO ===== */
+/* Flechas y paginación visibles en ambos */
+.swiper-button-next, .swiper-button-prev { color: #fff; z-index: 30; }
+.swiper-pagination-bullet-active { background: #fff; }
+
+/* ===== Tamaños específicos ===== */
+/* Escritorio: altura completa */
 @media (min-width: 1025px) {
-  .swiper-slide {
-    height: 100vh;
-  }
+  .slider-desktop .swiper-slide { height: 100vh; }
+  .slider-desktop .caption h2 { font-size: 2.2rem; }
 }
 
-/* ===== TABLET Y MOBILE ===== */
+/* Tablet / Mobile: menos alto y texto más pequeño */
 @media (max-width: 1024px) {
-  .swiper-slide {
-    height: 75vh;
-    background-size: cover !important;
-    background-position: center center;
-  }
-
-  .swiper-caption {
-    bottom: 10px;
-    padding: 0.8rem;
-    text-align: center;
-  }
-
-  .swiper-caption h2 {
-    font-size: 1.3rem;
-  }
-
-  .swiper-caption h6 {
-    font-size: 0.9rem;
-  }
-
-  .button {
-    font-size: 0.9rem;
-    padding: 8px 15px;
-  }
+  .slider-mobile .swiper-slide { height: 72vh; background-position: center top; }
+  .slider-mobile .caption { bottom: 12px; padding: 10px 12px; }
+  .slider-mobile .caption h2 { font-size: 1.3rem; }
+  .slider-mobile .caption h6 { font-size: 0.85rem; }
+  .slider-mobile .caption .button { padding: 8px 14px; font-size: 0.95rem; }
 }
 
-/* ===== MOBILE PEQUEÑO ===== */
-@media (max-width: 768px) {
-  .swiper-slide {
-    height: 70vh;
-  }
-  .swiper-caption {
-    background: rgba(0,0,0,0.35);
-  }
+/* Ajuste final para móviles pequeños */
+@media (max-width: 480px) {
+  .slider-mobile .swiper-slide { height: 65vh; }
+  .slider-mobile .caption h2 { font-size: 1.05rem; }
 }
