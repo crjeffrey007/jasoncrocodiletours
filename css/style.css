@@ -24975,95 +24975,86 @@ video {
     }
   }
 
-/* ===== Estilos generales ===== */
-.swiper-slide {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-  color: #fff;
-}
-.swiper-pagination-bullet-active {
-  background: #fff;
-}
-
-/* Caption siempre abajo */
-.swiper-caption {
-  position: absolute;
-  bottom: 20px;
-  left: 0;
-  width: 100%;
-  padding: 1rem 1.5rem;
-  background: rgba(0, 0, 0, 0.25);
-  color: #fff;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
-  text-align: center;
-}
-
-.swiper-caption h2 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-.swiper-caption h6 {
-  font-size: 1rem;
-  text-transform: uppercase;
-  margin-bottom: 0.5rem;
-}
-
-.button {
-  display: inline-block;
-  padding: 10px 20px;
-  border: 2px solid #fff;
-  color: #fff;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-.button:hover {
-  background: #fff;
-  color: #000;
-}
-
-/* ===== Desktop ===== */
-@media (min-width: 1025px) {
-  .swiper-slide {
-    height: 100vh;
-  }
-}
-
-/* ===== Tablet y mobile ===== */
-@media (max-width: 1024px) {
-  .swiper-slide {
-    height: 75vh;
-    background-size: cover !important;
-    background-position: center center;
+/* ================= Base & Variables ================= */
+  .jason-hero {
+    --brand: #0f8f2c;         /* CAMBIA este verde si tu marca usa otro */
+    --text: #ffffff;
+    --shadow: rgba(0,0,0,.75);
   }
 
-  .swiper-caption {
-    bottom: 10px;
-    padding: 0.8rem;
+  /* Evita estilos del tema afectando Swiper */
+  .jason-swiper .swiper-slide { display: block !important; }
+
+  /* Cada slide como fondo cover */
+  .jason-swiper .swiper-slide{
+    position: relative;
+    min-height: 100vh;                           /* Desktop */
+    background: center / cover no-repeat var(--bg);
   }
 
-  .swiper-caption h2 {
-    font-size: 1.4rem;
+  /* Caption SIEMPRE ABAJO */
+  .jason-caption{
+    position: absolute;
+    left: 0; right: 0; bottom: 24px;
+    width: min(1100px, 92%);
+    margin: 0 auto;
+    padding: clamp(10px, 2.5vw, 18px) clamp(12px, 3vw, 24px);
+    display: grid;
+    row-gap: clamp(6px, 1.2vw, 12px);
+    color: var(--text);
+    text-align: center;
+    z-index: 3;
   }
 
-  .swiper-caption h6 {
-    font-size: 0.9rem;
+  /* Tipografía (aislada y con !important por si el tema fuerza tamaños) */
+  .jason-caption h6{
+    margin: 0;
+    font-size: clamp(12px, 2.2vw, 18px) !important;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 4px var(--shadow);
+  }
+  .jason-caption h2{
+    margin: 0;
+    font-weight: 800;
+    line-height: 1.2;
+    font-size: clamp(18px, 3.6vw, 34px) !important;
+    text-shadow: 2px 2px 6px var(--shadow);
   }
 
-  .button {
-    font-size: 0.9rem;
-    padding: 8px 15px;
+  /* Botón: contorno blanco, fondo transparente */
+  .jason-btn{
+    justify-self: center;
+    display: inline-block;
+    padding: 10px 22px;
+    border: 2px solid #fff;
+    background: transparent;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 4px;
+    transition: all .25s ease;
+    text-shadow: 1px 1px 3px var(--shadow);
   }
-}
+  .jason-btn:hover{
+    background: #fff;
+    color: var(--brand);
+  }
 
-/* ===== Mobile pequeño ===== */
-@media (max-width: 768px) {
-  .swiper-slide {
-    height: 70vh;
+  /* Flechas y bullets en blanco */
+  .jason-nav { color: #fff; filter: drop-shadow(0 1px 3px rgba(0,0,0,.6)); }
+  .jason-pager .swiper-pagination-bullet{ background: rgba(255,255,255,.6); }
+  .jason-pager .swiper-pagination-bullet-active{ background:#fff; }
+
+  /* ================= Responsivo ================= */
+  /* Tablet & mobile */
+  @media (max-width: 1024px){
+    .jason-swiper .swiper-slide{ min-height: 78vh; }  /* Más baja para que se vea más de la foto */
+    .jason-caption{ bottom: 14px; }
   }
-}
+  /* Móvil pequeño */
+  @media (max-width: 768px){
+    .jason-swiper .swiper-slide{ min-height: 70vh; }
+    .jason-caption{ width: 94%; bottom: 12px; }
+    .jason-btn{ padding: 9px 18px; font-size: 14px; }
+  }
