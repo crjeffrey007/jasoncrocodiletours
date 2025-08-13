@@ -1509,3 +1509,19 @@ var swiper = new Swiper('.swiper-container', {
     }
   }
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  new Swiper('.desktop-swiper', {
+    loop: true,
+    autoplay: { delay: 5000, disableOnInteraction: false },
+    navigation: { nextEl: '.desktop-swiper .swiper-button-next', prevEl: '.desktop-swiper .swiper-button-prev' },
+    pagination: { el: '.desktop-swiper .swiper-pagination', clickable: true }
+  });
+
+  new Swiper('.mobile-swiper', {
+    loop: true,
+    autoplay: { delay: 5000, disableOnInteraction: false },
+    navigation: { nextEl: '.mobile-swiper .swiper-button-next', prevEl: '.mobile-swiper .swiper-button-prev' },
+    pagination: { el: '.mobile-swiper .swiper-pagination', clickable: true }
+  });
+});
