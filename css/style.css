@@ -24975,10 +24975,10 @@ video {
     }
   }
 
-/* ===== ESTILOS GENERALES ===== */
+/* ===== Estilos generales ===== */
 .swiper-slide {
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
   position: relative;
 }
@@ -24991,27 +24991,28 @@ video {
   background: #fff;
 }
 
+/* Texto siempre abajo */
 .swiper-caption {
   position: absolute;
-  bottom: 20px;
+  bottom: 15px;
   left: 0;
   width: 100%;
-  padding: 1rem 1.5rem;
-  background: rgba(0, 0, 0, 0.25);
+  padding: 12px 16px;
+  background: rgba(0, 0, 0, 0.3);
   color: #fff;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+  box-sizing: border-box;
 }
 
 .swiper-caption h2 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 8px;
 }
 .swiper-caption h6 {
-  font-size: 1rem;
+  margin-bottom: 6px;
   text-transform: uppercase;
-  margin-bottom: 0.5rem;
 }
 
+/* Botón */
 .button {
   display: inline-block;
   padding: 10px 20px;
@@ -25025,47 +25026,65 @@ video {
   color: #000;
 }
 
-/* ===== ESCRITORIO ===== */
+/* ===== Escritorio ===== */
 @media (min-width: 1025px) {
   .swiper-slide {
     height: 100vh;
   }
+  .swiper-caption h2 {
+    font-size: 2rem;
+  }
+  .swiper-caption h6 {
+    font-size: 1rem;
+  }
 }
 
-/* ===== TABLET Y MOBILE ===== */
+/* ===== Tablet ===== */
 @media (max-width: 1024px) {
+  .swiper-slide {
+    height: 80vh;
+  }
+  .swiper-caption {
+    bottom: 10px;
+    text-align: center;
+  }
+  .swiper-caption h2 {
+    font-size: 1.4rem;
+  }
+  .swiper-caption h6 {
+    font-size: 0.95rem;
+  }
+}
+
+/* ===== Móvil ===== */
+@media (max-width: 768px) {
   .swiper-slide {
     height: 75vh;
     background-size: cover !important;
-    background-position: center center;
+    background-position: center center !important;
   }
-
   .swiper-caption {
-    bottom: 10px;
-    padding: 0.8rem;
-    text-align: center;
+    padding: 10px;
   }
-
   .swiper-caption h2 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
-
   .swiper-caption h6 {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
-
   .button {
     font-size: 0.9rem;
-    padding: 8px 15px;
+    padding: 8px 14px;
   }
 }
 
-/* ===== MOBILE PEQUEÑO ===== */
-@media (max-width: 768px) {
+/* ===== Móvil pequeño ===== */
+@media (max-width: 480px) {
   .swiper-slide {
-    height: 70vh;
+    height: 65vh;
   }
-  .swiper-caption {
-    background: rgba(0,0,0,0.35);
+  .swiper-caption h2 {
+    font-size: 1rem;
   }
 }
+
