@@ -601,40 +601,6 @@
     <!-- Javascript-->
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
-   <script>
-document.addEventListener('DOMContentLoaded', function () {
-  // Desktop swiper
-  var desktopSwiper = new Swiper('.desktop-swiper', {
-    loop: true,
-    autoplay: { delay: 5000, disableOnInteraction: false },
-    slidesPerView: 1,
-    navigation: { nextEl: '.desktop-swiper .swiper-button-next', prevEl: '.desktop-swiper .swiper-button-prev' },
-    pagination: { el: '.desktop-swiper .swiper-pagination', clickable: true },
-  });
-
-  // Mobile swiper
-  var mobileSwiper = new Swiper('.mobile-swiper', {
-    loop: true,
-    autoplay: { delay: 5000, disableOnInteraction: false },
-    slidesPerView: 1,
-    navigation: { nextEl: '.mobile-swiper .swiper-button-next', prevEl: '.mobile-swiper .swiper-button-prev' },
-    pagination: { el: '.mobile-swiper .swiper-pagination', clickable: true },
-  });
-
-  // Al cambiar tamaño, actualizar Swipers (evita problemas de tamaño cuando se muestra/oculta)
-  function updateSwipers() {
-    if (desktopSwiper) desktopSwiper.update();
-    if (mobileSwiper) mobileSwiper.update();
-  }
-  window.addEventListener('resize', function () {
-    // pequeña pausa para evitar llamadas continuas
-    clearTimeout(window._swiper_resize_timer);
-    window._swiper_resize_timer = setTimeout(updateSwipers, 150);
-  });
-  // Llamada inicial por si alguno se inició en oculto
-  setTimeout(updateSwipers, 300);
-});
-</script>
 
   </body>
 </html>
