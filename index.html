@@ -622,9 +622,12 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-  new Swiper('#hero-slider', {
-    loop: true,
-    autoplay: { delay: 8000, disableOnInteraction: false },
+  const swiper = new Swiper('#hero-slider', {
+    loop: true, // Repetir infinito
+    autoplay: {
+      delay: 8000, // 8 segundos
+      disableOnInteraction: false
+    },
     navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
     pagination: { el: '.swiper-pagination', clickable: true }
   });
