@@ -24980,13 +24980,22 @@ video {
   width: 100%;
   height: 100vh;
 }
+/* General */
 .swiper-slide {
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   display: flex;
-  align-items: flex-end; /* Texto abajo */
+  align-items: flex-end;
 }
-.swiper-caption {
+/* Mobile y tablet → ver imagen más completa */
+@media (max-width: 1024px) {
+  .swiper-slide {
+    background-size: contain; /* muestra la imagen completa */
+    background-color: #000; /* rellena el fondo si sobra espacio */
+    background-position: center center;
+  }
+}.swiper-caption {
   background: rgba(0,0,0,0.4);
   padding: 1rem 2rem;
   width: 100%;
