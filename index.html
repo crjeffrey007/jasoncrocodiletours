@@ -122,57 +122,39 @@
   </div>
 </header>
 <div class="page">
-<!-- Hero Slider Section -->
-<section id="hero-slider" class="swiper-container">
+<section id="hero-slider" class="swiper">
   <div class="swiper-wrapper">
-
-    <!-- Slide 1 -->
     <div class="swiper-slide" style="background-image: url('images/jason-1.jpeg');">
-      <div class="slide-caption">
+      <div class="swiper-caption">
         <h6>Don’t miss the chance to live this unforgettable adventure!</h6>
         <h2>Make sure you don’t miss this once-in-a-lifetime experience!</h2>
-        <a class="slide-button" href="https://api.whatsapp.com/send?phone=50688229042" target="_blank">
-          Book Now
-        </a>
+        <a class="button" href="https://api.whatsapp.com/send?phone=50688229042" target="_blank">Book Now</a>
       </div>
     </div>
-
-    <!-- Slide 2 -->
     <div class="swiper-slide" style="background-image: url('images/jason-2.jpeg');">
-      <div class="slide-caption">
+      <div class="swiper-caption">
         <h6>Don’t miss the chance to live this unforgettable adventure!</h6>
         <h2>Make sure you don’t miss this once-in-a-lifetime experience!</h2>
-        <a class="slide-button" href="https://api.whatsapp.com/send?phone=50688229042" target="_blank">
-          Book Now
-        </a>
+        <a class="button" href="https://api.whatsapp.com/send?phone=50688229042" target="_blank">Book Now</a>
       </div>
     </div>
-
-    <!-- Slide 3 -->
     <div class="swiper-slide" style="background-image: url('images/jason-3.jpeg');">
-      <div class="slide-caption">
+      <div class="swiper-caption">
         <h6>Don’t miss the chance to live this unforgettable adventure!</h6>
         <h2>Make sure you don’t miss this once-in-a-lifetime experience!</h2>
-        <a class="slide-button" href="https://api.whatsapp.com/send?phone=50688229042" target="_blank">
-          Book Now
-        </a>
+        <a class="button" href="https://api.whatsapp.com/send?phone=50688229042" target="_blank">Book Now</a>
       </div>
     </div>
-
-    <!-- Slide 4 -->
     <div class="swiper-slide" style="background-image: url('images/jason-4.jpeg');">
-      <div class="slide-caption">
+      <div class="swiper-caption">
         <h6>Don’t miss the chance to live this unforgettable adventure!</h6>
         <h2>Make sure you don’t miss this once-in-a-lifetime experience!</h2>
-        <a class="slide-button" href="https://api.whatsapp.com/send?phone=50688229042" target="_blank">
-          Book Now
-        </a>
+        <a class="button" href="https://api.whatsapp.com/send?phone=50688229042" target="_blank">Book Now</a>
       </div>
     </div>
-
   </div>
 
-  <!-- Controls -->
+  <!-- Controles -->
   <div class="swiper-button-next"></div>
   <div class="swiper-button-prev"></div>
   <div class="swiper-pagination"></div>
@@ -620,14 +602,21 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-  const swiper = new Swiper('#hero-slider', {
-    loop: true, // Repetir infinito
+  new Swiper('#hero-slider', {
+    loop: true,
+    speed: 2000, // transicion lenta (2s)
     autoplay: {
-      delay: 8000, // 8 segundos
+      delay: 8000, // cada slide dura 8s
       disableOnInteraction: false
     },
-    navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
-    pagination: { el: '.swiper-pagination', clickable: true }
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    }
   });
 });
 </script>
