@@ -24991,7 +24991,7 @@ video {
 
 #hero-slider .slide-caption {
   position: absolute;
-  bottom: 30px;
+  bottom: 20px;
   left: 0;
   width: 100%;
   padding: 1rem 1.5rem;
@@ -25032,6 +25032,9 @@ video {
   #hero-slider {
     height: 75vh;
   }
+  #hero-slider .swiper-slide {
+    background-position: center top; /* Muestra más parte superior */
+  }
   #hero-slider h2 {
     font-size: 1.4rem;
   }
@@ -25043,10 +25046,17 @@ video {
 @media (max-width: 768px) {
   #hero-slider {
     height: 70vh;
+    min-height: 500px; /* asegura altura en móviles */
+  }
+  #hero-slider .swiper-slide {
+    background-size: contain; /* imagen lo más completa posible */
+    background-position: center;
   }
   #hero-slider .slide-caption {
     background: rgba(0,0,0,0.35);
     padding: 0.8rem;
+    position: absolute;
+    bottom: 15px;
   }
   #hero-slider h2 {
     font-size: 1.2rem;
