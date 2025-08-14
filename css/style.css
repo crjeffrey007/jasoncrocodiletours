@@ -24975,86 +24975,87 @@ video {
     }
   }
 
-/* ================= Base & Variables ================= */
-  .jason-hero {
-    --brand: #0f8f2c;         /* CAMBIA este verde si tu marca usa otro */
-    --text: #ffffff;
-    --shadow: rgba(0,0,0,.75);
-  }
+/* ======= HERO SLIDER ======= */
+#hero-slider {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
 
-  /* Evita estilos del tema afectando Swiper */
-  .jason-swiper .swiper-slide { display: block !important; }
+#hero-slider .swiper-slide {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
 
-  /* Cada slide como fondo cover */
-  .jason-swiper .swiper-slide{
-    position: relative;
-    min-height: 100vh;                           /* Desktop */
-    background: center / cover no-repeat var(--bg);
-  }
+#hero-slider .slide-caption {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background: rgba(0, 0, 0, 0.25);
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+}
 
-  /* Caption SIEMPRE ABAJO */
-  .jason-caption{
-    position: absolute;
-    left: 0; right: 0; bottom: 24px;
-    width: min(1100px, 92%);
-    margin: 0 auto;
-    padding: clamp(10px, 2.5vw, 18px) clamp(12px, 3vw, 24px);
-    display: grid;
-    row-gap: clamp(6px, 1.2vw, 12px);
-    color: var(--text);
-    text-align: center;
-    z-index: 3;
-  }
+#hero-slider h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
 
-  /* Tipografía (aislada y con !important por si el tema fuerza tamaños) */
-  .jason-caption h6{
-    margin: 0;
-    font-size: clamp(12px, 2.2vw, 18px) !important;
-    letter-spacing: .5px;
-    text-transform: uppercase;
-    text-shadow: 1px 1px 4px var(--shadow);
-  }
-  .jason-caption h2{
-    margin: 0;
-    font-weight: 800;
-    line-height: 1.2;
-    font-size: clamp(18px, 3.6vw, 34px) !important;
-    text-shadow: 2px 2px 6px var(--shadow);
-  }
+#hero-slider h6 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
 
-  /* Botón: contorno blanco, fondo transparente */
-  .jason-btn{
-    justify-self: center;
-    display: inline-block;
-    padding: 10px 22px;
-    border: 2px solid #fff;
-    background: transparent;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 700;
-    border-radius: 4px;
-    transition: all .25s ease;
-    text-shadow: 1px 1px 3px var(--shadow);
-  }
-  .jason-btn:hover{
-    background: #fff;
-    color: var(--brand);
-  }
+#hero-slider .slide-button {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid #fff;
+  color: #fff;
+  text-decoration: none;
+  background: transparent;
+  transition: all 0.3s ease;
+}
 
-  /* Flechas y bullets en blanco */
-  .jason-nav { color: #fff; filter: drop-shadow(0 1px 3px rgba(0,0,0,.6)); }
-  .jason-pager .swiper-pagination-bullet{ background: rgba(255,255,255,.6); }
-  .jason-pager .swiper-pagination-bullet-active{ background:#fff; }
+#hero-slider .slide-button:hover {
+  background: #fff;
+  color: #006400; /* Verde oscuro */
+}
 
-  /* ================= Responsivo ================= */
-  /* Tablet & mobile */
-  @media (max-width: 1024px){
-    .jason-swiper .swiper-slide{ min-height: 78vh; }  /* Más baja para que se vea más de la foto */
-    .jason-caption{ bottom: 14px; }
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  #hero-slider {
+    height: 75vh;
   }
-  /* Móvil pequeño */
-  @media (max-width: 768px){
-    .jason-swiper .swiper-slide{ min-height: 70vh; }
-    .jason-caption{ width: 94%; bottom: 12px; }
-    .jason-btn{ padding: 9px 18px; font-size: 14px; }
+  #hero-slider h2 {
+    font-size: 1.4rem;
   }
+  #hero-slider h6 {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #hero-slider {
+    height: 70vh;
+  }
+  #hero-slider .slide-caption {
+    background: rgba(0,0,0,0.35);
+    padding: 0.8rem;
+  }
+  #hero-slider h2 {
+    font-size: 1.2rem;
+  }
+  #hero-slider h6 {
+    font-size: 0.85rem;
+  }
+  #hero-slider .slide-button {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+}
