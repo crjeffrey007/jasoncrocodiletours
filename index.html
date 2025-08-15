@@ -617,25 +617,28 @@
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
 
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-  new Swiper('#hero-slider', {
-    loop: true,
-    speed: 2000, // transicion lenta (2s)
-    autoplay: {
-      delay: 8000, // cada slide dura 8s
-      disableOnInteraction: false
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev'
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true
-    }
+  document.addEventListener("DOMContentLoaded", function () {
+    new Swiper('.swiper-container', {
+      loop: true,
+      autoplay: {
+        delay: 8000, // más lento
+        disableOnInteraction: false
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      },
+      simulateTouch: true,
+      effect: 'slide'
+    });
   });
-});
 </script>
   
   </body>
