@@ -24975,62 +24975,76 @@ video {
     }
   }
 
-/* Ajuste general del slider */
-#hero-slider {
-  width: 100%;
-  height: 100vh;
-}
-/* General */
+/* Estilos generales */
 .swiper-slide {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  display: flex;
-  align-items: flex-end;
+  position: relative;
 }
-/* Mobile y tablet → ver imagen más completa */
-@media (max-width: 1024px) {
-  .swiper-slide {
-    background-size: contain; /* muestra la imagen completa */
-    background-color: #000; /* rellena el fondo si sobra espacio */
-    background-position: center center;
-  }
-}.swiper-caption {
-  background: rgba(0,0,0,0.4);
-  padding: 1rem 2rem;
+
+.swiper-slide-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
   width: 100%;
+  padding: 1rem 2rem;
+  background: rgba(0, 0, 0, 0.3);
   color: #fff;
-  text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
-  text-align: center;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
 }
-.swiper-caption h2 {
+
+.swiper-slide-caption h2 {
   font-size: 2rem;
+  margin-bottom: 0.5rem;
 }
-.swiper-caption h6 {
+.swiper-slide-caption h6 {
   font-size: 1rem;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
 }
+
 .button {
   display: inline-block;
   padding: 10px 20px;
   border: 2px solid #fff;
   color: #fff;
-  background: transparent;
   text-decoration: none;
   transition: all 0.3s ease;
+  background: transparent;
 }
 .button:hover {
   background: #fff;
-  color: #006400; /* Verde oscuro */
+  color: #064420; /* verde oscuro */
 }
 
-/* Ajustes responsivos */
-@media (max-width: 1024px) {
-  #hero-slider { height: 75vh; }
-  .swiper-caption h2 { font-size: 1.5rem; }
+/* Escritorio */
+@media (min-width: 1025px) {
+  .swiper-slide {
+    height: 100vh;
+  }
 }
-@media (max-width: 768px) {
-  #hero-slider { height: 70vh; }
-  .swiper-caption { padding: 0.8rem; }
-  .swiper-caption h2 { font-size: 1.2rem; }
-  .swiper-caption h6 { font-size: 0.9rem; }
+
+/* Mobile y tablet */
+@media (max-width: 1024px) {
+  .swiper-slide {
+    height: 70vh;
+    background-size: contain; /* imagen más completa */
+    background-color: #000;
+  }
+  .swiper-slide-caption {
+    bottom: 10px;
+    padding: 1rem;
+    text-align: center;
+  }
+  .swiper-slide-caption h2 {
+    font-size: 1.4rem;
+  }
+  .swiper-slide-caption h6 {
+    font-size: 0.9rem;
+  }
+  .button {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
 }
