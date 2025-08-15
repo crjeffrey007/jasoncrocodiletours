@@ -24975,9 +24975,8 @@ video {
     }
   }
 
-/* Estilos generales */
+/* ===== ESTILOS GENERALES ===== */
 .swiper-slide {
-  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
@@ -25015,34 +25014,41 @@ video {
 }
 .button:hover {
   background: #fff;
-  color: #064420; /* verde oscuro */
+  color: #064420;
 }
 
-/* Escritorio */
+/* ===== ESCRITORIO ===== */
 @media (min-width: 1025px) {
   .swiper-slide {
     height: 100vh;
+    background-size: cover;
   }
 }
 
-/* Mobile y tablet */
+/* ===== TABLET Y MOBILE ===== */
 @media (max-width: 1024px) {
   .swiper-slide {
-    height: 70vh;
-    background-size: contain; /* imagen más completa */
+    height: auto;
+    min-height: 70vh;
+    background-size: contain; /* Para que se vea completa */
     background-color: #000;
   }
+
   .swiper-slide-caption {
-    bottom: 10px;
+    position: absolute;
+    bottom: 0; /* Texto siempre abajo */
     padding: 1rem;
     text-align: center;
   }
+
   .swiper-slide-caption h2 {
     font-size: 1.4rem;
   }
+
   .swiper-slide-caption h6 {
     font-size: 0.9rem;
   }
+
   .button {
     font-size: 0.9rem;
     padding: 8px 15px;
