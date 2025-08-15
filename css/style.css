@@ -24975,7 +24975,7 @@ video {
     }
   }
 
-/* ===== ESTILOS GENERALES ===== */
+/* ===== GENERAL ===== */
 .swiper-slide {
   background-position: center;
   background-repeat: no-repeat;
@@ -24984,11 +24984,11 @@ video {
 
 .swiper-slide-caption {
   position: absolute;
-  bottom: 20px;
+  bottom: 0;
   left: 0;
   width: 100%;
-  padding: 1rem 2rem;
-  background: rgba(0, 0, 0, 0.3);
+  padding: 1rem 1.5rem;
+  background: rgba(0, 0, 0, 0.35);
   color: #fff;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
 }
@@ -25030,19 +25030,18 @@ video {
   .swiper-slide {
     height: auto;
     min-height: 70vh;
-    background-size: contain; /* Para que se vea completa */
+    background-size: cover; /* híbrido: mantiene buen encuadre */
+    background-position: center center;
     background-color: #000;
   }
 
   .swiper-slide-caption {
-    position: absolute;
-    bottom: 0; /* Texto siempre abajo */
-    padding: 1rem;
+    padding: 0.8rem;
     text-align: center;
   }
 
   .swiper-slide-caption h2 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 
   .swiper-slide-caption h6 {
