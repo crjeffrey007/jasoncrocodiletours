@@ -24975,108 +24975,69 @@ video {
     }
   }
 
-    .button, .button-mobile {
-      display: inline-block;
-      padding: 10px 22px;
-      border: 2px solid #fff;
-      color: #fff;
-      background: transparent;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
-    }
-    .button:hover, .button-mobile:hover {
-      background: #fff;
-      color: #064420; /* verde oscuro */
-    }
+   /* Ocultar uno u otro slider */
+.desktop-slider { display: block; }
+.mobile-slider { display: none; }
 
-    /* ===== SLIDER DESKTOP ===== */
-    .slider-desktop {
-      display: block;
-      height: 100vh;
-    }
-    .slider-desktop .swiper-slide {
-      background-size: cover;
-      background-position: center;
-      height: 100vh;
-      position: relative;
-    }
-    .slider-desktop .swiper-caption {
-      position: absolute;
-      bottom: 40px;
-      left: 0;
-      width: 100%;
-      text-align: center;
-      color: #fff;
-      text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
-    }
-    .slider-desktop h2 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
-    .slider-desktop h6 {
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
-      text-transform: uppercase;
-    }
-
-    /* ===== SLIDER MOBILE ===== */
-    .slider-mobile {
-      display: none;
-      width: 100%;
-    }
-    .slider-mobile .swiper-slide {
-      text-align: center;
-    }
-    .slider-mobile img.mobile-image {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-    .slider-mobile .mobile-caption {
-      padding: 1rem;
-      background: rgba(0,0,0,0.6);
-      color: #fff;
-      text-align: center;
-    }
-    .slider-mobile h2 {
-      font-size: 1.3rem;
-      margin-bottom: 0.5rem;
-    }
-    .slider-mobile h6 {
-      font-size: 0.9rem;
-      margin-bottom: 0.5rem;
-      text-transform: uppercase;
-    }
-
-/* Slider mobile ajustes */
-.slider-mobile .swiper-slide {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
+/* Mostrar solo en mobile */
+@media (max-width: 1024px) {
+  .desktop-slider { display: none; }
+  .mobile-slider { display: block; }
 }
 
-.slider-mobile img.mobile-image {
+/* ===== General ===== */
+.jason-slider {
   width: 100%;
-  height: auto;
-  max-height: 60vh; /* 🔹 límite en altura para que no se vaya muy largo */
-  object-fit: contain; /* muestra la imagen completa sin recortar */
+  height: 100vh;
 }
 
-.slider-mobile .mobile-caption {
-  background: rgba(0,0,0,0.6);
-  color: #fff;
-  padding: 1rem;
+.jason-slider .swiper-slide {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* ===== Escritorio ===== */
+.jason-slider .caption {
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
   text-align: center;
-  width: 100%;
+  color: #fff;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.8);
+  background: rgba(0,0,0,0.25);
+  padding: 1rem;
 }
 
-    /* ===== RESPONSIVE ===== */
-    @media (max-width: 1024px) {
-      .slider-desktop { display: none; }
-      .slider-mobile { display: block; }
-    }
+.jason-slider .caption h2 { font-size: 2.2rem; }
+.jason-slider .caption h6 { font-size: 1rem; }
 
-    .swiper-button-next, .swiper-button-prev { color: #fff; }
-    .swiper-pagination-bullet-active { background: #fff; }
+/* ===== Mobile ===== */
+.jason-slider .caption-mobile {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.9);
+  background: rgba(0,0,0,0.45);
+  padding: 0.8rem;
+}
+
+.jason-slider .caption-mobile h2 { font-size: 1.3rem; }
+.jason-slider .caption-mobile h6 { font-size: 0.9rem; }
+
+/* Botón */
+.button {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 10px 22px;
+  border: 2px solid #fff;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.button:hover {
+  background: #fff;
+  color: #064f1b; /* verde oscuro Jason */
+}
