@@ -24975,65 +24975,85 @@ video {
     }
   }
 
-/* Estilo general de caption */
-.swiper-slide-caption {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  background: rgba(0,0,0,0.35);
-  color: #fff;
-  text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
-}
+    .button, .button-mobile {
+      display: inline-block;
+      padding: 10px 22px;
+      border: 2px solid #fff;
+      color: #fff;
+      background: transparent;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+    }
+    .button:hover, .button-mobile:hover {
+      background: #fff;
+      color: #064420; /* verde oscuro */
+    }
 
-/* Solo en mobile: forzar abajo */
-@media (max-width: 1024px) {
-  .caption-mobile-bottom {
-    bottom: 0 !important;
-    top: auto !important;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0.8rem;
-    text-align: center;
-  }
-  
-  .caption-title-mobile {
-    font-size: 0.9rem !important;
-    margin-bottom: 0.3rem;
-  }
+    /* ===== SLIDER DESKTOP ===== */
+    .slider-desktop {
+      display: block;
+      height: 100vh;
+    }
+    .slider-desktop .swiper-slide {
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      position: relative;
+    }
+    .slider-desktop .swiper-caption {
+      position: absolute;
+      bottom: 40px;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      color: #fff;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
+    }
+    .slider-desktop h2 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .slider-desktop h6 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+    }
 
-  .caption-subtitle-mobile {
-    font-size: 1.2rem !important;
-    margin-bottom: 0.5rem;
-  }
+    /* ===== SLIDER MOBILE ===== */
+    .slider-mobile {
+      display: none;
+      width: 100%;
+    }
+    .slider-mobile .swiper-slide {
+      text-align: center;
+    }
+    .slider-mobile img.mobile-image {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .slider-mobile .mobile-caption {
+      padding: 1rem;
+      background: rgba(0,0,0,0.6);
+      color: #fff;
+      text-align: center;
+    }
+    .slider-mobile h2 {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+    .slider-mobile h6 {
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+    }
 
-  .button-mobile {
-    font-size: 0.9rem !important;
-    padding: 8px 15px !important;
-    border: 2px solid #fff !important;
-    background: transparent !important;
-    color: #fff !important;
-    transition: all 0.3s ease;
-  }
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .slider-desktop { display: none; }
+      .slider-mobile { display: block; }
+    }
 
-  .button-mobile:hover {
-    background: #fff !important;
-    color: #064420 !important; /* verde oscuro Jason */
-  }
-}
-
-/* Escritorio normal */
-@media (min-width: 1025px) {
-  .swiper-slide {
-    background-size: cover;
-    height: 100vh;
-  }
-
-  .swiper-slide-caption {
-    bottom: 30px;
-    padding: 1rem 2rem;
-  }
-  .swiper-slide-caption h2 {
-    font-size: 2rem;
-  }
-}
+    .swiper-button-next, .swiper-button-prev { color: #fff; }
+    .swiper-pagination-bullet-active { background: #fff; }
