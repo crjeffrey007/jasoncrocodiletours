@@ -25049,6 +25049,29 @@ video {
       text-transform: uppercase;
     }
 
+/* Slider mobile ajustes */
+.slider-mobile .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.slider-mobile img.mobile-image {
+  width: 100%;
+  height: auto;
+  max-height: 60vh; /* 🔹 límite en altura para que no se vaya muy largo */
+  object-fit: contain; /* muestra la imagen completa sin recortar */
+}
+
+.slider-mobile .mobile-caption {
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  width: 100%;
+}
+
     /* ===== RESPONSIVE ===== */
     @media (max-width: 1024px) {
       .slider-desktop { display: none; }
