@@ -24975,81 +24975,66 @@ video {
     }
   }
 
-/* ===== GENERAL ===== */
-.swiper-slide {
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
-}
-
+/* Estilo general de caption */
 .swiper-slide-caption {
   position: absolute;
-  bottom: 0;
   left: 0;
   width: 100%;
-  padding: 1rem 1.5rem;
-  background: rgba(0, 0, 0, 0.35);
+  background: rgba(0,0,0,0.35);
   color: #fff;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
 }
 
-.swiper-slide-caption h2 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-.swiper-slide-caption h6 {
-  font-size: 1rem;
-  text-transform: uppercase;
-  margin-bottom: 0.5rem;
-}
-
-.button {
-  display: inline-block;
-  padding: 10px 20px;
-  border: 2px solid #fff;
-  color: #fff;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  background: transparent;
-}
-.button:hover {
-  background: #fff;
-  color: #064420;
-}
-
-/* ===== ESCRITORIO ===== */
-@media (min-width: 1025px) {
-  .swiper-slide {
-    height: 100vh;
-    background-size: cover;
-  }
-}
-
-/* ===== TABLET Y MOBILE ===== */
+/* Solo en mobile: forzar abajo */
 @media (max-width: 1024px) {
-  .swiper-slide {
-    height: auto;
-    min-height: 70vh;
-    background-size: cover; /* híbrido: mantiene buen encuadre */
-    background-position: center center;
-    background-color: #000;
-  }
-
-  .swiper-slide-caption {
+  .caption-mobile-bottom {
+    bottom: 0 !important;
+    top: auto !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 0.8rem;
     text-align: center;
   }
+  
+  .caption-title-mobile {
+    font-size: 0.9rem !important;
+    margin-bottom: 0.3rem;
+  }
+
+  .caption-subtitle-mobile {
+    font-size: 1.2rem !important;
+    margin-bottom: 0.5rem;
+  }
+
+  .button-mobile {
+    font-size: 0.9rem !important;
+    padding: 8px 15px !important;
+    border: 2px solid #fff !important;
+    background: transparent !important;
+    color: #fff !important;
+    transition: all 0.3s ease;
+  }
+
+  .button-mobile:hover {
+    background: #fff !important;
+    color: #064420 !important; /* verde oscuro Jason */
+  }
+}
+
+/* Escritorio normal */
+@media (min-width: 1025px) {
+  .swiper-slide {
+    background-size: cover;
+    height: 100vh;
+  }
+
+  .swiper-slide-caption {
+    bottom: 30px;
+    padding: 1rem 2rem;
+  }
 
   .swiper-slide-caption h2 {
-    font-size: 1.3rem;
-  }
-
-  .swiper-slide-caption h6 {
-    font-size: 0.9rem;
-  }
-
-  .button {
-    font-size: 0.9rem;
-    padding: 8px 15px;
+    font-size: 2rem;
   }
 }
