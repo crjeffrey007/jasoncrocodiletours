@@ -24975,92 +24975,72 @@ video {
     }
   }
 
-/* ===== ESTILOS GENERALES DEL SLIDER ===== */
-.swiper-container {
+/* ===== SLIDER MOBILE ===== */
+.mobile-slider {
+  display: none;
+  position: relative;
+}
+
+.mobile-slider .swiper-slide {
+  position: relative;
+}
+
+.mobile-slider .swiper-slide img {
   width: 100%;
-  position: relative;
+  height: 100vh; /* Pantalla completa */
+  object-fit: cover;
+  display: block;
 }
 
-/* Flechas y paginación */
-.swiper-button-next,
-.swiper-button-prev {
-  color: #fff;
-}
-.swiper-pagination-bullet-active {
-  background: #fff;
-}
-
-/* ===== SLIDER ESCRITORIO ===== */
-.desktop-slider .swiper-slide {
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
-}
-
-/* Texto en escritorio */
-.desktop-slider .caption {
+/* Texto en mobile con fondo oscuro */
+.mobile-slider .caption {
   position: absolute;
-  bottom: 40px;
+  bottom: 0;
   left: 0;
   width: 100%;
+  padding: 1.5rem;
   text-align: center;
-  padding: 1rem;
   color: #fff;
-  text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
+  z-index: 2;
+  text-shadow: 1px 1px 8px rgba(0,0,0,0.9);
 }
 
-.desktop-slider h2 {
-  font-size: 2rem;
+/* Fondo degradado oscuro detrás del texto */
+.mobile-slider .swiper-slide::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%; /* mitad inferior oscura */
+  background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0));
+  z-index: 1;
+}
+
+/* Títulos */
+.mobile-slider h2 {
+  font-size: 1.4rem;
   margin: 0.5rem 0;
 }
-.desktop-slider h6 {
-  font-size: 1rem;
+.mobile-slider h6 {
+  font-size: 0.9rem;
   text-transform: uppercase;
   margin: 0.5rem 0;
 }
 
 /* Botón */
-.button {
+.mobile-slider .button {
   display: inline-block;
-  padding: 12px 24px;
+  padding: 10px 20px;
   border: 2px solid #fff;
   color: #fff;
   text-decoration: none;
+  margin-top: 10px;
   transition: all 0.3s ease;
+  z-index: 2;
+  position: relative;
 }
-.button:hover {
+.mobile-slider .button:hover {
   background: #fff;
-  color: #064e3b; /* verde oscuro */
+  color: #064e3b;
 }
-
-/* ===== SLIDER MOBILE ===== */
-.mobile-slider {
-  display: none;
-}
-.mobile-slider .swiper-slide img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* ===== VISIBILIDAD ===== */
-.desktop-slider { display: block; }
-.mobile-slider { display: none; }
-
-@media (max-width: 1024px) {
-  .desktop-slider { display: none; }
-  .mobile-slider { display: block; }
-}
-
-/* ===== AJUSTES MOBILE (texto si lo quieres) ===== */
-@media (max-width: 768px) {
-  .desktop-slider h2 { font-size: 1.5rem; }
-  .desktop-slider h6 { font-size: 0.9rem; }
-  .button {
-    font-size: 0.9rem;
-    padding: 10px 20px;
-  }
-}
-
