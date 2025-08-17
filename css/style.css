@@ -24975,20 +24975,10 @@ video {
     }
   }
 
-/* Ocultar uno u otro slider */
-.desktop-slider { display: block; }
-.mobile-slider { display: none; }
-
-/* Mostrar solo en mobile */
-@media (max-width: 1024px) {
-  .desktop-slider { display: none; }
-  .mobile-slider { display: block; }
-}
-
-/* ===== General ===== */
+/* General slider */
 .jason-slider {
   width: 100%;
-  height: 100vh;
+  height: 100vh; /* en escritorio ocupa toda la pantalla */
 }
 
 .jason-slider .swiper-slide {
@@ -24997,47 +24987,74 @@ video {
   position: relative;
 }
 
-/* ===== Escritorio ===== */
+/* Caption: abajo del slide */
 .jason-slider .caption {
   position: absolute;
-  bottom: 30px;
+  bottom: 20px;
+  left: 0;
   width: 100%;
   text-align: center;
   color: #fff;
-  text-shadow: 1px 1px 6px rgba(0,0,0,0.8);
-  background: rgba(0,0,0,0.25);
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8);
   padding: 1rem;
+  background: rgba(0, 0, 0, 0.35); /* fondo sutil para legibilidad */
 }
 
-.jason-slider .caption h2 { font-size: 2.2rem; }
-.jason-slider .caption h6 { font-size: 1rem; }
-
-/* ===== Mobile ===== */
-.jason-slider .caption-mobile {
-  position: absolute;
-  bottom: 10px;
-  width: 100%;
-  text-align: center;
-  color: #fff;
-  text-shadow: 1px 1px 6px rgba(0,0,0,0.9);
-  background: rgba(0,0,0,0.45);
-  padding: 0.8rem;
+.jason-slider .caption h2 {
+  font-size: 2.2rem;
+  margin: 0.5rem 0;
 }
 
-.jason-slider .caption-mobile h2 { font-size: 1.3rem; }
-.jason-slider .caption-mobile h6 { font-size: 0.9rem; }
+.jason-slider .caption h6 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin: 0.3rem 0;
+}
 
-/* Botón */
-.button {
+/* Botón estilo Jason */
+.jason-slider .button {
   display: inline-block;
-  margin-top: 0.5rem;
-  padding: 10px 22px;
+  margin-top: 0.8rem;
+  padding: 10px 24px;
   border: 2px solid #fff;
   color: #fff;
   text-decoration: none;
   transition: all 0.3s ease;
 }
-.button:hover {
+.jason-slider .button:hover {
   background: #fff;
   color: #064f1b; /* verde oscuro Jason */
+}
+
+/* ====== MOBILE ====== */
+@media (max-width: 1024px) {
+  .jason-slider {
+    height: 75vh; /* no tan alto en tablets */
+  }
+  .jason-slider .caption h2 {
+    font-size: 1.4rem;
+  }
+  .jason-slider .caption h6 {
+    font-size: 0.9rem;
+  }
+  .jason-slider .button {
+    font-size: 0.9rem;
+    padding: 8px 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .jason-slider {
+    height: 70vh; /* más compacto en móviles */
+  }
+  .jason-slider .caption {
+    bottom: 10px;
+    background: rgba(0,0,0,0.45);
+  }
+  .jason-slider .caption h2 {
+    font-size: 1.2rem;
+  }
+  .jason-slider .caption h6 {
+    font-size: 0.8rem;
+  }
 }
