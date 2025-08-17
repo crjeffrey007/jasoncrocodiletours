@@ -24975,13 +24975,14 @@ video {
     }
   }
 
-/* Mostrar/Ocultar según dispositivo */
+/* Por defecto: mostrar solo desktop */
 .desktop-slider { display: block; }
 .mobile-slider { display: none; }
 
-@media (max-width: 991px) {
-  .desktop-slider { display: none; }
-  .mobile-slider { display: block; }
+/* En móviles (hasta 991px): ocultar desktop y mostrar mobile */
+@media screen and (max-width: 991px) {
+  .desktop-slider { display: none !important; }
+  .mobile-slider { display: block !important; }
 }
 
 /* ===== SLIDER GENERAL ===== */
