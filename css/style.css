@@ -24975,136 +24975,133 @@ video {
     }
   }
 
-/* Por defecto: mostrar solo desktop */
-.desktop-slider { display: block; }
-.mobile-slider { display: none; }
+<style>
+    /* Mostrar/Ocultar según dispositivo */
+    .desktop-slider { display: block; }
+    .mobile-slider { display: none; }
 
-/* En móviles (hasta 991px): ocultar desktop y mostrar mobile */
-@media screen and (max-width: 991px) {
-  .desktop-slider { display: none !important; }
-  .mobile-slider { display: block !important; }
-}
+    @media (max-width: 991px) {
+      .desktop-slider { display: none; }
+      .mobile-slider { display: block; }
+    }
 
-/* ===== SLIDER GENERAL ===== */
-.swiper-container {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-}
+    /* ====== SLIDER GENERAL ====== */
+    .swiper-container {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+    }
 
-.swiper-button-next,
-.swiper-button-prev {
-  color: #fff;
-}
-.swiper-pagination-bullet-active {
-  background: #fff;
-}
+    .swiper-slide {
+      position: relative;
+    }
 
-/* ===== DESKTOP ===== */
-.desktop-slider .swiper-slide {
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-}
+    /* ====== ESCRITORIO ====== */
+    .desktop-slider .swiper-slide {
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+    }
 
-.desktop-slider .caption {
-  position: absolute;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-  color: #fff;
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
-}
+    .desktop-slider .caption {
+      position: absolute;
+      bottom: 20%;
+      left: 10%;
+      color: #fff;
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+      z-index: 2;
+    }
 
-.desktop-slider h2 { font-size: 2.5rem; margin: 1rem 0; }
-.desktop-slider h6 { font-size: 1rem; text-transform: uppercase; }
+    .desktop-slider .caption h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
 
-/* SLIDER MOBILE */
-.mobile-slider {
-  width: 100%;
-  height: 100vh; /* cada slide ocupará toda la pantalla */
-  position: relative;
-  overflow: hidden;
-}
+    .desktop-slider .caption h6 {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+    }
 
-.mobile-slider .swiper-wrapper {
-  height: 100%;
-}
+    .desktop-slider .button {
+      display: inline-block;
+      padding: 0.8rem 1.5rem;
+      border: 2px solid #fff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
 
-.mobile-slider .swiper-slide {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end; /* texto siempre abajo */
-  align-items: center;
-  height: 100%;
-  position: relative;
-}
+    .desktop-slider .button:hover {
+      background: #fff;
+      color: #006400; /* verde oscuro */
+    }
 
-.mobile-slider .swiper-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* asegura que la imagen ocupe todo el slide sin deformarse */
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-}
+    /* ====== MOBILE ====== */
+    .mobile-slider {
+      width: 100%;
+      height: 100vh;
+      position: relative;
+    }
 
-.mobile-slider .caption {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  padding: 1.2rem;
-  text-align: center;
-  color: #fff;
-  text-shadow: 1px 1px 8px rgba(0,0,0,0.9);
-  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
-}
+    .mobile-slider .swiper-wrapper {
+      height: 100%;
+    }
 
-.mobile-slider .caption h2 {
-  font-size: 1.4rem;
-  line-height: 1.3;
-  margin: 0.5rem 0;
-}
+    .mobile-slider .swiper-slide {
+      height: 100%;
+      position: relative;
+    }
 
-.mobile-slider .caption h6 {
-  font-size: 0.9rem;
-  margin-bottom: 0.3rem;
-}
+    .mobile-slider .swiper-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
 
-.mobile-slider .button {
-  display: inline-block;
-  margin-top: 0.8rem;
-  padding: 0.6rem 1.2rem;
-  border: 2px solid #fff;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 6px;
-  font-size: 0.9rem;
-  font-weight: bold;
-  transition: all 0.3s ease;
-}
+    /* Texto y botón siempre abajo */
+    .mobile-slider .caption {
+      position: absolute;
+      bottom: 20px;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      z-index: 2;
+      padding: 1rem;
+      color: #fff;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+      background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+    }
 
-.mobile-slider .button:hover {
-  background: #fff;
-  color: #006400; /* verde oscuro de Jason */
-}
+    .mobile-slider .caption h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
 
-/* ===== BOTÓN ===== */
-.button {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.6rem 1.2rem;
-  border: 2px solid #fff;
-  color: #fff;
-  background: transparent;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
-}
-.button:hover {
-  background: #fff;
-  color: #064e3b; /* Verde oscuro */
-}
+    .mobile-slider .caption h6 {
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .mobile-slider .button {
+      display: inline-block;
+      margin-top: 0.5rem;
+      padding: 0.6rem 1.2rem;
+      border: 2px solid #fff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .mobile-slider .button:hover {
+      background: #fff;
+      color: #006400; /* verde oscuro */
+    }
