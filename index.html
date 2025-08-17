@@ -122,75 +122,48 @@
   </div>
 </header>
 <div class="page">
-  <!-- Slider para ESCRITORIO -->
-<section class="swiper-container jason-slider desktop-slider">
+<section class="swiper-container jason-slider">
   <div class="swiper-wrapper">
-    <div class="swiper-slide" style="background-image: url('images/jason-1.jpeg');">
-      <div class="caption">
-        <h6>Are you ready to live the ultimate crocodile experience?</h6>
-        <h2>Explore <span class="highlight">Costa Rica’s Wildest Tour!</span></h2>
-        <a class="button" href="https://api.whatsapp.com/send?phone=50688229042" target="_blank">Book Now</a>
-      </div>
-    </div>
-    <div class="swiper-slide" style="background-image: url('images/jason-2.jpeg');">
-      <div class="caption">
-        <h6>Are you ready to live the ultimate crocodile experience?</h6>
-        <h2>Explore <span class="highlight">Costa Rica’s Wildest Tour!</span></h2>
-        <a class="button" href="https://api.whatsapp.com/send?phone=50688229042" target="_blank">Book Now</a>
-      </div>
-    </div>
-    <div class="swiper-slide" style="background-image: url('images/jason-3.jpeg');">
-      <div class="caption">
-        <h6>Are you ready to live the ultimate crocodile experience?</h6>
-        <h2>Explore <span class="highlight">Costa Rica’s Wildest Tour!</span></h2>
-        <a class="button" href="https://api.whatsapp.com/send?phone=50688229042" target="_blank">Book Now</a>
-      </div>
-    </div>
-    <div class="swiper-slide" style="background-image: url('images/jason-4.jpeg');">
-      <div class="caption">
-        <h6>Are you ready to live the ultimate crocodile experience?</h6>
-        <h2>Explore <span class="highlight">Costa Rica’s Wildest Tour!</span></h2>
-        <a class="button" href="https://api.whatsapp.com/send?phone=50688229042" target="_blank">Book Now</a>
-      </div>
-    </div>
-  </div>
-  <div class="swiper-button-next"></div>
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-pagination"></div>
-</section>
 
-<!-- Slider para MÓVIL -->
-<section class="swiper-container jason-slider mobile-slider">
-  <div class="swiper-wrapper">
+    <!-- Slide 1 -->
     <div class="swiper-slide" style="background-image: url('images/jason-1.jpeg');">
-      <div class="caption-mobile">
+      <div class="caption">
         <h6>Are you ready to live the ultimate crocodile experience?</h6>
         <h2>Explore <span class="highlight">Costa Rica’s Wildest Tour!</span></h2>
         <a class="button" href="https://api.whatsapp.com/send?phone=50688229042" target="_blank">Book Now</a>
       </div>
     </div>
+
+    <!-- Slide 2 -->
     <div class="swiper-slide" style="background-image: url('images/jason-2.jpeg');">
-      <div class="caption-mobile">
+      <div class="caption">
         <h6>Are you ready to live the ultimate crocodile experience?</h6>
         <h2>Explore <span class="highlight">Costa Rica’s Wildest Tour!</span></h2>
         <a class="button" href="https://api.whatsapp.com/send?phone=50688229042" target="_blank">Book Now</a>
       </div>
     </div>
+
+    <!-- Slide 3 -->
     <div class="swiper-slide" style="background-image: url('images/jason-3.jpeg');">
-      <div class="caption-mobile">
+      <div class="caption">
         <h6>Are you ready to live the ultimate crocodile experience?</h6>
         <h2>Explore <span class="highlight">Costa Rica’s Wildest Tour!</span></h2>
         <a class="button" href="https://api.whatsapp.com/send?phone=50688229042" target="_blank">Book Now</a>
       </div>
     </div>
+
+    <!-- Slide 4 -->
     <div class="swiper-slide" style="background-image: url('images/jason-4.jpeg');">
-      <div class="caption-mobile">
+      <div class="caption">
         <h6>Are you ready to live the ultimate crocodile experience?</h6>
         <h2>Explore <span class="highlight">Costa Rica’s Wildest Tour!</span></h2>
         <a class="button" href="https://api.whatsapp.com/send?phone=50688229042" target="_blank">Book Now</a>
       </div>
     </div>
+
   </div>
+
+  <!-- Navigation -->
   <div class="swiper-button-next"></div>
   <div class="swiper-button-prev"></div>
   <div class="swiper-pagination"></div>
@@ -639,18 +612,21 @@
  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  new Swiper('.desktop-slider', {
+  new Swiper('.jason-slider', {
     loop: true,
-    autoplay: { delay: 7000, disableOnInteraction: false },
-    navigation: { nextEl: '.desktop-slider .swiper-button-next', prevEl: '.desktop-slider .swiper-button-prev' },
-    pagination: { el: '.desktop-slider .swiper-pagination', clickable: true },
-  });
-
-  new Swiper('.mobile-slider', {
-    loop: true,
-    autoplay: { delay: 7000, disableOnInteraction: false },
-    navigation: { nextEl: '.mobile-slider .swiper-button-next', prevEl: '.mobile-slider .swiper-button-prev' },
-    pagination: { el: '.mobile-slider .swiper-pagination', clickable: true },
+    autoplay: {
+      delay: 7000, // 🔹 más lento
+      disableOnInteraction: false
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    },
+    effect: 'slide'
   });
 });
 </script>
