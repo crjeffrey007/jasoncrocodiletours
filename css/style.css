@@ -24975,7 +24975,7 @@ video {
     }
   }
 
-   /* Ocultar uno u otro slider */
+/* Ocultar uno u otro slider */
 .desktop-slider { display: block; }
 .mobile-slider { display: none; }
 
