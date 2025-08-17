@@ -24975,7 +24975,77 @@ video {
     }
   }
 
-/* Ocultar sliders según dispositivo */
+/* ===== ESTILOS GENERALES DEL SLIDER ===== */
+.swiper-container {
+  width: 100%;
+  position: relative;
+}
+
+/* Flechas y paginación */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff;
+}
+.swiper-pagination-bullet-active {
+  background: #fff;
+}
+
+/* ===== SLIDER ESCRITORIO ===== */
+.desktop-slider .swiper-slide {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/* Texto en escritorio */
+.desktop-slider .caption {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  color: #fff;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
+}
+
+.desktop-slider h2 {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+}
+.desktop-slider h6 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin: 0.5rem 0;
+}
+
+/* Botón */
+.button {
+  display: inline-block;
+  padding: 12px 24px;
+  border: 2px solid #fff;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.button:hover {
+  background: #fff;
+  color: #064e3b; /* verde oscuro */
+}
+
+/* ===== SLIDER MOBILE ===== */
+.mobile-slider {
+  display: none;
+}
+.mobile-slider .swiper-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===== VISIBILIDAD ===== */
 .desktop-slider { display: block; }
 .mobile-slider { display: none; }
 
@@ -24984,57 +25054,13 @@ video {
   .mobile-slider { display: block; }
 }
 
-/* Estilos base */
-.jason-slider {
-  width: 100%;
-  height: 100vh;
+/* ===== AJUSTES MOBILE (texto si lo quieres) ===== */
+@media (max-width: 768px) {
+  .desktop-slider h2 { font-size: 1.5rem; }
+  .desktop-slider h6 { font-size: 0.9rem; }
+  .button {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
 }
 
-.jason-slider .swiper-slide {
-  background-size: cover;
-  background-position: center;
-  position: relative;
-}
-
-/* ===== Escritorio ===== */
-.caption {
-  position: absolute;
-  bottom: 40px;
-  width: 100%;
-  text-align: center;
-  color: #fff;
-  text-shadow: 1px 1px 6px rgba(0,0,0,0.8);
-  background: rgba(0,0,0,0.25);
-  padding: 1rem;
-}
-.caption h2 { font-size: 2.2rem; }
-.caption h6 { font-size: 1rem; }
-
-/* ===== Móvil ===== */
-.caption-mobile {
-  position: absolute;
-  bottom: 15px;
-  width: 100%;
-  text-align: center;
-  color: #fff;
-  text-shadow: 1px 1px 6px rgba(0,0,0,0.9);
-  background: rgba(0,0,0,0.45);
-  padding: 0.8rem;
-}
-.caption-mobile h2 { font-size: 1.3rem; }
-.caption-mobile h6 { font-size: 0.9rem; }
-
-/* Botón */
-.button {
-  display: inline-block;
-  margin-top: 0.5rem;
-  padding: 10px 22px;
-  border: 2px solid #fff;
-  color: #fff;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-.button:hover {
-  background: #fff;
-  color: #064f1b; /* Verde Jason */
-}
