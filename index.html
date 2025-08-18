@@ -653,25 +653,47 @@
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
 
-  <!-- Swiper JS -->
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      new Swiper('.desktop-slider', {
-        loop: true,
-        autoplay: { delay: 6000, disableOnInteraction: false },
-        navigation: { nextEl: '.desktop-slider .swiper-button-next', prevEl: '.desktop-slider .swiper-button-prev' },
-        pagination: { el: '.desktop-slider .swiper-pagination', clickable: true }
-      });
+ <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  let desktopSwiper = null;
+  let mobileSwiper = null;
 
-      new Swiper('.mobile-slider', {
+  function initSwiper() {
+    const isMobile = window.innerWidth <= 991;
+
+    // ✅ Mobile slider
+    if (isMobile && !mobileSwiper) {
+      mobileSwiper = new Swiper('.mobile-slider', {
         loop: true,
-        autoplay: { delay: 6000, disableOnInteraction: false },
-        navigation: { nextEl: '.mobile-slider .swiper-button-next', prevEl: '.mobile-slider .swiper-button-prev' },
+        autoplay: { delay: 5000, disableOnInteraction: false },
         pagination: { el: '.mobile-slider .swiper-pagination', clickable: true }
       });
-    });
-  </script>
+    }
+
+    // ✅ Desktop slider
+    if (!isMobile && !desktopSwiper) {
+      desktopSwiper = new Swiper('.desktop-slider', {
+        loop: true,
+        autoplay: { delay: 5000, disableOnInteraction: false },
+        navigation: {
+          nextEl: '.desktop-slider .swiper-button-next',
+          prevEl: '.desktop-slider .swiper-button-prev'
+        },
+        pagination: { el: '.desktop-slider .swiper-pagination', clickable: true }
+      });
+    }
+  }
+
+  // Inicialización al cargar
+  initSwiper();
+
+  // Reinicializa al cambiar tamaño
+  window.addEventListener("resize", function () {
+    initSwiper();
+  });
+});
+</script>
   
   </body>
 </html>
