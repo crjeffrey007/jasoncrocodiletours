@@ -24975,141 +24975,76 @@ video {
     }
   }
 
-<style>
-    /* Por defecto solo escritorio */
+/* Mostrar/Ocultar sliders */
 .desktop-slider { display: block; }
 .mobile-slider { display: none; }
-
-/* En móviles y tablets (hasta 991px) */
 @media (max-width: 991px) {
   .desktop-slider { display: none !important; }
   .mobile-slider { display: block !important; }
 }
 
-    /* ====== SLIDER GENERAL ====== */
-    .swiper-container {
-      width: 100%;
-      overflow: hidden;
-      position: relative;
-    }
+/* ===== Estilos escritorio ===== */
+.desktop-slider {
+  width: 100%;
+  height: 100vh;
+}
+.desktop-slider .swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+.desktop-slider .caption {
+  position: absolute;
+  bottom: 15%;
+  left: 10%;
+  color: #fff;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+}
+.desktop-slider .caption h2 { font-size: 2.5rem; }
+.desktop-slider .caption h6 { font-size: 1rem; margin-bottom: 0.5rem; }
+.desktop-slider .button {
+  display:inline-block;
+  padding:0.8rem 1.5rem;
+  border:2px solid #fff;
+  color:#fff;
+  text-decoration:none;
+  transition:0.3s;
+}
+.desktop-slider .button:hover {
+  background:#fff;
+  color:#006400; /* verde oscuro */
+}
 
-    .swiper-slide {
-      position: relative;
-    }
-
-    /* ====== ESCRITORIO ====== */
-    .desktop-slider .swiper-slide {
-      background-size: cover;
-      background-position: center;
-      height: 100vh;
-    }
-
-    .desktop-slider .caption {
-      position: absolute;
-      bottom: 20%;
-      left: 10%;
-      color: #fff;
-      text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
-      z-index: 2;
-    }
-
-    .desktop-slider .caption h2 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .desktop-slider .caption h6 {
-      font-size: 1rem;
-      margin-bottom: 0.5rem;
-      text-transform: uppercase;
-    }
-
-    .desktop-slider .button {
-      display: inline-block;
-      padding: 0.8rem 1.5rem;
-      border: 2px solid #fff;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-      transition: all 0.3s ease;
-    }
-
-    .desktop-slider .button:hover {
-      background: #fff;
-      color: #006400; /* verde oscuro */
-    }
-
-    /* ====== MOBILE ====== */
-    .mobile-slider {
-      width: 100%;
-      height: 100vh;
-      position: relative;
-    }
-
-    .mobile-slider .swiper-wrapper {
-      height: 100%;
-    }
-
-    .mobile-slider .swiper-slide {
-      height: 100%;
-      position: relative;
-    }
-
-    .mobile-slider .swiper-slide img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 1;
-    }
-
-    /* Texto y botón siempre abajo */
-    .mobile-slider .caption {
-      position: absolute;
-      bottom: 20px;
-      left: 0;
-      width: 100%;
-      text-align: center;
-      z-index: 2;
-      padding: 1rem;
-      color: #fff;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
-      background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
-    }
-
-    .mobile-slider .caption h2 {
-      font-size: 1.5rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .mobile-slider .caption h6 {
-      font-size: 0.9rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .mobile-slider .button {
-      display: inline-block;
-      margin-top: 0.5rem;
-      padding: 0.6rem 1.2rem;
-      border: 2px solid #fff;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-      transition: all 0.3s ease;
-    }
-
-    .mobile-slider .button:hover {
-      background: #fff;
-      color: #006400; /* verde oscuro */
-    }
-
-   /* Ajuste imágenes móvil */
-  .mobile-slider .swiper-slide img {
-     width: 100%;
-     height: auto;
-     display: block;
-     }
+/* ===== Estilos móvil ===== */
+.mobile-slider .swiper-slide {
+  position: relative;
+}
+.mobile-slider .swiper-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.mobile-slider .caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.9);
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+}
+.mobile-slider .caption h2 { font-size: 1.4rem; }
+.mobile-slider .caption h6 { font-size: 0.9rem; margin-bottom: 0.5rem; }
+.mobile-slider .button {
+  display:inline-block;
+  padding:0.6rem 1.2rem;
+  border:2px solid #fff;
+  color:#fff;
+  text-decoration:none;
+  transition:0.3s;
+}
+.mobile-slider .button:hover {
+  background:#fff;
+  color:#006400;
+}
