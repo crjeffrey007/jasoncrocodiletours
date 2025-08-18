@@ -24976,14 +24976,15 @@ video {
   }
 
 <style>
-    /* Mostrar/Ocultar según dispositivo */
-    .desktop-slider { display: block; }
-    .mobile-slider { display: none; }
+    /* Por defecto solo escritorio */
+.desktop-slider { display: block; }
+.mobile-slider { display: none; }
 
-    @media (max-width: 991px) {
-      .desktop-slider { display: none; }
-      .mobile-slider { display: block; }
-    }
+/* En móviles y tablets (hasta 991px) */
+@media (max-width: 991px) {
+  .desktop-slider { display: none !important; }
+  .mobile-slider { display: block !important; }
+}
 
     /* ====== SLIDER GENERAL ====== */
     .swiper-container {
@@ -25105,3 +25106,10 @@ video {
       background: #fff;
       color: #006400; /* verde oscuro */
     }
+
+   /* Ajuste imágenes móvil */
+  .mobile-slider .swiper-slide img {
+     width: 100%;
+     height: auto;
+     display: block;
+     }
