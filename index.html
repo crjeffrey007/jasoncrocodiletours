@@ -19,7 +19,7 @@
       <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <!-- Google tag (gtag.js) -->
-   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KW5SGQJZLT"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KW5SGQJZLT"></script>
        <script>
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
@@ -124,126 +124,8 @@
   </div>
 </header>
 <div class="page">
-<div id="slider-container"></div>
-
-<!-- Swiper -->
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  let swiperInstance = null;
-  const container = document.getElementById("slider-container");
-
-  function renderSlider() {
-    const isMobile = window.innerWidth <= 991;
-    container.innerHTML = ""; // limpiar antes
-
-    if (isMobile) {
-      // ----- SLIDER MOBILE -----
-      container.innerHTML = `
-        <section class="swiper mobile-slider">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img src="images/jason-1.jpeg" alt="Jason Crocodile Tour">
-              <div class="caption">
-                <h6>Are you ready to live the ultimate crocodile experience?</h6>
-                <h2>Explore <span class="highlight">Costa Rica’s Wildest Tour!</span></h2>
-                <a class="button" href="https://api.whatsapp.com/send?phone=50688229042" target="_blank">Book Now</a>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <img src="images/jason-2.jpeg" alt="Jason Crocodile Tour">
-              <div class="caption">
-                <h6>Are you ready to live the ultimate crocodile experience?</h6>
-                <h2>Explore <span class="highlight">Costa Rica’s Wildest Tour!</span></h2>
-                <a class="button" href="https://api.whatsapp.com/send?phone=50688229042" target="_blank">Book Now</a>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <img src="images/jason-3.jpeg" alt="Jason Crocodile Tour">
-              <div class="caption">
-                <h6>Are you ready to live the ultimate crocodile experience?</h6>
-                <h2>Explore <span class="highlight">Costa Rica’s Wildest Tour!</span></h2>
-                <a class="button" href="https://api.whatsapp.com/send?phone=50688229042" target="_blank">Book Now</a>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <img src="images/jason-4.jpeg" alt="Jason Crocodile Tour">
-              <div class="caption">
-                <h6>Are you ready to live the ultimate crocodile experience?</h6>
-                <h2>Explore <span class="highlight">Costa Rica’s Wildest Tour!</span></h2>
-                <a class="button" href="https://api.whatsapp.com/send?phone=50688229042" target="_blank">Book Now</a>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-pagination"></div>
-        </section>
-      `;
-      swiperInstance = new Swiper(".mobile-slider", {
-        loop: true,
-        autoplay: { delay: 6000, disableOnInteraction: false },
-        pagination: { el: ".mobile-slider .swiper-pagination", clickable: true }
-      });
-
-    } else {
-      // ----- SLIDER DESKTOP -----
-      container.innerHTML = `
-        <section class="swiper desktop-slider">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide" style="background-image:url('images/jason-1.jpeg')">
-              <div class="caption">
-                <h6>Are you ready to live the ultimate crocodile experience?</h6>
-                <h2>Explore <span class="highlight">Costa Rica’s Wildest Tour!</span></h2>
-                <a class="button" href="https://api.whatsapp.com/send?phone=50688229042" target="_blank">Book Now</a>
-              </div>
-            </div>
-            <div class="swiper-slide" style="background-image:url('images/jason-2.jpeg')">
-              <div class="caption">
-                <h6>Are you ready to live the ultimate crocodile experience?</h6>
-                <h2>Explore <span class="highlight">Costa Rica’s Wildest Tour!</span></h2>
-                <a class="button" href="https://api.whatsapp.com/send?phone=50688229042" target="_blank">Book Now</a>
-              </div>
-            </div>
-            <div class="swiper-slide" style="background-image:url('images/jason-3.jpeg')">
-              <div class="caption">
-                <h6>Are you ready to live the ultimate crocodile experience?</h6>
-                <h2>Explore <span class="highlight">Costa Rica’s Wildest Tour!</span></h2>
-                <a class="button" href="https://api.whatsapp.com/send?phone=50688229042" target="_blank">Book Now</a>
-              </div>
-            </div>
-            <div class="swiper-slide" style="background-image:url('images/jason-4.jpeg')">
-              <div class="caption">
-                <h6>Are you ready to live the ultimate crocodile experience?</h6>
-                <h2>Explore <span class="highlight">Costa Rica’s Wildest Tour!</span></h2>
-                <a class="button" href="https://api.whatsapp.com/send?phone=50688229042" target="_blank">Book Now</a>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-pagination"></div>
-        </section>
-      `;
-      swiperInstance = new Swiper(".desktop-slider", {
-        loop: true,
-        autoplay: { delay: 6000, disableOnInteraction: false },
-        navigation: {
-          nextEl: ".desktop-slider .swiper-button-next",
-          prevEl: ".desktop-slider .swiper-button-prev"
-        },
-        pagination: { el: ".desktop-slider .swiper-pagination", clickable: true }
-      });
-    }
-  }
-
-  renderSlider();
-  window.addEventListener("resize", function () {
-    if (swiperInstance) { swiperInstance.destroy(); swiperInstance = null; }
-    renderSlider();
-  });
-});
-</script>
-
-  
+ <!-- SLIDER -->
+  <div id="slider-container"></div>
       <!-- Discover New Horizons-->
   <section class="section section-sm section-first bg-default text-md-left" style="background-color: #010101;">
     <div class="container">
@@ -685,44 +567,10 @@ document.addEventListener("DOMContentLoaded", function () {
     <script src="js/script.js"></script>
 
 <!-- ===== SWIPER JS ===== -->
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  let desktopSwiper = null;
-  let mobileSwiper = null;
-
-  function initSwiper() {
-    const isMobile = window.innerWidth <= 991;
-
-    if (!isMobile) {
-      if (!desktopSwiper) {
-        desktopSwiper = new Swiper('.desktop-slider', {
-          loop: true,
-          autoplay: { delay: 6000, disableOnInteraction: false },
-          navigation: {
-            nextEl: '.desktop-slider .swiper-button-next',
-            prevEl: '.desktop-slider .swiper-button-prev'
-          },
-          pagination: { el: '.desktop-slider .swiper-pagination', clickable: true }
-        });
-      }
-      if (mobileSwiper) { mobileSwiper.destroy(); mobileSwiper = null; }
-    } else {
-      if (!mobileSwiper) {
-        mobileSwiper = new Swiper('.mobile-slider', {
-          loop: true,
-          autoplay: { delay: 6000, disableOnInteraction: false },
-          pagination: { el: '.mobile-slider .swiper-pagination', clickable: true }
-        });
-      }
-      if (desktopSwiper) { desktopSwiper.destroy(); desktopSwiper = null; }
-    }
-  }
-
-  initSwiper();
-  window.addEventListener("resize", initSwiper);
-});
-</script>
+<!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <!-- Slider Init -->
+  <script src="slider.js"></script>
   
   </body>
 </html>
