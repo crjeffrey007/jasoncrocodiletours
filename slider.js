@@ -2,17 +2,20 @@ document.addEventListener("DOMContentLoaded", function () {
   const mount = document.getElementById("slider-container");
   let swiper = null;
 
-  function isMobile(){ return window.innerWidth <= 991; }
+  function isMobile() {
+    return window.innerWidth <= 991;
+  }
 
-  function render(){
-    if(swiper){ swiper.destroy(true,true); swiper=null; }
-    mount.innerHTML="";
+  function render() {
+    if (swiper) { swiper.destroy(true, true); swiper = null; }
+    mount.innerHTML = "";
 
-    if(isMobile()){
-      mount.innerHTML=`
+    if (isMobile()) {
+      // SLIDER MOBILE
+      mount.innerHTML = `
         <section class="swiper mobile-slider">
           <div class="swiper-wrapper">
-            ${[1,2,3,4].map(n=>`
+            ${[1,2,3,4].map(n => `
               <div class="swiper-slide">
                 <img src="images/jason-${n}.jpeg" alt="Jason Crocodile Tour ${n}">
                 <div class="caption">
@@ -24,16 +27,17 @@ document.addEventListener("DOMContentLoaded", function () {
           </div>
           <div class="swiper-pagination"></div>
         </section>`;
-      swiper=new Swiper(".mobile-slider",{
-        loop:true,
-        autoplay:{delay:7000,disableOnInteraction:false},
-        pagination:{el:".mobile-slider .swiper-pagination",clickable:true}
+      swiper = new Swiper(".mobile-slider", {
+        loop: true,
+        autoplay: { delay: 7000, disableOnInteraction: false },
+        pagination: { el: ".mobile-slider .swiper-pagination", clickable: true }
       });
-    }else{
-      mount.innerHTML=`
+    } else {
+      // SLIDER DESKTOP
+      mount.innerHTML = `
         <section class="swiper desktop-slider">
           <div class="swiper-wrapper">
-            ${[1,2,3,4].map(n=>`
+            ${[1,2,3,4].map(n => `
               <div class="swiper-slide" style="background-image:url('images/jason-${n}.jpeg')">
                 <div class="caption">
                   <h6>Are you ready to live the ultimate crocodile experience?</h6>
@@ -46,23 +50,25 @@ document.addEventListener("DOMContentLoaded", function () {
           <div class="swiper-button-prev"></div>
           <div class="swiper-pagination"></div>
         </section>`;
-      swiper=new Swiper(".desktop-slider",{
-        loop:true,
-        autoplay:{delay:7000,disableOnInteraction:false},
-        navigation:{
-          nextEl:".desktop-slider .swiper-button-next",
-          prevEl:".desktop-slider .swiper-button-prev"
+      swiper = new Swiper(".desktop-slider", {
+        loop: true,
+        autoplay: { delay: 7000, disableOnInteraction: false },
+        navigation: {
+          nextEl: ".desktop-slider .swiper-button-next",
+          prevEl: ".desktop-slider .swiper-button-prev"
         },
-        pagination:{el:".desktop-slider .swiper-pagination",clickable:true}
+        pagination: { el: ".desktop-slider .swiper-pagination", clickable: true }
       });
     }
   }
 
   render();
-  window.addEventListener("resize", ()=>{
-    const wasMobile=document.querySelector(".mobile-slider")!==null;
-    const nowMobile=isMobile();
-    if(wasMobile!==nowMobile) render();
-    else if(swiper) swiper.update();
+
+  // Redibujar cuando se cambia tamaño
+  window.addEventListener("resize", () => {
+    const wasMobile = document.querySelector(".mobile-slider") !== null;
+    const nowMobile = isMobile();
+    if (wasMobile !== nowMobile) render();
+    else if (swiper) swiper.update();
   });
 });
