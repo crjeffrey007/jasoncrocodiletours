@@ -25085,3 +25085,32 @@ video {
   background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0));
   z-index: 1;
 }
+
+ .navbar-text-promo {
+    text-align: center;
+    padding: 0 15px;
+  }
+  .navbar-text-promo h6 {
+    font-size: 14px;
+    margin: 0;
+    color: #444;
+  }
+  .navbar-text-promo h2 {
+    font-size: 20px;
+    margin: 5px 0;
+    font-weight: bold;
+  }
+  .navbar-text-promo .highlight {
+    color: #e6b800; /* Amarillo dorado */
+  }
+
+  /* Mobile optimizado */
+  @media (max-width: 768px) {
+    .navbar-text-promo h6 {
+      font-size: 12px;
+    }
+    .navbar-text-promo h2 {
+      font-size: 16px;
+    }
+    .rd-navbar-toggle { display: none !important; } /* Oculta los 3 puntos */
+  }
