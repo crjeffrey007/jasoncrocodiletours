@@ -61,58 +61,73 @@
     <div class="page">
   </head>
   <body>
-<!-- Header con texto profesional -->
-<header class="page-header shadow-sm">
-  <nav class="navbar navbar-expand-lg navbar-light bg-white py-2">
-    <div class="container-fluid">
+<header class="page-header">
+  <div class="rd-navbar-wrap">
+    <nav class="rd-navbar rd-navbar-corporate" data-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static">
+      
+      <!-- Fila 1 -->
+      <div class="header-top">
+        <!-- Logo -->
+        <div class="header-col logo-col">
+          <a class="brand" href="https://www.jasoncrocodiletours.com">
+            <img src="images/logo-cocodrilo.jpg" alt="Jason Crocodile Tours" />
+          </a>
+        </div>
 
-      <!-- Logo -->
-      <a class="navbar-brand" href="https://www.jasoncrocodiletours.com">
-        <img src="images/logo-cocodrilo.jpg" alt="Jason Crocodile Tours" height="55">
-      </a>
+        <!-- Texto promocional -->
+        <div class="header-col promo-col">
+          <p class="promo-text">Are you ready to live the ultimate crocodile experience?</p>
+          <p class="promo-sub">Explore Costa Rica’s <span class="highlight">Wildest Tour!</span></p>
+        </div>
 
-      <!-- Texto promocional (visible en desktop y mobile, centrado) -->
-      <div class="promo-text d-none d-lg-block mx-auto text-center">
-        <p class="mb-0 fw-bold">Are you ready to live the ultimate crocodile experience?</p>
-        <small class="text-success">Explore Costa Rica’s <span class="fw-bold">Wildest Tour!</span></small>
+        <!-- Contacto WhatsApp -->
+        <div class="header-col contact-col">
+          <a class="whatsapp-link" href="https://api.whatsapp.com/send?phone=50688229042" target="_blank">
+            <i class="fa fa-whatsapp"></i> +506 8822 9042
+          </a>
+        </div>
       </div>
 
-      <!-- Contacto WhatsApp -->
-      <a class="d-none d-lg-inline-block text-success fw-bold" href="https://api.whatsapp.com/send?phone=50688229042" target="_blank">
-        <i class="fa fa-whatsapp"></i> +506 8822 9042
-      </a>
+      <!-- Fila 2 -->
+      <div class="header-bottom">
+        <!-- Menú -->
+        <ul class="nav-menu">
+          <li><a href="https://www.jasoncrocodiletours.com">Home</a></li>
+          <li><a href="about-jason.html">About Us</a></li>
+          <li class="has-dropdown">
+            <a href="tours.html">Tours</a>
+            <ul class="dropdown">
+              <li><a href="crocodile-tour.html">Crocodile Tour</a></li>
+              <li><a href="horseback-ridding-tour.html">Horseback Ridding Tour</a></li>
+              <li><a href="birdwatching-tour.html">Birdwatching Tour</a></li>
+              <li><a href="tortuga-island-private-tour.html">Tortuga Island Private Tour</a></li>
+            </ul>
+          </li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
 
-      <!-- Botón hamburguesa -->
-      <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    </div>
-
-    <!-- Menú colapsable -->
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <!-- Texto promocional en mobile -->
-      <div class="promo-text d-lg-none text-center my-2">
-        <p class="mb-0 fw-bold">Are you ready to live the ultimate crocodile experience?</p>
-        <small class="text-success">Explore Costa Rica’s <span class="fw-bold">Wildest Tour!</span></small>
-      </div>
-
-      <ul class="navbar-nav mx-auto text-center">
-        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="about-jason.html">About Us</a></li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">Tours</a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="crocodile-tour.html">Crocodile Tour</a></li>
-            <li><a class="dropdown-item" href="horseback-ridding-tour.html">Horseback Ridding Tour</a></li>
-            <li><a class="dropdown-item" href="birdwatching-tour.html">Birdwatching Tour</a></li>
-            <li><a class="dropdown-item" href="tortuga-island-private-tour.html">Tortuga Island Private Tour</a></li>
+        <!-- Redes + banderas -->
+        <div class="social-flags">
+          <ul class="social-icons">
+            <li><a class="fa fa-facebook" href="https://www.facebook.com/JasonCrocodileToursOriginal" target="_blank"></a></li>
+            <li><a class="fa fa-instagram" href="https://www.instagram.com/jasoncrocodiletoursoriginal" target="_blank"></a></li>
+            <li><a class="fa fa-whatsapp" href="https://api.whatsapp.com/send?phone=50688229042" target="_blank"></a></li>
+            <li><a class="fa fa-tripadvisor" href="https://www.tripadvisor.es/Attraction_Review-g309271-d23602259-Reviews-Jason_Crocodile_Tours" target="_blank"></a></li>
+            <li><a class="fa fa-map-marker" href="https://www.google.com/maps/place/9%C2%B046'42.3%22N+84%C2%B037'34.0%22W/" target="_blank"></a></li>
+            <li><a class="fa fa-youtube" href="https://www.youtube.com/@JasonCrocodile" target="_blank"></a></li>
+            <li><a class="tiktok-icon" href="https://www.tiktok.com/@jasoncrocodiletours506" target="_blank">
+              <img src="images/tik-tok.png" alt="TikTok" />
+            </a></li>
           </ul>
-        </li>
-        <li class="nav-item"><a class="nav-link" href="testimonials.html">Testimonials</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
+          <div class="flags">
+            <a href="sobre-jason.html"><img src="images/bandera-costa-rica.png" alt="Español"></a>
+            <a href="about-jason.html"><img src="images/bandera-estados-unidos.png" alt="English"></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
 </header>
 <div class="page">
  <!-- SLIDER -->
