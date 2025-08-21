@@ -25086,7 +25086,7 @@ video {
   z-index: 1;
 }
 
-/* Ajuste general del header */
+/* Header general */
 .page-header {
   background: #fff;
   border-bottom: 1px solid #ddd;
@@ -25098,11 +25098,14 @@ video {
   align-items: center;
   justify-content: space-between;
   padding: 8px 15px;
+  flex-wrap: wrap;
 }
 
 /* Logo */
 .logo-col img {
   height: 55px;
+  max-height: 55px;
+  width: auto;
 }
 
 /* Texto promocional */
@@ -25134,27 +25137,35 @@ video {
   text-decoration: none;
 }
 
-/* Mobile ajustes */
+/* ===== Mobile ===== */
 @media (max-width: 768px) {
   .header-top {
-    flex-direction: column;
-    text-align: center;
-    padding: 5px;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px 10px;
   }
 
-  .promo-text {
-    font-size: 0.9rem;
+  /* Logo más pequeño */
+  .logo-col img {
+    height: 40px;
   }
-  .promo-sub {
+
+  /* WhatsApp más pequeño */
+  .contact-col a {
+    font-size: 0.85rem;
+  }
+
+  /* Texto resumido */
+  .promo-col {
+    width: 100%;
+    text-align: center;
+    order: 3; /* Va debajo */
+    margin-top: 5px;
+  }
+  .promo-text {
     font-size: 0.8rem;
   }
-
-  .logo-col img {
-    height: 45px;
-    margin-bottom: 5px;
-  }
-
-  .contact-col {
-    margin-top: 5px;
+  .promo-sub {
+    font-size: 0.75rem;
   }
 }
