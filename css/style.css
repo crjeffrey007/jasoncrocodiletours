@@ -25086,86 +25086,22 @@ video {
   z-index: 1;
 }
 
-/* Header general */
-.page-header {
-  background: #fff;
-  border-bottom: 1px solid #ddd;
-}
-
-/* Fila superior */
-.header-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 8px 15px;
-  flex-wrap: wrap;
-}
-
-/* Logo */
-.logo-col img {
-  height: 55px;
-  max-height: 55px;
-  width: auto;
-}
-
-/* Texto promocional */
-.promo-col {
-  flex: 1;
-  text-align: center;
-  padding: 0 10px;
-}
-.promo-text {
-  margin: 0;
-  font-size: 1rem;
-  font-weight: 600;
+/* Ajuste del texto promocional */
+.promo-text p {
+  font-size: 0.95rem;
   color: #333;
 }
-.promo-sub {
-  margin: 0;
-  font-size: 0.9rem;
-  color: #009688;
-}
-.promo-sub .highlight {
-  font-weight: bold;
+
+.promo-text small {
+  font-size: 0.85rem;
 }
 
-/* Contacto */
-.contact-col a {
-  font-size: 0.95rem;
-  font-weight: bold;
-  color: #009688;
-  text-decoration: none;
-}
-
-/* ===== Mobile ===== */
+/* Ajuste en móviles: más compacto */
 @media (max-width: 768px) {
-  .header-top {
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 5px 10px;
-  }
-
-  /* Logo más pequeño */
-  .logo-col img {
-    height: 40px;
-  }
-
-  /* WhatsApp más pequeño */
-  .contact-col a {
+  .promo-text p {
     font-size: 0.85rem;
   }
-
-  /* Texto resumido */
-  .promo-col {
-    width: 100%;
-    text-align: center;
-    order: 3; /* Va debajo */
-    margin-top: 5px;
-  }
-  .promo-text {
-    font-size: 0.8rem;
-  }
-  .promo-sub {
+  .promo-text small {
     font-size: 0.75rem;
   }
 }
