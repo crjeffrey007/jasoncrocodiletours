@@ -25160,3 +25160,13 @@ video {
     padding: 5px 0;
   }
 }
+/* Ajuste de logo en mobile */
+.navbar-brand img {
+  max-height: 50px;
+}
+
+@media (max-width: 768px) {
+  .navbar-nav {
+    text-align: center;
+  }
+}
