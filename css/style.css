@@ -25086,76 +25086,52 @@ video {
   z-index: 1;
 }
 
-/* General */
+/* Ajuste general del header */
 .page-header {
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Fila superior */
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 15px;
+}
+
+/* Logo */
+.logo-col img {
+  height: 55px;
+}
+
+/* Texto promocional */
+.promo-col {
+  flex: 1;
+  text-align: center;
+  padding: 0 10px;
+}
+.promo-text {
   margin: 0;
-  padding: 0;
-}
-
-.header-top, .header-bottom {
-  padding: 10px 15px; /* menos espacio */
-}
-
-.logo-img {
-  max-height: 60px; /* reduce tamaño logo */
-  height: auto;
-}
-
-.promo-text, .promo-sub {
-  margin: 0;
-  font-size: 14px;
-  line-height: 1.2;
-}
-
-/* Ajuste del texto promocional */
-.promo-text p {
-  font-size: 0.95rem;
+  font-size: 1rem;
+  font-weight: 600;
   color: #333;
 }
-
-.promo-text small {
-  font-size: 0.85rem;
+.promo-sub {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #009688;
 }
-
-/* Ajuste en móviles: más compacto */
-@media (max-width: 768px) {
-  .promo-text p {
-    font-size: 0.85rem;
-  }
-  .promo-text small {
-    font-size: 0.75rem;
-  }
-}
-
-/* Menú */
-.nav-menu li {
-  margin: 0 10px;
-}
-.nav-menu a {
-  font-size: 15px;
-  padding: 5px 0;
-}
-
-/* WhatsApp */
-.whatsapp-link {
+.promo-sub .highlight {
   font-weight: bold;
-  color: #25D366;
-  font-size: 15px;
 }
 
-/* Redes */
-.social-icons li {
-  margin: 0 5px;
-}
-.social-icons a {
-  font-size: 16px;
-}
-
-/* Bandera */
-.flags img {
-  width: 28px;
-  height: auto;
-  margin-left: 5px;
+/* Contacto */
+.contact-col a {
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: #009688;
+  text-decoration: none;
 }
 
 /* Mobile ajustes */
@@ -25165,19 +25141,20 @@ video {
     text-align: center;
     padding: 5px;
   }
-  .logo-img {
-    max-height: 50px;
+
+  .promo-text {
+    font-size: 0.9rem;
   }
-  .promo-col {
-    display: none; /* oculta textos promo en mobile */
+  .promo-sub {
+    font-size: 0.8rem;
   }
-  .header-bottom {
-    flex-direction: column;
+
+  .logo-col img {
+    height: 45px;
+    margin-bottom: 5px;
   }
-  .nav-menu {
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 5px 0;
+
+  .contact-col {
+    margin-top: 5px;
   }
 }
-
