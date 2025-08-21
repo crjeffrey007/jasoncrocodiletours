@@ -25252,3 +25252,128 @@ video {
 .promo-sub .highlight {
   color: #ffff00 !important;
 }
+
+/* === BASE GENERAL DEL HEADER === */
+.page-header,
+.rd-navbar,
+.rd-navbar-wrap,
+.rd-navbar-main,
+.rd-navbar-aside,
+.header-top,
+.header-bottom {
+  background-color: #000 !important; /* fondo negro */
+  color: #fff !important;
+}
+
+.page-header a,
+.rd-navbar a,
+.nav-menu a,
+.social-icons a,
+.whatsapp-link {
+  color: #fff !important;
+  text-decoration: none;
+}
+
+.page-header a:hover,
+.nav-menu a:hover,
+.social-icons a:hover {
+  color: #ffff00 !important; /* hover amarillo */
+}
+
+/* === TEXTOS PROMOCIONALES === */
+.promo-text {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffff00 !important;
+}
+.promo-sub {
+  font-size: 1.1rem;
+  color: #fff !important;
+  font-weight: bold;
+}
+.promo-sub .highlight {
+  color: #ffff00 !important;
+}
+
+/* === LOGO === */
+.rd-navbar-brand img {
+  max-height: 90px;
+  height: auto;
+}
+
+/* === MENÚ SUPERIOR (desktop) === */
+.rd-navbar-aside {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+}
+
+.rd-navbar-corporate-contacts {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.rd-navbar-corporate-contacts li {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.rd-navbar-corporate-contacts a {
+  color: #fff !important;
+  font-weight: bold;
+}
+
+/* === RESPONSIVE MOBILE/TABLET === */
+@media (max-width: 991px) {
+  /* Ajustar navbar */
+  .rd-navbar-aside {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .rd-navbar-brand {
+    margin-bottom: 10px;
+  }
+
+  /* Textos promocionales centrados */
+  .promo-text,
+  .promo-sub {
+    text-align: center;
+    width: 100%;
+  }
+
+  /* WhatsApp alineado al centro */
+  .rd-navbar-corporate-contacts {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Menú hamburguesa */
+  .rd-navbar-toggle span,
+  .rd-navbar-collapse-toggle span {
+    background-color: #fff !important; /* hamburguesa blanca */
+  }
+
+  /* Menú desplegable */
+  .rd-navbar-nav {
+    background-color: #000 !important;
+  }
+  .rd-navbar-nav a {
+    color: #fff !important;
+  }
+  .rd-navbar-nav a:hover {
+    color: #ffff00 !important;
+  }
+
+  /* Redes sociales centradas */
+  .list-inline.rd-navbar-corporate-list-social {
+    justify-content: center;
+    margin-top: 10px;
+  }
+}
