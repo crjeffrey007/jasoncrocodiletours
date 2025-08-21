@@ -25210,3 +25210,45 @@ video {
   }
 }
 
+/* Forzar fondo negro en todo el header */
+.page-header,
+.rd-navbar,
+.rd-navbar-wrap,
+.rd-navbar-main,
+.rd-navbar-aside,
+.header-top,
+.header-bottom {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+/* Asegurar que todos los links sean blancos */
+.page-header a,
+.rd-navbar a,
+.nav-menu a,
+.social-icons a,
+.whatsapp-link {
+  color: #fff !important;
+}
+
+/* Hover en amarillo */
+.page-header a:hover,
+.nav-menu a:hover,
+.social-icons a:hover {
+  color: #ffff00 !important;
+}
+
+/* Textos promocionales */
+.promo-text {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffff00 !important;
+}
+.promo-sub {
+  font-size: 1.2rem;
+  color: #fff !important;
+  font-weight: bold;
+}
+.promo-sub .highlight {
+  color: #ffff00 !important;
+}
