@@ -25086,45 +25086,20 @@ video {
   z-index: 1;
 }
 
- .navbar-text-promo {
-    text-align: center;
-    padding: 0 15px;
-  }
-  .navbar-text-promo h6 {
-    font-size: 14px;
-    margin: 0;
-    color: #444;
-  }
-  .navbar-text-promo h2 {
-    font-size: 20px;
-    margin: 5px 0;
-    font-weight: bold;
-  }
-  .navbar-text-promo .highlight {
-    color: #e6b800; /* Amarillo dorado */
-  }
-
-  /* Mobile optimizado */
-  @media (max-width: 768px) {
-    .navbar-text-promo h6 {
-      font-size: 12px;
-    }
-    .navbar-text-promo h2 {
-      font-size: 16px;
-    }
-    .rd-navbar-toggle { display: none !important; } /* Oculta los 3 puntos */
-  }
-
-/* Estructura general */
+/* General */
+.page-header {
+  background: #000; /* fondo negro */
+  color: #fff;      /* texto blanco */
+}
 .header-top, .header-bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding: 10px 20px;
+  padding: 10px 30px; /* más espacio */
 }
 
-/* === FILA 1 (logo, textos, contacto) === */
+/* Fila 1 */
 .header-col {
   flex: 1;
   text-align: center;
@@ -25143,13 +25118,18 @@ video {
 .promo-text {
   font-size: 1rem;
   font-weight: bold;
+  color: #ffff00; /* amarillo */
 }
 .promo-sub {
   font-size: 1.2rem;
-  color: #14532d; /* verde oscuro */
+  color: #fff; /* blanco */
   font-weight: bold;
 }
+.promo-sub .highlight {
+  color: #ffff00;
+}
 
+/* WhatsApp */
 .whatsapp-link {
   color: #25D366;
   font-weight: bold;
@@ -25160,32 +25140,36 @@ video {
   margin-right: 5px;
 }
 
-/* === FILA 2 (menú, redes y banderas) === */
+/* Fila 2 */
 .header-bottom {
-  border-top: 1px solid #ddd;
-  padding-top: 10px;
+  border-top: 1px solid #333;
+  padding: 10px 30px;
 }
-
 .nav-menu {
   display: flex;
   gap: 20px;
   list-style: none;
+  padding-right: 30px; /* margen derecho extra */
 }
 .nav-menu a {
   text-decoration: none;
   font-weight: bold;
-  color: #333;
+  color: #fff;
+}
+.nav-menu a:hover {
+  color: #ffff00;
 }
 .nav-menu .dropdown {
   display: none;
   position: absolute;
-  background: white;
+  background: #000;
   list-style: none;
 }
 .has-dropdown:hover .dropdown {
   display: block;
 }
 
+/* Redes + banderas */
 .social-flags {
   display: flex;
   align-items: center;
@@ -25198,10 +25182,10 @@ video {
 }
 .social-icons a {
   font-size: 1.2rem;
-  color: #333;
+  color: #fff;
 }
 .social-icons a:hover {
-  color: #14532d;
+  color: #ffff00;
 }
 .flags img {
   width: 32px;
@@ -25209,7 +25193,7 @@ video {
   margin-left: 5px;
 }
 
-/* === RESPONSIVE === */
+/* Responsive */
 @media (max-width: 991px) {
   .header-top, .header-bottom {
     flex-direction: column;
@@ -25222,5 +25206,7 @@ video {
   .nav-menu {
     flex-direction: column;
     gap: 10px;
+    padding-right: 0;
   }
 }
+
