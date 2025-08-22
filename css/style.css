@@ -25087,12 +25087,13 @@ video {
 }
 
 /* ========================
-   HEADER ESTILOS GENERALES
+   HEADER BASE
    ======================== */
 .main-header {
   width: 100%;
-  background: #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  background: #000; /* negro */
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
   position: relative;
   z-index: 999;
 }
@@ -25106,57 +25107,63 @@ video {
 
 .logo img {
   max-height: 80px;
-  width: auto;
 }
 
 .header-text {
   text-align: center;
   flex: 1;
-  padding: 0 15px;
+  padding: 0 10px;
 }
 
 .header-text .tagline {
   font-size: 16px;
   margin: 0;
   font-weight: 400;
+  color: #fff; /* blanco */
 }
 
 .header-text .highlight-text {
   font-size: 20px;
   font-weight: 600;
   margin: 0;
+  color: #FFD700; /* amarillo */
 }
 
 .header-text .highlight-text span {
-  color: #e63946;
+  color: #FFD700;
 }
 
 .contact {
   display: flex;
   align-items: center;
-  font-size: 16px;
   gap: 6px;
+  font-size: 16px;
 }
 
-.contact .icon {
-  font-size: 18px;
-  color: green;
+.contact .icon,
+.contact a {
+  color: #FFD700; /* amarillo */
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .menu-toggle {
   display: none;
-  background: none;
-  border: none;
+  background: #000; /* fondo negro */
+  border: 2px solid #FFD700;
+  border-radius: 6px;
   font-size: 24px;
+  color: #FFD700; /* icono amarillo */
   cursor: pointer;
+  padding: 6px 10px;
 }
 
-/* NAV BAR */
+/* NAV DESKTOP */
 .nav-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 20px;
+  padding: 12px 20px;
 }
 
 .menu {
@@ -25171,20 +25178,24 @@ video {
   text-decoration: none;
   font-size: 16px;
   font-weight: 500;
-  color: #333;
+  color: #FFD700; /* amarillo */
+}
+
+.menu li a:hover {
+  color: #fff; /* blanco al hover */
 }
 
 .social {
   list-style: none;
   display: flex;
-  gap: 10px;
+  gap: 12px;
   margin: 0;
   padding: 0;
 }
 
 .social li a {
   font-size: 18px;
-  color: #333;
+  color: #FFD700; /* iconos amarillos */
 }
 
 .social img {
@@ -25196,49 +25207,15 @@ video {
    VERSIÓN MÓVIL
    ======================== */
 @media (max-width: 991px) {
-  .top-bar {
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 8px 12px;
-  }
-
-  .logo img {
-    max-height: 55px;
-  }
-
-  .header-text {
-    order: 3;
-    width: 100%;
-    text-align: center;
-    margin: 6px 0;
-  }
-  .header-text .tagline {
-    font-size: 13px;
-  }
-  .header-text .highlight-text {
-    font-size: 15px;
-  }
-
-  .contact {
-    order: 2;
-    font-size: 14px;
-  }
-  .contact .icon {
-    font-size: 16px;
-  }
-
   .menu-toggle {
     display: block;
-    order: 1;
-    margin-left: auto;
   }
 
   .nav-bar {
     display: none;
     flex-direction: column;
     padding: 12px;
-    background: #fff;
-    box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+    background: #FFD700; /* amarillo */
     border-radius: 6px;
     margin: 8px;
   }
@@ -25254,18 +25231,25 @@ video {
   }
 
   .menu li a {
-    font-size: 15px;
+    font-size: 16px;
+    color: green; /* verde normal */
+  }
+
+  .menu li a:hover {
+    color: #000; /* negro hover */
   }
 
   .social {
     justify-content: center;
-    gap: 12px;
   }
+
   .social li a {
-    font-size: 16px;
+    font-size: 20px;
+    color: green; /* verde iconos */
   }
-  .social img {
-    width: 16px;
-    height: 16px;
+
+  .social li a:hover {
+    color: #000; /* hover negro */
   }
 }
+
