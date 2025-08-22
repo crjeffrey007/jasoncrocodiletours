@@ -25103,59 +25103,35 @@ video {
   align-items: center;
   justify-content: space-between;
   padding: 12px 20px;
+  flex-wrap: wrap;
 }
 
 .logo img {
-  max-height: 80px;
+  max-height: 70px;
 }
 
 .header-text {
-  text-align: center;
   flex: 1;
-  padding: 0 10px;
+  text-align: center;
 }
 
 .header-text .tagline {
-  font-size: 16px;
-  margin: 0;
-  font-weight: 400;
-  color: #fff; /* blanco */
-}
-
-.header-text .highlight-text {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
   margin: 0;
-  color: #FFD700; /* amarillo */
+  color: #FFD700; /* Amarillo */
 }
 
-.header-text .highlight-text span {
-  color: #FFD700;
-}
-
-.contact {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 16px;
-}
-
-.contact .icon,
-.contact a {
-  color: #FFD700; /* amarillo */
-  text-decoration: none;
-  font-weight: bold;
-}
-
+/* Botón hamburguesa */
 .menu-toggle {
   display: none;
-  background: #000; /* fondo negro */
-  border: 2px solid #FFD700;
+  background: #FFD700; /* amarillo */
+  border: none;
   border-radius: 6px;
-  font-size: 24px;
-  color: #FFD700; /* icono amarillo */
+  font-size: 26px;
+  color: green; /* ícono verde */
   cursor: pointer;
-  padding: 6px 10px;
+  padding: 6px 12px;
 }
 
 /* NAV DESKTOP */
@@ -25178,33 +25154,40 @@ video {
   text-decoration: none;
   font-size: 16px;
   font-weight: 500;
-  color: #FFD700; /* amarillo */
+  color: #fff; /* blanco */
+  transition: color 0.3s;
 }
 
 .menu li a:hover {
-  color: #fff; /* blanco al hover */
+  color: #FFD700; /* amarillo */
 }
 
+/* Íconos sociales */
 .social {
   list-style: none;
   display: flex;
-  gap: 12px;
+  gap: 14px;
   margin: 0;
   padding: 0;
 }
 
 .social li a {
-  font-size: 18px;
-  color: #FFD700; /* iconos amarillos */
+  font-size: 20px; /* aumentado 2px */
+  color: #fff; /* blancos */
+  transition: color 0.3s;
+}
+
+.social li a:hover {
+  color: #FFD700; /* amarillo hover */
 }
 
 .social img {
-  width: 18px;
-  height: 18px;
+  width: 22px; /* aumentado */
+  height: 22px;
 }
 
 /* ========================
-   VERSIÓN MÓVIL
+   MÓVIL
    ======================== */
 @media (max-width: 991px) {
   .menu-toggle {
@@ -25227,12 +25210,12 @@ video {
   .menu {
     flex-direction: column;
     gap: 12px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
   }
 
   .menu li a {
-    font-size: 16px;
-    color: green; /* verde normal */
+    font-size: 18px;
+    color: green; /* verde */
   }
 
   .menu li a:hover {
@@ -25244,12 +25227,12 @@ video {
   }
 
   .social li a {
-    font-size: 20px;
-    color: green; /* verde iconos */
+    font-size: 22px;
+    color: green;
   }
 
   .social li a:hover {
-    color: #000; /* hover negro */
+    color: #000;
   }
 }
 
