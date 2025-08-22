@@ -556,11 +556,15 @@
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <!-- Slider Init -->
   <script src="slider.js"></script>
-    <<script>
-// JS para abrir/cerrar el menú en mobile con animación
-document.getElementById("menu-toggle").addEventListener("click", function () {
-  document.getElementById("nav-bar").classList.toggle("active");
-});
+   <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const toggle = document.getElementById("menu-toggle");
+    const nav = document.getElementById("nav-bar");
+
+    toggle.addEventListener("click", function() {
+      nav.classList.toggle("active");
+    });
+  });
 </script>
   </body>
 </html>
