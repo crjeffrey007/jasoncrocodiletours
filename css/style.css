@@ -25102,19 +25102,33 @@ video {
   margin: 0;
 }
 
-/* Mobile tagline */
-.mobile-tagline {
-  background: #000;
+/* Textos amarillos con efecto */
+.rd-navbar-texts .tagline,
+.rd-navbar-texts .highlight-text {
+  color: #FFD700;
+  font-weight: bold;
+  margin: 0;
   text-align: center;
-  padding: 8px 10px;
-  position: sticky;
-  top: 105px; /* justo debajo del header */
-  z-index: 999;
+  animation: fadeInUp 1.2s ease-in-out;
 }
-.mobile-tagline .tagline,
-.mobile-tagline .highlight-text {
-  color: #fff;
-  margin: 2px 0;
-  font-size: 14px;
+.rd-navbar-texts .tagline {
+  font-size: 16px;
+}
+.rd-navbar-texts .highlight-text {
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
+/* Animación */
+@keyframes fadeInUp {
+  from {opacity: 0; transform: translateY(15px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* Ocultar en móviles */
+@media (max-width: 991px) {
+  .rd-navbar-texts {
+    display: none !important;
+  }
+}
