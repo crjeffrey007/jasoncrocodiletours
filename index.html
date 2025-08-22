@@ -62,72 +62,97 @@
     <div class="page">
   </head>
   <body>
-<!-- Header con texto profesional -->
-<header class="page-header">
+<header class="section page-header">
   <div class="rd-navbar-wrap">
-    <nav class="rd-navbar rd-navbar-corporate" data-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static">
-      
-      <!-- Fila 1 -->
-      <div class="header-top">
-        <!-- Logo -->
-        <div class="header-col logo-col">
-          <a class="brand" href="https://www.jasoncrocodiletours.com">
-            <img src="images/logo-cocodrilo.jpg" alt="Jason Crocodile Tours" />
-          </a>
-        </div>
+    <nav class="rd-navbar rd-navbar-corporate" data-layout="rd-navbar-fixed"
+      data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed"
+      data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static"
+      data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static"
+      data-xl-device-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static"
+      data-xxl-device-layout="rd-navbar-static" data-lg-stick-up="true"
+      data-xl-stick-up="true" data-xxl-stick-up="true">
 
-        <!-- Textos promocionales -->
-        <div class="header-col promo-col">
-          <p class="promo-text">Are you ready to live the ultimate crocodile experience?</p>
-          <p class="promo-sub">Explore Costa Rica’s <span class="highlight">Wildest Tour!</span></p>
-        </div>
+      <!-- Toggle botones -->
+      <div class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></div>
 
-        <!-- Contacto WhatsApp -->
-        <div class="header-col contact-col">
-          <a class="whatsapp-link" href="https://api.whatsapp.com/send?phone=50688229042" target="_blank">
-            <i class="fa fa-whatsapp"></i> +506 8822 9042
-          </a>
+      <!-- TOP BAR -->
+      <div class="rd-navbar-aside-outer">
+        <div class="rd-navbar-aside">
+          <div class="rd-navbar-panel">
+            <!-- Botón hamburguesa -->
+            <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+            <!-- Logo -->
+            <div class="rd-navbar-brand">
+              <a class="brand" href="https://www.jasoncrocodiletours.com">
+                <img src="images/logo-cocodrilo.jpg" alt="Jason Crocodile Tours" />
+              </a>
+            </div>
+          </div>
+
+          <!-- Textos promocionales -->
+          <div class="promo-texts">
+            <div class="promo-text">Are you ready to live the ultimate crocodile experience?</div>
+            <div class="promo-sub">Explore <span class="highlight">Costa Rica’s Wildest Tour!</span></div>
+          </div>
+
+          <!-- WhatsApp -->
+          <div class="rd-navbar-aside-right rd-navbar-collapse">
+            <ul class="rd-navbar-corporate-contacts">
+              <li>
+                <div class="unit unit-spacing-xs">
+                  <div class="unit-left"><span class="icon fa fa-whatsapp"></span></div>
+                  <div class="unit-body">
+                    <a class="whatsapp-link" href="https://api.whatsapp.com/send?phone=50688229042" target="_blank">
+                      +506 8822 9042
+                    </a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
         </div>
       </div>
 
-      <!-- Fila 2 -->
-      <div class="header-bottom">
-        <!-- Menú -->
-        <ul class="nav-menu">
-          <li><a href="https://www.jasoncrocodiletours.com">Home</a></li>
-          <li><a href="about-jason.html">About Us</a></li>
-          <li class="has-dropdown">
-            <a href="tours.html">Tours</a>
-            <ul class="dropdown">
-              <li><a href="crocodile-tour.html">Crocodile Tour</a></li>
-              <li><a href="horseback-ridding-tour.html">Horseback Ridding Tour</a></li>
-              <li><a href="birdwatching-tour.html">Birdwatching Tour</a></li>
-              <li><a href="tortuga-island-private-tour.html">Tortuga Island Private Tour</a></li>
+      <!-- NAVIGATION -->
+      <div class="rd-navbar-main-outer">
+        <div class="rd-navbar-main">
+          <div class="rd-navbar-nav-wrap">
+            <!-- Redes sociales -->
+            <ul class="list-inline list-inline-md rd-navbar-corporate-list-social">
+              <li><a class="icon fa fa-facebook" href="https://www.facebook.com/JasonCrocodileToursOriginal" target="_blank"></a></li>
+              <li><a class="icon fa fa-instagram" href="https://www.instagram.com/jasoncrocodiletoursoriginal" target="_blank"></a></li>
+              <li><a class="icon fa fa-whatsapp" href="https://api.whatsapp.com/send?phone=50688229042" target="_blank"></a></li>
+              <li><a class="icon fa fa-tripadvisor" href="https://www.tripadvisor.es/Attraction_Review-g309271-d23602259-Reviews-Jason_Crocodile_Tours-Jaco_Jaco_District_Garabito_Municipality_Province_of_Punta.html" target="_blank"></a></li>
+              <li><a class="icon fa fa-map-marker" href="https://www.google.com/maps/place/9%C2%B046'42.3%22N+84%C2%B037'34.0%22W" target="_blank"></a></li>
+              <li><a class="icon fa fa-youtube" href="https://www.youtube.com/@JasonCrocodile" target="_blank"></a></li>
+              <li><a class="icon tiktok-icon" href="https://www.tiktok.com/@jasoncrocodiletours506" target="_blank">
+                <img src="images/tik-tok.png" alt="TikTok" style="width: 18px; height: 18px;">
+              </a></li>
             </ul>
-          </li>
-          <li><a href="testimonials.html">Testimonials</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
 
-        <!-- Redes + banderas -->
-        <div class="social-flags">
-          <ul class="social-icons">
-            <li><a class="fa fa-facebook" href="https://www.facebook.com/JasonCrocodileToursOriginal" target="_blank"></a></li>
-            <li><a class="fa fa-instagram" href="https://www.instagram.com/jasoncrocodiletoursoriginal" target="_blank"></a></li>
-            <li><a class="fa fa-whatsapp" href="https://api.whatsapp.com/send?phone=50688229042" target="_blank"></a></li>
-            <li><a class="fa fa-tripadvisor" href="https://www.tripadvisor.es/Attraction_Review-g309271-d23602259-Reviews-Jason_Crocodile_Tours" target="_blank"></a></li>
-            <li><a class="fa fa-map-marker" href="https://www.google.com/maps/place/9%C2%B046'42.3%22N+84%C2%B037'34.0%22W/" target="_blank"></a></li>
-            <li><a class="fa fa-youtube" href="https://www.youtube.com/@JasonCrocodile" target="_blank"></a></li>
-            <li><a class="tiktok-icon" href="https://www.tiktok.com/@jasoncrocodiletours506" target="_blank">
-              <img src="images/tik-tok.png" alt="TikTok" />
-            </a></li>
-          </ul>
-          <div class="flags">
-            <a href="sobre-jason.html"><img src="images/bandera-costa-rica.png" alt="Español"></a>
-            <a href="about-jason.html"><img src="images/bandera-estados-unidos.png" alt="English"></a>
+            <!-- Menú principal -->
+            <ul class="rd-navbar-nav">
+              <li class="rd-nav-item active"><a class="rd-nav-link" href="index.html">Home</a></li>
+              <li class="rd-nav-item"><a class="rd-nav-link" href="about-jason.html">About Us</a></li>
+              <li class="rd-nav-item rd-navbar--has-dropdown">
+                <a class="rd-nav-link" href="tours.html">Tours</a>
+                <ul class="rd-navbar-dropdown">
+                  <li><a class="rd-nav-link" href="crocodile-tour.html">Crocodile Tour</a></li>
+                  <li><a class="rd-nav-link" href="horseback-ridding-tour.html">Horseback Ridding Tour</a></li>
+                  <li><a class="rd-nav-link" href="birdwatching-tour.html">Birdwatching Tour</a></li>
+                  <li><a class="rd-nav-link" href="tortuga-island-private-tour.html">Tortuga Island Private Tour</a></li>
+                </ul>
+              </li>
+              <li><a class="rd-nav-link" href="testimonials.html">Testimonials</a></li>
+              <li><a class="rd-nav-link" href="contact.html">Contact</a></li>
+              <li><a class="rd-nav-link" href="sobre-jason.html"><img src="images/bandera-costa-rica.png" alt="Español" width="32" height="27"></a></li>
+              <li><a class="rd-nav-link" href="about-jason.html"><img src="images/bandera-estados-unidos.png" alt="English" width="32" height="27"></a></li>
+            </ul>
           </div>
         </div>
       </div>
+
     </nav>
   </div>
 </header>
