@@ -63,31 +63,33 @@
   <body>
 <header class="main-header">
   <div class="top-bar">
-    <!-- Logo -->
+    <!-- LOGO -->
     <div class="logo">
       <a href="https://www.jasoncrocodiletours.com">
         <img src="images/logo-cocodrilo.jpg" alt="Jason Crocodile Tours" />
       </a>
     </div>
 
-    <!-- Textos -->
+    <!-- TEXTO HEADER -->
     <div class="header-text">
       <p class="tagline">Are you ready to live the ultimate crocodile experience?</p>
       <p class="highlight-text">Explore <span>Costa Rica’s Wildest Tour!</span></p>
     </div>
 
-    <!-- Contacto WhatsApp -->
+    <!-- CONTACTO -->
     <div class="contact">
       <span class="icon fa fa-whatsapp"></span>
       <a href="https://api.whatsapp.com/send?phone=50688229042" target="_blank">+506 8822 9042</a>
     </div>
 
-    <!-- Botón hamburguesa -->
-    <button class="menu-toggle" aria-label="Menu">&#9776;</button>
+    <!-- Botón menú hamburguesa (solo mobile) -->
+    <button class="menu-toggle" id="menu-toggle">
+      <i class="fa fa-bars"></i>
+    </button>
   </div>
 
-  <!-- Barra de navegación -->
-  <nav class="nav-bar">
+  <!-- NAVIGATION -->
+  <nav class="nav-bar" id="nav-bar">
     <ul class="menu">
       <li><a href="https://www.jasoncrocodiletours.com">Home</a></li>
       <li><a href="about-jason.html">About Us</a></li>
@@ -554,10 +556,11 @@
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <!-- Slider Init -->
   <script src="slider.js"></script>
-    <script>
-  document.querySelector(".menu-toggle").addEventListener("click", function () {
-    document.querySelector(".nav-bar").classList.toggle("active");
-  });
-</script>  
+    <<script>
+// JS para abrir/cerrar el menú en mobile con animación
+document.getElementById("menu-toggle").addEventListener("click", function () {
+  document.getElementById("nav-bar").classList.toggle("active");
+});
+</script>
   </body>
 </html>
