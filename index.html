@@ -558,13 +558,11 @@
   <!-- Slider Init -->
   <script src="slider.js"></script>
   <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const toggle = document.getElementById("menu-toggle");
-    const nav = document.getElementById("nav-bar");
+  const toggleBtn = document.getElementById("menu-toggle");
+  const navBar = document.getElementById("nav-bar");
 
-    toggle.addEventListener("click", function() {
-      nav.classList.toggle("active");
-    });
+  toggleBtn.addEventListener("click", () => {
+    navBar.classList.toggle("active");
   });
 </script>
   </body>
