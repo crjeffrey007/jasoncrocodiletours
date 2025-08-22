@@ -16,7 +16,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-      <!-- Swiper CSS -->
+    <!-- Font Awesome (v4.7, compatible con clases fa) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KW5SGQJZLT"></script>
@@ -70,14 +72,15 @@
       </a>
     </div>
 
-    <!-- TEXTO HEADER -->
+    <!-- TEXTOS HEADER -->
     <div class="header-text">
       <p class="tagline">Are you ready to live the ultimate crocodile experience?</p>
+      <p class="highlight-text">Explore <span>Costa Rica’s Wildest Tour!</span></p>
     </div>
 
-    <!-- BOTÓN MENÚ (solo móvil) -->
-    <button class="menu-toggle" id="menu-toggle">
-      <i class="fa fa-bars"></i>
+    <!-- BOTÓN HAMBURGUESA (solo móvil) -->
+    <button class="menu-toggle" id="menu-toggle" aria-label="Open menu">
+      <i class="fa fa-bars" aria-hidden="true"></i>
     </button>
   </div>
 
@@ -91,14 +94,19 @@
       <li><a href="contact.html">Contact</a></li>
     </ul>
 
+    <!-- ÍCONOS SOCIALES -->
     <ul class="social">
-      <li><a class="fa fa-facebook" href="#" target="_blank"></a></li>
-      <li><a class="fa fa-instagram" href="#" target="_blank"></a></li>
-      <li><a class="fa fa-whatsapp" href="#" target="_blank"></a></li>
-      <li><a class="fa fa-tripadvisor" href="#" target="_blank"></a></li>
-      <li><a class="fa fa-youtube" href="#" target="_blank"></a></li>
-      <li><a class="fa fa-map-marker" href="#" target="_blank"></a></li>
-      <li><a class="tiktok-icon" href="#" target="_blank"><img src="images/tik-tok.png" alt="TikTok"></a></li>
+      <li><a class="fa fa-facebook" href="https://www.facebook.com/JasonCrocodileToursOriginal" target="_blank" rel="noopener" aria-label="Facebook"></a></li>
+      <li><a class="fa fa-instagram" href="https://www.instagram.com/jasoncrocodiletoursoriginal" target="_blank" rel="noopener" aria-label="Instagram"></a></li>
+      <li><a class="fa fa-whatsapp" href="https://api.whatsapp.com/send?phone=50688229042" target="_blank" rel="noopener" aria-label="WhatsApp"></a></li>
+      <li><a class="fa fa-tripadvisor" href="https://www.tripadvisor.es/Attraction_Review-g309271-d23602259" target="_blank" rel="noopener" aria-label="TripAdvisor"></a></li>
+      <li><a class="fa fa-youtube" href="https://www.youtube.com/@JasonCrocodile" target="_blank" rel="noopener" aria-label="YouTube"></a></li>
+      <li><a class="fa fa-map-marker" href="https://www.google.com/maps/place/9%C2%B046'42.3%22N+84%C2%B037'34.0%22W" target="_blank" rel="noopener" aria-label="Google Maps"></a></li>
+      <li>
+        <a class="tiktok-icon" href="https://www.tiktok.com/@jasoncrocodiletours506" target="_blank" rel="noopener" aria-label="TikTok">
+          <img src="images/tik-tok.png" alt="TikTok" />
+        </a>
+      </li>
     </ul>
   </nav>
 </header>
@@ -549,7 +557,7 @@
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <!-- Slider Init -->
   <script src="slider.js"></script>
-   <script>
+  <script>
   document.addEventListener("DOMContentLoaded", function() {
     const toggle = document.getElementById("menu-toggle");
     const nav = document.getElementById("nav-bar");
