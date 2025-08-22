@@ -25086,7 +25086,7 @@ video {
   z-index: 1;
 }
 
-/* Forzar fondo negro en todo el header */
+/* === GENERAL HEADER === */
 .page-header,
 .rd-navbar,
 .rd-navbar-wrap,
@@ -25098,33 +25098,109 @@ video {
   color: #fff !important;
 }
 
-/* Asegurar que todos los links sean blancos */
 .page-header a,
 .rd-navbar a,
 .nav-menu a,
 .social-icons a,
 .whatsapp-link {
   color: #fff !important;
+  text-decoration: none;
 }
 
-/* Hover en amarillo */
 .page-header a:hover,
-.nav-menu a:hover,
+.rd-navbar-nav a:hover,
 .social-icons a:hover {
   color: #ffff00 !important;
 }
 
-/* Textos promocionales */
+/* === TEXTOS PROMOCIONALES === */
 .promo-text {
   font-size: 1rem;
   font-weight: bold;
   color: #ffff00 !important;
 }
 .promo-sub {
-  font-size: 1.2rem;
-  color: #fff !important;
+  font-size: 1.1rem;
   font-weight: bold;
+  color: #fff !important;
 }
 .promo-sub .highlight {
   color: #ffff00 !important;
+}
+
+/* === LOGO === */
+.rd-navbar-brand img {
+  max-height: 90px;
+  height: auto;
+}
+
+/* === LAYOUT ESCRITORIO === */
+.rd-navbar-aside {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 2rem;
+}
+
+/* WhatsApp */
+.rd-navbar-corporate-contacts {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.rd-navbar-corporate-contacts li {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.rd-navbar-corporate-contacts a {
+  color: #fff !important;
+  font-weight: bold;
+}
+
+/* === RESPONSIVE MOBILE === */
+@media (max-width: 991px) {
+  .rd-navbar-aside {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+  }
+  .rd-navbar-brand {
+    margin-bottom: 10px;
+  }
+
+  .promo-text,
+  .promo-sub {
+    text-align: center;
+    width: 100%;
+  }
+
+  .rd-navbar-corporate-contacts {
+    justify-content: center;
+    width: 100%;
+  }
+
+  /* Menú hamburguesa */
+  .rd-navbar-toggle span,
+  .rd-navbar-collapse-toggle span {
+    background-color: #fff !important;
+  }
+
+  /* Fondo menú */
+  .rd-navbar-nav {
+    background-color: #000 !important;
+  }
+  .rd-navbar-nav a {
+    color: #fff !important;
+  }
+  .rd-navbar-nav a:hover {
+    color: #ffff00 !important;
+  }
+
+  /* Redes sociales */
+  .list-inline.rd-navbar-corporate-list-social {
+    justify-content: center;
+    margin-top: 10px;
+  }
 }
