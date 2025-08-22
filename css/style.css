@@ -25086,121 +25086,109 @@ video {
   z-index: 1;
 }
 
-/* === GENERAL HEADER === */
-.page-header,
-.rd-navbar,
-.rd-navbar-wrap,
-.rd-navbar-main,
-.rd-navbar-aside,
-.header-top,
-.header-bottom {
-  background-color: #000 !important;
-  color: #fff !important;
+/* General */
+.main-header {
+  background: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
 }
 
-.page-header a,
-.rd-navbar a,
-.nav-menu a,
-.social-icons a,
-.whatsapp-link {
-  color: #fff !important;
+/* Top bar */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  flex-wrap: wrap;
+}
+
+.logo img {
+  max-height: 90px;
+}
+
+.header-text {
+  text-align: center;
+  flex: 1;
+}
+
+.header-text .tagline {
+  color: #ffff00;
+  font-weight: bold;
+  margin: 0;
+}
+
+.header-text .highlight-text {
+  color: #fff;
+  font-weight: bold;
+}
+
+.header-text .highlight-text span {
+  color: #ffff00;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.contact a {
+  color: #fff;
   text-decoration: none;
 }
 
-.page-header a:hover,
-.rd-navbar-nav a:hover,
-.social-icons a:hover {
-  color: #ffff00 !important;
-}
-
-/* === TEXTOS PROMOCIONALES === */
-.promo-text {
-  font-size: 1rem;
-  font-weight: bold;
-  color: #ffff00 !important;
-}
-.promo-sub {
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: #fff !important;
-}
-.promo-sub .highlight {
-  color: #ffff00 !important;
-}
-
-/* === LOGO === */
-.rd-navbar-brand img {
-  max-height: 90px;
-  height: auto;
-}
-
-/* === LAYOUT ESCRITORIO === */
-.rd-navbar-aside {
+/* Nav bar */
+.nav-bar {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 0.5rem 2rem;
-}
-
-/* WhatsApp */
-.rd-navbar-corporate-contacts {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.rd-navbar-corporate-contacts li {
-  display: flex;
   align-items: center;
-  gap: 5px;
-}
-.rd-navbar-corporate-contacts a {
-  color: #fff !important;
-  font-weight: bold;
+  padding: 10px 20px;
+  border-top: 1px solid #333;
 }
 
-/* === RESPONSIVE MOBILE === */
+.menu, .social {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.menu a, .social a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.social img {
+  width: 18px;
+  height: 18px;
+}
+
+/* ===== Mobile ===== */
 @media (max-width: 991px) {
-  .rd-navbar-aside {
+  .top-bar {
     flex-direction: column;
-    align-items: center;
-    padding: 10px;
+    text-align: center;
+  }
+
+  .header-text {
+    margin: 10px 0;
+  }
+
+  .nav-bar {
+    flex-direction: column;
     gap: 10px;
   }
-  .rd-navbar-brand {
-    margin-bottom: 10px;
+
+  .menu {
+    flex-direction: column;
+    gap: 10px;
   }
 
-  .promo-text,
-  .promo-sub {
-    text-align: center;
-    width: 100%;
-  }
-
-  .rd-navbar-corporate-contacts {
+  .social {
     justify-content: center;
-    width: 100%;
-  }
-
-  /* Menú hamburguesa */
-  .rd-navbar-toggle span,
-  .rd-navbar-collapse-toggle span {
-    background-color: #fff !important;
-  }
-
-  /* Fondo menú */
-  .rd-navbar-nav {
-    background-color: #000 !important;
-  }
-  .rd-navbar-nav a {
-    color: #fff !important;
-  }
-  .rd-navbar-nav a:hover {
-    color: #ffff00 !important;
-  }
-
-  /* Redes sociales */
-  .list-inline.rd-navbar-corporate-list-social {
-    justify-content: center;
-    margin-top: 10px;
+    gap: 15px;
   }
 }
