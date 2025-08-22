@@ -25224,89 +25224,99 @@ video {
     filter: sepia(1) saturate(10) hue-rotate(10deg) brightness(1.1); /* tono amarillo */
   }
 
-  /* ========================
-     RESPONSIVE (MOBILE / TABLET)
-     ======================== */
-  @media (max-width: 991px) {
-    .top-bar {
-      padding: 10px 14px;
-      gap: 8px;
-    }
-
-    .logo img {
-      max-height: 64px;
-    }
-
-    .header-text .tagline {
-      font-size: 16px;
-    }
-    .header-text .highlight-text {
-      font-size: 17px;
-    }
-
-    /* Mostrar hamburguesa en mobile */
-    .menu-toggle {
-      display: inline-block;
-    }
-
-    /* Nav colapsado por defecto */
-    .nav-bar {
-      display: none;
-      flex-direction: column;
-      gap: 14px;
-      padding: 14px;
-      margin: 10px;
-      background: #FFD700; /* fondo amarillo al abrir */
-      border-radius: 8px;
-    }
-
-    /* Al activar (con JS) */
-    .nav-bar.active {
-      display: flex;
-    }
-
-    .menu {
-      width: 100%;
-      flex-direction: column;
-      align-items: center;
-      gap: 12px;
-      margin: 0;
-      padding: 0;
-    }
-
-    .menu li a {
-      font-size: 18px;
-      color: green; /* verde */
-      padding: 6px 8px;
-      border-radius: 4px;
-      transition: background 0.25s ease, color 0.25s ease;
-    }
-
-    .menu li a:hover {
-      color: #000; /* negro */
-      background: rgba(0,0,0,0.08);
-    }
-
-    .social {
-      justify-content: center;
-      gap: 14px;
-    }
-
-    .social li a {
-      color: green; /* verde en mobile */
-      font-size: 22px;
-      width: 28px;
-      height: 28px;
-    }
-
-    .social li a:hover {
-      color: #000; /* negro hover */
-    }
-
-    .social li a.tiktok-icon img {
-      filter: hue-rotate(90deg) saturate(2); /* tono verdoso */
-    }
-    .social li a.tiktok-icon:hover img {
-      filter: brightness(0); /* negro en hover */
-    }
+/* ===================== */
+/* MOBILE STYLES         */
+/* ===================== */
+@media (max-width: 991px) {
+  .main-header {
+    background: #000;
+    padding: 10px;
   }
+
+  /* Logo más pequeño y centrado */
+  .main-header .logo img {
+    max-width: 130px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+  }
+
+  /* Texto del header */
+  .main-header .header-text {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .main-header .header-text .tagline,
+  .main-header .header-text .highlight-text {
+    font-size: 14px;
+    line-height: 1.4;
+    color: yellow;
+  }
+
+  /* Íconos sociales centrados */
+  .main-header .social {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 10px 0;
+    padding: 0;
+  }
+  .main-header .social li {
+    list-style: none;
+    margin: 5px;
+  }
+  .main-header .social a {
+    font-size: 22px; /* +2px */
+    color: #fff;
+    transition: 0.3s;
+  }
+  .main-header .social a:hover {
+    color: yellow;
+  }
+  .main-header .social img {
+    width: 22px;
+    height: 22px;
+  }
+
+  /* Menú hamburguesa */
+  .menu-toggle {
+    display: block;
+    background: yellow;
+    color: green;
+    border: none;
+    font-size: 24px;
+    padding: 8px 12px;
+    cursor: pointer;
+    margin: 0 auto;
+  }
+
+  /* Menú desplegable */
+  .nav-bar {
+    display: none;
+    background: yellow;
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 5px;
+    padding: 10px 0;
+  }
+  .nav-bar.active {
+    display: block;
+  }
+  .nav-bar .menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .nav-bar .menu li {
+    margin: 8px 0;
+  }
+  .nav-bar .menu li a {
+    color: green;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  .nav-bar .menu li a:hover {
+    color: black;
+  }
+}
