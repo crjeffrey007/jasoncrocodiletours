@@ -25132,3 +25132,41 @@ video {
     display: none !important;
   }
 }
+
+/* Texto debajo de la imagen en mobile */
+.caption-mobile {
+  background: #000;
+  color: #FFD700;
+  text-align: center;
+  padding: 15px;
+}
+
+.caption-mobile h6 {
+  font-size: 14px;
+  margin: 0 0 5px;
+}
+
+.caption-mobile h2 {
+  font-size: 18px;
+  margin: 0 0 10px;
+  font-weight: bold;
+}
+
+.caption-mobile h2 span {
+  color: #FFD700;
+}
+
+.caption-mobile .button {
+  display: inline-block;
+  background: #FFD700;
+  color: #000;
+  font-weight: bold;
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.caption-mobile .button:hover {
+  background: #fff;
+  color: #000;
+}
