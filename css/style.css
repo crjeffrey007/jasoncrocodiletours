@@ -25147,9 +25147,10 @@ video {
 }
 
 .caption-mobile h2 {
-  font-size: 18px;
-  margin: 0 0 10px;
+  font-size: 16px;
+  margin: 0 0 8px;
   font-weight: bold;
+  line-height: 1.3em;
 }
 
 .caption-mobile h2 span {
@@ -25161,7 +25162,8 @@ video {
   background: #FFD700;
   color: #000;
   font-weight: bold;
-  padding: 8px 15px;
+  font-size: 13px;
+  padding: 6px 12px;
   border-radius: 5px;
   text-decoration: none;
 }
@@ -25170,3 +25172,34 @@ video {
   background: #fff;
   color: #000;
 }
+
+/* Texto debajo de la imagen en mobile */
+.caption-mobile {
+  background: #000;
+  color: #FFD700;
+  text-align: center;
+  padding: 10px;
+  margin: 0; /* quita cualquier espacio */
+}
+
+.caption-mobile h6 {
+  font-size: 12px;
+  margin: 0 0 4px;
+  line-height: 1.2em;
+}
+
+/* Quitar margen/espacio superior en mobile */
+@media (max-width: 991px) {
+  .mobile-slider {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+  .mobile-slider img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0; /* sin espacios extras */
+  }
+}
+
+
