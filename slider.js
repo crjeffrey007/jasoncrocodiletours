@@ -11,16 +11,16 @@ document.addEventListener("DOMContentLoaded", function () {
     mount.innerHTML = "";
 
     if (isMobile()) {
-      // SLIDER MOBILE
+      // SLIDER MOBILE con texto debajo
       mount.innerHTML = `
         <section class="swiper mobile-slider">
           <div class="swiper-wrapper">
             ${[1,2,3,4].map(n => `
               <div class="swiper-slide">
                 <img src="images/jason-${n}.jpeg" alt="Jason Crocodile Tour ${n}">
-                <div class="caption">
+                <div class="caption-mobile">
                   <h6>Are you ready to live the ultimate crocodile experience?</h6>
-                  <h2>Explore <span class="highlight">Costa Rica’s Wildest Tour!</span></h2>
+                  <h2>Explore <span>Costa Rica’s Wildest Tour!</span></h2>
                   <a class="button" href="https://api.whatsapp.com/send?phone=50688229042" target="_blank">Book Now</a>
                 </div>
               </div>`).join("")}
@@ -33,18 +33,13 @@ document.addEventListener("DOMContentLoaded", function () {
         pagination: { el: ".mobile-slider .swiper-pagination", clickable: true }
       });
     } else {
-      // SLIDER DESKTOP
+      // SLIDER DESKTOP sin texto
       mount.innerHTML = `
         <section class="swiper desktop-slider">
           <div class="swiper-wrapper">
             ${[1,2,3,4].map(n => `
-              <div class="swiper-slide" style="background-image:url('images/jason-${n}.jpeg')">
-                <div class="caption">
-                  <h6>Are you ready to live the ultimate crocodile experience?</h6>
-                  <h2>Explore <span class="highlight">Costa Rica’s Wildest Tour!</span></h2>
-                  <a class="button" href="https://api.whatsapp.com/send?phone=50688229042" target="_blank">Book Now</a>
-                </div>
-              </div>`).join("")}
+              <div class="swiper-slide" style="background-image:url('images/jason-${n}.jpeg')"></div>
+            `).join("")}
           </div>
           <div class="swiper-button-next"></div>
           <div class="swiper-button-prev"></div>
@@ -64,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   render();
 
-  // Redibujar cuando se cambia tamaño
+  // Redibujar cuando cambia tamaño
   window.addEventListener("resize", () => {
     const wasMobile = document.querySelector(".mobile-slider") !== null;
     const nowMobile = isMobile();
