@@ -25220,23 +25220,35 @@ body, html {
 
 /* Bloque de texto para mobile */
 .mobile-text-block {
-  display: none; /* por defecto oculto en escritorio */
+  display: none; /* oculto en escritorio */
 }
 
 @media (max-width: 991px) {
+  .mobile-slider {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  /* Separación adecuada debajo del slider */
+  #slider-container {
+    margin-bottom: 20px; /* 👈 Ajusta el espacio entre slider e info */
+  }
+
   .mobile-text-block {
     display: block;
     background: #000;
     color: #FFD700; /* amarillo */
     text-align: center;
-    padding: 20px 15px;
-    margin: 0;
+    padding: 25px 15px; /* más aire interno */
+    margin: 0 auto;
     animation: fadeInUp 1s ease-in-out;
+    max-width: 95%;
+    border-radius: 8px;
   }
 
   .mobile-text-block h6 {
     font-size: 14px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     letter-spacing: 1px;
     text-transform: uppercase;
     opacity: 0.9;
