@@ -25223,7 +25223,47 @@ body, html {
   display: none; /* oculto en escritorio */
 }
 
-@media (max-width: 991px) {
+/* Animación de entrada */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Ajustes solo para móviles */
+@media (max-width: 767px) {
+  /* Añadir espacio entre la imagen y el contenido del tab */
+  .tabs-custom {
+    margin-top: 20px;   /* espacio arriba */
+    margin-bottom: 20px; /* espacio abajo */
+  }
+
+  /* Ajustar títulos y párrafos para que no se vean muy grandes */
+  .tabs-custom h6 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .tabs-custom p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /* Espaciado entre botones */
+  .tabs-custom .group-md {
+    margin-top: 15px;
+  }
+
+  /* Los tabs (botones de navegación) con más aire */
+  .tabs-custom .nav-tabs {
+    margin-bottom: 15px;
+  }
+
   .mobile-slider {
     margin-top: 0 !important;
     padding-top: 0 !important;
@@ -25282,47 +25322,5 @@ body, html {
   .mobile-text-block .button:hover {
     background: #fff200;
     transform: scale(1.05);
-  }
-}
-
-/* Animación de entrada */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Ajustes solo para móviles */
-@media (max-width: 991px) {
-  /* Añadir espacio entre la imagen y el contenido del tab */
-  .tabs-custom {
-    margin-top: 20px;   /* espacio arriba */
-    margin-bottom: 20px; /* espacio abajo */
-  }
-
-  /* Ajustar títulos y párrafos para que no se vean muy grandes */
-  .tabs-custom h6 {
-    font-size: 16px;
-    margin-bottom: 10px;
-  }
-
-  .tabs-custom p {
-    font-size: 14px;
-    line-height: 1.5;
-  }
-
-  /* Espaciado entre botones */
-  .tabs-custom .group-md {
-    margin-top: 15px;
-  }
-
-  /* Los tabs (botones de navegación) con más aire */
-  .tabs-custom .nav-tabs {
-    margin-bottom: 15px;
   }
 }
