@@ -25280,7 +25280,7 @@ body, html {
     color: #FFD700; /* amarillo */
     text-align: center;
     padding: 25px 15px; /* más aire interno */
-    margin: 0 auto;
+    margin-top: 15px;  /* espacio entre slider y texto */
     animation: fadeInUp 1s ease-in-out;
     max-width: 95%;
     border-radius: 8px;
@@ -25322,5 +25322,11 @@ body, html {
   .mobile-text-block .button:hover {
     background: #fff200;
     transform: scale(1.05);
+  }
+}
+/* Escritorio (queda limpio, sin cambios) */
+@media (min-width: 769px) {
+  .mobile-text-block {
+    display: none; /* no se muestra en escritorio */
   }
 }
