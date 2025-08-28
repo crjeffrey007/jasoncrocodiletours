@@ -25431,3 +25431,9 @@ body, html {
     margin-bottom: 20px; /* menos espacio en móvil */
   }
 }
+
+/* Ocultar las flechas por defecto de Swiper */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  content: "" !important; /* elimina la flecha amarilla */
+}
