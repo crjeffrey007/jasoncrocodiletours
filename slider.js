@@ -7,13 +7,18 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function render() {
-    if (swiper) { swiper.destroy(true, true); swiper = null; }
+    // Destruir instancia previa del Swiper
+    if (swiper) {
+      swiper.destroy(true, true);
+      swiper = null;
+    }
+    // Limpiar el contenedor antes de renderizar
     mount.innerHTML = "";
 
     if (isMobile()) {
-      // SLIDER MOBILE (sin texto, sin botón)
+      // === SLIDER MOBILE ===
       mount.innerHTML = `
-        <section class="swiper mobile-slider">
+        <section class="swiper mobile-slider" style="margin-bottom:10px;">
           <div class="swiper-wrapper">
             ${[1,2,3,4].map(n => `
               <div class="swiper-slide">
@@ -28,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
         pagination: { el: ".mobile-slider .swiper-pagination", clickable: true }
       });
     } else {
-      // SLIDER DESKTOP (sin texto, sin botón, con flechas únicas)
+      // === SLIDER DESKTOP ===
       mount.innerHTML = `
         <section class="swiper desktop-slider">
           <div class="swiper-wrapper">
@@ -36,6 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
               <div class="swiper-slide" style="background-image:url('images/jason-${n}.jpeg')">
               </div>`).join("")}
           </div>
+          <!-- Flechas únicas -->
           <div class="swiper-button-next"></div>
           <div class="swiper-button-prev"></div>
           <div class="swiper-pagination"></div>
@@ -58,7 +64,10 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("resize", () => {
     const wasMobile = document.querySelector(".mobile-slider") !== null;
     const nowMobile = isMobile();
-    if (wasMobile !== nowMobile) render();
-    else if (swiper) swiper.update();
+    if (wasMobile !== nowMobile) {
+      render(); // solo redibuja si cambia de desktop ↔ mobile
+    } else if (swiper) {
+      swiper.update();
+    }
   });
 });
