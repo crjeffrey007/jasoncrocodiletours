@@ -25437,3 +25437,19 @@ body, html {
 .swiper-button-prev::after {
   content: "" !important; /* elimina la flecha amarilla */
 }
+
+/* Desktop: flechas visibles */
+@media (min-width: 992px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: flex !important;
+  }
+}
+
+/* Mobile: esconder flechas, solo paginación */
+@media (max-width: 991px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none !important;
+  }
+}
