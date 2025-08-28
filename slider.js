@@ -6,14 +6,17 @@ document.addEventListener("DOMContentLoaded", function () {
     return window.innerWidth <= 991;
   }
 
-  function render() {
-    // Destruir instancia previa del Swiper
+  function cleanup() {
     if (swiper) {
       swiper.destroy(true, true);
       swiper = null;
     }
-    // Limpiar el contenedor antes de renderizar
+    // Limpieza manual del contenedor (incluye flechas antiguas)
     mount.innerHTML = "";
+  }
+
+  function render() {
+    cleanup();
 
     if (isMobile()) {
       // === SLIDER MOBILE ===
