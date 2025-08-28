@@ -6,26 +6,23 @@ document.addEventListener("DOMContentLoaded", function () {
     return window.innerWidth <= 991;
   }
 
-  function cleanup() {
-    if (swiper) {
-      swiper.destroy(true, true);
-      swiper = null;
-    }
-    // Limpieza manual del contenedor (incluye flechas antiguas)
-    mount.innerHTML = "";
-  }
-
   function render() {
-    cleanup();
+    if (swiper) { swiper.destroy(true, true); swiper = null; }
+    mount.innerHTML = "";
 
     if (isMobile()) {
-      // === SLIDER MOBILE ===
+      // 🔹 MOBILE: imagen + texto + dots
       mount.innerHTML = `
         <section class="swiper mobile-slider" style="margin-bottom:10px;">
           <div class="swiper-wrapper">
             ${[1,2,3,4].map(n => `
               <div class="swiper-slide">
                 <img src="images/jason-${n}.jpeg" alt="Jason Crocodile Tour ${n}">
+                <div class="caption">
+                  <h6>Are you ready to live the ultimate crocodile experience?</h6>
+                  <h2>Explore <span class="highlight">Costa Rica’s Wildest Tour!</span></h2>
+                  <a class="button" href="https://api.whatsapp.com/send?phone=50688229042" target="_blank">Book Now</a>
+                </div>
               </div>`).join("")}
           </div>
           <div class="swiper-pagination"></div>
@@ -36,15 +33,14 @@ document.addEventListener("DOMContentLoaded", function () {
         pagination: { el: ".mobile-slider .swiper-pagination", clickable: true }
       });
     } else {
-      // === SLIDER DESKTOP ===
+      // 🔹 DESKTOP: solo imagen + flechas + dots
       mount.innerHTML = `
         <section class="swiper desktop-slider">
           <div class="swiper-wrapper">
             ${[1,2,3,4].map(n => `
-              <div class="swiper-slide" style="background-image:url('images/jason-${n}.jpeg')">
-              </div>`).join("")}
+              <div class="swiper-slide" style="background-image:url('images/jason-${n}.jpeg')"></div>
+            `).join("")}
           </div>
-          <!-- Flechas únicas -->
           <div class="swiper-button-next"></div>
           <div class="swiper-button-prev"></div>
           <div class="swiper-pagination"></div>
@@ -63,14 +59,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   render();
 
-  // Redibujar al cambiar tamaño
   window.addEventListener("resize", () => {
     const wasMobile = document.querySelector(".mobile-slider") !== null;
     const nowMobile = isMobile();
-    if (wasMobile !== nowMobile) {
-      render(); // solo redibuja si cambia de desktop ↔ mobile
-    } else if (swiper) {
-      swiper.update();
-    }
+    if (wasMobile !== nowMobile) render();
+    else if (swiper) swiper.update();
   });
 });
