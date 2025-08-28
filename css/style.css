@@ -25432,24 +25432,54 @@ body, html {
   }
 }
 
-/* Ocultar las flechas por defecto de Swiper */
+/* 🔹 Quitar flechas amarillas por defecto de Swiper */
 .swiper-button-next::after,
 .swiper-button-prev::after {
-  content: "" !important; /* elimina la flecha amarilla */
+  content: "" !important; /* borra la flecha amarilla */
 }
 
-/* Desktop: flechas visibles */
+/* 🔹 Estilos personalizados solo en desktop */
 @media (min-width: 992px) {
   .swiper-button-next,
   .swiper-button-prev {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.6);
     display: flex !important;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+  }
+
+  .swiper-button-next:hover,
+  .swiper-button-prev:hover {
+    background: rgba(0, 0, 0, 0.9);
+  }
+
+  /* Flechas con ícono blanco tipo “<” y “>” */
+  .swiper-button-next::before,
+  .swiper-button-prev::before {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .swiper-button-next::before {
+    content: "›";
+  }
+
+  .swiper-button-prev::before {
+    content: "‹";
   }
 }
 
-/* Mobile: esconder flechas, solo paginación */
+/* 🔹 Mobile: solo paginación (sin flechas) */
 @media (max-width: 991px) {
   .swiper-button-next,
   .swiper-button-prev {
     display: none !important;
   }
 }
+
