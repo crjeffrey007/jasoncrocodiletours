@@ -25432,63 +25432,28 @@ body, html {
   }
 }
 
-/* 🔹 Quitar flechas amarillas por defecto */
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  display: none !important;
+/* Flechas Swiper */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
 }
 
-/* 🔹 Desktop: flechas redondas */
-@media (min-width: 992px) {
-  .swiper-button-next,
-  .swiper-button-prev {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    background: rgba(0, 0, 0, 0.6);
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-    transition: background 0.3s ease;
-  }
-
-  .swiper-button-next:hover,
-  .swiper-button-prev:hover {
-    background: rgba(0, 0, 0, 0.9);
-  }
-
-  /* Iconos blancos en lugar de las amarillas */
-  .swiper-button-next::before,
-  .swiper-button-prev::before {
-    font-family: Arial, sans-serif;
-    font-size: 22px;
-    font-weight: bold;
-    color: #fff;
-  }
-
-  .swiper-button-next::before { content: "›"; }
-  .swiper-button-prev::before { content: "‹"; }
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: rgba(0,0,0,0.7);
 }
 
-/* 🔹 Mobile: solo dots, sin flechas */
 @media (max-width: 991px) {
   .swiper-button-next,
   .swiper-button-prev {
-    display: none !important;
-  }
-
-  .swiper.mobile-slider {
-    margin-bottom: 10px; /* espacio bajo el slider */
-  }
-
-  .swiper.mobile-slider .caption {
-    padding: 10px;
-    text-align: center;
-  }
-
-  .swiper.mobile-slider h6,
-  .swiper.mobile-slider h2 {
-    margin: 5px 0;
+    display: none; /* Ocultar flechas en mobile */
   }
 }
-
