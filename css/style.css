@@ -25487,3 +25487,19 @@ body, html {
     display: block !important;
   }
 }
+
+/* Por defecto ocultamos flechas en mobile/tablet */
+@media (max-width: 991px) {
+  .clean-slider .custom-next,
+  .clean-slider .custom-prev {
+    display: none !important;
+  }
+}
+
+/* En desktop sí mostramos flechas */
+@media (min-width: 992px) {
+  .clean-slider .custom-next,
+  .clean-slider .custom-prev {
+    display: block;
+  }
+}
