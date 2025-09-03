@@ -25444,3 +25444,34 @@ body, html {
     display: none; /* Ocultar flechas en mobile */
   }
 }
+
+/* 🔹 Ocultar en escritorio */
+.mobile-text-block {
+  display: none;
+}
+
+/* 🔹 Mostrar solo en móviles */
+@media (max-width: 991px) {
+  .mobile-text-block {
+    display: block;
+    text-align: center;
+    padding: 15px;
+    color: #fff;
+  }
+
+  .mobile-text-block h6 {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+
+  .mobile-text-block h2 {
+    font-size: 20px;
+    line-height: 1.3;
+    font-weight: 700;
+  }
+
+  .mobile-text-block h2 span {
+    color: #f4d03f; /* ejemplo de highlight */
+  }
+}
