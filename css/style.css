@@ -25488,46 +25488,57 @@ body, html {
   }
 }
 
-/* Estilos generales del slider limpio */
+/* 🔹 Contenedor general */
 .clean-slider {
   width: 100%;
-  max-width: 1200px; /* ancho máximo para que no se deforme en pantallas grandes */
-  margin: 0 auto; /* centrar slider */
-  border-radius: 12px; /* bordes suaves opcionales */
+  max-width: 1200px;      /* ancho máximo */
+  margin: 0 auto;
+  border-radius: 16px;    /* esquinas redondeadas */
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
 }
 
-/* Ajuste de altura */
+/* 🔹 Slides con altura fija */
 .clean-slider .swiper-slide {
-  height: 400px; /* altura fija para desktop */
+  width: 100%;
+  height: 400px;          /* altura en desktop */
 }
 
 @media (max-width: 991px) {
   .clean-slider .swiper-slide {
-    height: 250px; /* altura más pequeña en móviles/tablets */
+    height: 250px;        /* altura en mobile/tablet */
   }
 }
 
-/* Imágenes ajustadas */
-.clean-slider img {
+/* 🔹 Imágenes dentro del slide */
+.clean-slider .swiper-slide img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* que siempre rellene el espacio */
+  object-fit: cover;       /* mantiene proporción y rellena */
   object-position: center; /* centrado */
   display: block;
 }
 
-/* Flechas */
+/* 🔹 Dots (paginación) */
+.clean-slider .swiper-pagination-bullet {
+  background: rgba(255,255,255,0.9);
+  opacity: 1;
+}
+.clean-slider .swiper-pagination-bullet-active {
+  background: #007bff; /* color activo (puedes cambiarlo) */
+}
+
+/* 🔹 Flechas (solo desktop) */
 .clean-slider .custom-next,
 .clean-slider .custom-prev {
-  color: #fff; /* flechas blancas */
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  color: #fff;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.5);
 }
 
 .clean-slider .custom-next::after,
 .clean-slider .custom-prev::after {
-  font-size: 28px; /* tamaño de la flecha */
+  font-size: 30px; /* tamaño flechas */
 }
 
 /* Ocultar flechas en mobile */
@@ -25537,3 +25548,4 @@ body, html {
     display: none !important;
   }
 }
+
