@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     mount.innerHTML = "";
 
     if (isMobile()) {
-      // 🔹 MOBILE: imagen + texto + dots
+      // 🔹 MOBILE: imagen + texto + dots (SIN flechas)
       mount.innerHTML = `
         <section class="swiper mobile-slider" style="margin-bottom:10px;">
           <div class="swiper-wrapper">
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
         pagination: { el: ".mobile-slider .swiper-pagination", clickable: true }
       });
     } else {
-      // 🔹 DESKTOP: solo imagen + flechas + dots
+      // 🔹 DESKTOP: imagen + flechas + dots (UN solo par de flechas)
       mount.innerHTML = `
         <section class="swiper desktop-slider">
           <div class="swiper-wrapper">
@@ -41,6 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
               <div class="swiper-slide" style="background-image:url('images/jason-${n}.jpeg')"></div>
             `).join("")}
           </div>
+          <!-- Solo 1 par de flechas -->
           <div class="swiper-button-next"></div>
           <div class="swiper-button-prev"></div>
           <div class="swiper-pagination"></div>
