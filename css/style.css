@@ -25202,19 +25202,6 @@ video {
   }
 }
 
-/* Flechas Swiper */
-.swiper-button-next,
-.swiper-button-prev {
-  color: #fff;              /* color blanco */
-  background: rgba(0,0,0,0.5); /* fondo semitransparente */
-  border-radius: 50%;       /* redondas */
-  width: 40px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 /* Quitar borde feo azul */
 .swiper-button-next:after,
 .swiper-button-prev:after {
