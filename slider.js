@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let swiper = null;
 
   function isMobileOrTablet() {
-    return window.innerWidth <= 991; // móviles y tablets
+    return window.innerWidth <= 991;
   }
 
   function render() {
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     mount.innerHTML = "";
 
     if (isMobileOrTablet()) {
-      // 🔹 MOBILE + TABLET: imagen + texto + dots (SIN flechas)
+      // 🔹 MOBILE + TABLET: slider con imágenes + texto + dots (sin flechas)
       mount.innerHTML = `
         <section class="swiper mobile-slider" style="margin-bottom:10px;">
           <div class="swiper-wrapper">
@@ -40,8 +40,33 @@ document.addEventListener("DOMContentLoaded", function () {
         pagination: { el: ".mobile-slider .swiper-pagination", clickable: true },
       });
     } else {
-      // 🔹 DESKTOP: no mostramos nada
-      mount.innerHTML = "";
+      // 🔹 DESKTOP: slider con imágenes SOLAMENTE (flechas + dots)
+      mount.innerHTML = `
+        <section class="swiper desktop-slider">
+          <div class="swiper-wrapper">
+            ${[1, 2, 3, 4].map(
+              (n) => `
+              <div class="swiper-slide">
+                <img src="images/jason-${n}.jpeg" alt="Jason Crocodile Tour ${n}">
+              </div>`
+            ).join("")}
+          </div>
+          <!-- Un solo par de flechas -->
+          <div class="swiper-button-next custom-next"></div>
+          <div class="swiper-button-prev custom-prev"></div>
+          <div class="swiper-pagination"></div>
+        </section>
+      `;
+
+      swiper = new Swiper(".desktop-slider", {
+        loop: true,
+        autoplay: { delay: 7000, disableOnInteraction: false },
+        navigation: {
+          nextEl: ".desktop-slider .custom-next",
+          prevEl: ".desktop-slider .custom-prev",
+        },
+        pagination: { el: ".desktop-slider .swiper-pagination", clickable: true },
+      });
     }
   }
 
