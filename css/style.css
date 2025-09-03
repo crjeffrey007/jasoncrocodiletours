@@ -25475,3 +25475,15 @@ body, html {
     color: #f4d03f; /* ejemplo de highlight */
   }
 }
+
+/* Por defecto lo ocultamos en todas partes */
+.only-mobile {
+  display: none;
+}
+
+/* Lo mostramos solo en móviles */
+@media screen and (max-width: 768px) {
+  .only-mobile {
+    display: block !important;
+  }
+}
