@@ -676,5 +676,24 @@
     navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
   });
 </script>
+    <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const swiper = new Swiper('#crocSlider', {
+      loop: true,
+      slidesPerView: 1,
+      autoplay: { delay: 5000, disableOnInteraction: false },
+      autoHeight: true, // ajusta a la altura real del slide (derivada del aspect-ratio)
+      pagination: {
+        el: '.croc-slider .swiper-pagination',
+        clickable: true
+      },
+      // Usamos NUESTRAS flechas personalizadas (sin clases de Swiper)
+      navigation: {
+        nextEl: '.croc-slider-scope .croc-next',
+        prevEl: '.croc-slider-scope .croc-prev'
+      }
+    });
+  });
+</script>
   </body>
 </html>
