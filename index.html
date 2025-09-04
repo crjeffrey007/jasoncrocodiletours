@@ -166,21 +166,44 @@
 </header>
 <div class="page">
  <!-- SLIDER -->
-  <!-- Slider -->
-<div class="swiper clean-slider">
-  <div class="swiper-wrapper">
-    <div class="swiper-slide"><img src="images/jason-1.jpeg" alt="Jason Crocodile Tour"></div>
-    <div class="swiper-slide"><img src="images/jason-2.jpeg" alt="Jason Crocodile Tour"></div>
-    <div class="swiper-slide"><img src="images/jason-3.jpeg" alt="Jason Crocodile Tour"></div>
-    <div class="swiper-slide"><img src="images/jason-4.jpeg" alt="Jason Crocodile Tour"></div>
+  <div class="croc-slider-scope">
+  <div class="swiper croc-slider" id="crocSlider">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <figure class="slide-media">
+          <img src="images/jason-1.jpeg" alt="">
+        </figure>
+      </div>
+      <div class="swiper-slide">
+        <figure class="slide-media">
+          <img src="images/jason-2.jpeg" alt="">
+        </figure>
+      </div>
+      <div class="swiper-slide">
+        <figure class="slide-media">
+          <img src="images/jason-3.jpeg" alt="">
+        </figure>
+      </div>
+      <div class="swiper-slide">
+        <figure class="slide-media">
+          <img src="images/jason-4.jpeg" alt="">
+        </figure>
+      </div>
+    </div>
+
+    <!-- Dots -->
+    <div class="swiper-pagination"></div>
   </div>
 
-  <!-- Dots -->
-  <div class="swiper-pagination"></div>
-
-  <!-- Flechas -->
-  <div class="swiper-button-next"></div>
-  <div class="swiper-button-prev"></div>
+  <!-- Flechas personalizadas (NO las de Swiper) -->
+  <button class="croc-nav croc-prev" aria-label="Anterior" type="button">
+    <!-- Chevron izquierda -->
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+  </button>
+  <button class="croc-nav croc-next" aria-label="Siguiente" type="button">
+    <!-- Chevron derecha -->
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.59 16.59 10 18l6-6-6-6-1.41 1.41L13.17 12z"/></svg>
+  </button>
 </div>
 <!-- Discover New Horizons-->
 <section class="section section-sm section-first bg-default text-md-left" style="background-color: #010101;">
