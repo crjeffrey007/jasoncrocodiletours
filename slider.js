@@ -2,10 +2,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const mount = document.getElementById("slider-container");
   let swiper = null;
 
-  function isMobileOrTablet() {
-    return window.innerWidth <= 991;
-  }
-
   function render() {
     if (swiper) {
       swiper.destroy(true, true);
@@ -13,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     mount.innerHTML = "";
 
-    // 🔹 SLIDER LIMPIO (MOBILE + DESKTOP)
+    // 🔹 Slider único (móvil + desktop)
     mount.innerHTML = `
       <section class="swiper clean-slider">
         <div class="swiper-wrapper">
@@ -26,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
         <!-- Dots -->
         <div class="swiper-pagination"></div>
-        <!-- Flechas (solo visibles en desktop con CSS) -->
+        <!-- Flechas -->
         <div class="swiper-button-next custom-next"></div>
         <div class="swiper-button-prev custom-prev"></div>
       </section>
@@ -44,8 +40,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   render();
-
-  // Re-render en resize
   window.addEventListener("resize", () => {
     if (swiper) swiper.update();
   });
