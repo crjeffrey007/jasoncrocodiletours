@@ -25488,48 +25488,42 @@ body, html {
   }
 }
 
-/* 🔹 Contenedor general */
+/* Contenedor principal */
 .clean-slider {
   width: 100%;
-  max-width: 1200px;      /* ancho máximo */
+  max-width: 1200px;
   margin: 0 auto;
-  border-radius: 16px;    /* esquinas redondeadas */
+  border-radius: 16px;
   overflow: hidden;
   position: relative;
   box-shadow: 0 4px 15px rgba(0,0,0,0.15);
 }
 
-/* 🔹 Slides con altura fija */
+/* Slides con relación de aspecto 16:9 */
 .clean-slider .swiper-slide {
+  aspect-ratio: 16 / 9; /* relación moderna adaptable */
   width: 100%;
-  height: 400px;          /* altura en desktop */
 }
 
-@media (max-width: 991px) {
-  .clean-slider .swiper-slide {
-    height: 250px;        /* altura en mobile/tablet */
-  }
-}
-
-/* 🔹 Imágenes dentro del slide */
+/* Imágenes */
 .clean-slider .swiper-slide img {
   width: 100%;
   height: 100%;
-  object-fit: cover;       /* mantiene proporción y rellena */
-  object-position: center; /* centrado */
+  object-fit: cover;  /* llena el espacio sin deformarse */
+  object-position: center;
   display: block;
 }
 
-/* 🔹 Dots (paginación) */
+/* Dots (paginación) */
 .clean-slider .swiper-pagination-bullet {
-  background: rgba(255,255,255,0.9);
+  background: rgba(255, 255, 255, 0.8);
   opacity: 1;
 }
 .clean-slider .swiper-pagination-bullet-active {
-  background: #007bff; /* color activo (puedes cambiarlo) */
+  background: #007bff; /* color activo */
 }
 
-/* 🔹 Flechas (solo desktop) */
+/* Flechas */
 .clean-slider .custom-next,
 .clean-slider .custom-prev {
   color: #fff;
@@ -25541,11 +25535,10 @@ body, html {
   font-size: 30px; /* tamaño flechas */
 }
 
-/* Ocultar flechas en mobile */
+/* Ocultar flechas en mobile/tablet */
 @media (max-width: 991px) {
   .clean-slider .custom-next,
   .clean-slider .custom-prev {
     display: none !important;
   }
 }
-
