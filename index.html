@@ -19,8 +19,7 @@
     <!-- Font Awesome (v4.7, compatible con clases fa) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KW5SGQJZLT"></script>
        <script>
@@ -167,13 +166,21 @@
 </header>
 <div class="page">
  <!-- SLIDER -->
-  <div id="slider-container"></div>
-<!-- Solo visible en mobile -->
-<div class="only-mobile">
-  <h6 class="wow">Are you ready to live the ultimate crocodile experience?</h6>
-  <h2 class="wow">
-    Explore <span>Costa Rica’s Wildest Tour!</span>
-  </h2>
+  <!-- Slider -->
+<div class="swiper clean-slider">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"><img src="images/jason-1.jpeg" alt="Jason Crocodile Tour 1"></div>
+    <div class="swiper-slide"><img src="images/jason-2.jpeg" alt="Jason Crocodile Tour 2"></div>
+    <div class="swiper-slide"><img src="images/jason-3.jpeg" alt="Jason Crocodile Tour 3"></div>
+    <div class="swiper-slide"><img src="images/jason-4.jpeg" alt="Jason Crocodile Tour 4"></div>
+  </div>
+
+  <!-- Dots -->
+  <div class="swiper-pagination"></div>
+
+  <!-- Flechas -->
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
 </div>
 <!-- Discover New Horizons-->
 <section class="section section-sm section-first bg-default text-md-left" style="background-color: #010101;">
@@ -635,17 +642,15 @@
     <!-- Javascript-->
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
-<!-- ===== SWIPER JS ===== -->
 <!-- Swiper JS -->
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <!-- Slider Init -->
-  <script src="slider.js"></script>
-  <script>
-  const toggleBtn = document.getElementById("menu-toggle");
-  const navBar = document.getElementById("nav-bar");
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
-  toggleBtn.addEventListener("click", () => {
-    navBar.classList.toggle("active");
+<script>
+  new Swiper('.clean-slider', {
+    loop: true,
+    autoplay: { delay: 5000, disableOnInteraction: false },
+    pagination: { el: '.swiper-pagination', clickable: true },
+    navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
   });
 </script>
   </body>
