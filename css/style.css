@@ -25546,3 +25546,88 @@ body, html {
     display: none !important;
   }
 }
+
+/* ====== SCOPE para evitar choques con otros estilos ====== */
+.croc-slider-scope { position: relative; width: 100%; margin-inline: auto; }
+
+/* Si no quieres que se estire infinito en monitores enormes, limita el ancho: */
+/* .croc-slider-scope { max-width: 1600px; } */
+
+/* Desactiva cualquier flecha por defecto de Swiper si algún tema las inyecta */
+.croc-slider-scope :where(.swiper-button-next, .swiper-button-prev) {
+  display: none !important;
+}
+
+/* Contenedor Swiper */
+.croc-slider {
+  width: 100%;
+  height: auto; /* dejamos que la altura la marque el contenido */
+}
+
+/* Cada slide contendrá un figure con relación 16:9 y tope de altura */
+.croc-slider .swiper-slide { display: block; }
+
+.slide-media {
+  margin: 0;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;               /* proporción consistente */
+  height: auto;
+  max-height: clamp(260px, 60vh, 700px); /* ✅ NO ocupa toda la pantalla */
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+/* Fallback si algún navegador no soporta aspect-ratio */
+@supports not (aspect-ratio: 16 / 9) {
+  .slide-media::before {
+    content: "";
+    display: block;
+    padding-top: 56.25%; /* 16:9 */
+  }
+  .slide-media > img { position: absolute; inset: 0; height: 100%; }
+}
+
+/* Imagenes bien ajustadas */
+.slide-media > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;    /* llena sin deformarse */
+  object-position: center;
+  display: block;
+}
+
+/* Dots (paginación) */
+.croc-slider .swiper-pagination-bullet {
+  background: rgba(255,255,255,0.9);
+  opacity: 1;
+}
+.croc-slider .swiper-pagination-bullet-active {
+  background: #0ea5e9; /* celeste elegante */
+}
+
+/* ====== Flechas personalizadas sin conflictos ====== */
+.croc-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.45);
+  cursor: pointer;
+  transition: background .2s ease;
+}
+.croc-nav:hover { background: rgba(0,0,0,0.6); }
+.croc-prev { left: 14px; }
+.croc-next { right: 14px; }
+.croc-nav svg { width: 22px; height: 22px; fill: #fff; }
+
+/* Oculta flechas en móviles para estética */
+@media (max-width: 991px) {
+  .croc-nav { display: none; }
+}
