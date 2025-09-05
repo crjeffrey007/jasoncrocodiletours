@@ -25488,70 +25488,87 @@ body, html {
   }
 }
 
-/* Scope */
-.croc-slider-scope { position: relative; width: 100%; margin: 0 auto; }
-
-/* Desactivar flechas default de Swiper */
-.swiper-button-next, .swiper-button-prev {
-  display: none !important;
+/* === RESET Swiper === */
+.croc-slider .swiper-button-next,
+.croc-slider .swiper-button-prev {
+  display: none !important; /* mata flechas default */
+  content: none !important;
 }
 
-/* Slider ancho completo y altura controlada */
+/* === Contenedor principal === */
 .croc-slider {
   width: 100%;
-  height: 400px; /* ✅ fija altura en desktop */
+  height: 400px; /* ✅ altura fija desktop */
+  position: relative;
+  overflow: hidden;
 }
 
 @media (max-width: 991px) {
-  .croc-slider { height: 250px; } /* ✅ más baja en móviles */
+  .croc-slider {
+    height: 250px; /* ✅ altura fija mobile */
+  }
 }
 
-/* Slides */
+/* === Slides === */
 .croc-slider .swiper-slide {
   width: 100%;
   height: 100%;
 }
 
-/* Imágenes */
 .croc-slider .swiper-slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
   display: block;
-  pointer-events: none; /* ✅ evita el overlay de “pausa/play” */
+  pointer-events: none; /* ✅ evita overlay de pausa/play */
 }
 
-/* Dots */
+/* === Dots === */
 .croc-slider .swiper-pagination-bullet {
-  background: rgba(255,255,255,0.9);
-  opacity: 1;
+  background: rgba(255,255,255,0.8);
 }
 .croc-slider .swiper-pagination-bullet-active {
   background: #0ea5e9;
 }
 
-/* Flechas personalizadas */
-.croc-nav {
+/* === Flechas personalizadas === */
+.croc-prev,
+.croc-next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 5;
-  width: 44px;
-  height: 44px;
-  display: grid;
-  place-items: center;
-  border: none;
+  z-index: 10;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background: rgba(0,0,0,0.45);
+  background: rgba(0,0,0,0.5);
+  border: none;
   cursor: pointer;
 }
-.croc-nav:hover { background: rgba(0,0,0,0.65); }
-.croc-prev { left: 16px; }
-.croc-next { right: 16px; }
-.croc-nav svg { width: 22px; height: 22px; fill: #fff; }
 
-/* Ocultar flechas en móviles */
+.croc-prev { left: 15px; }
+.croc-next { right: 15px; }
+
+.croc-prev::before,
+.croc-next::before {
+  content: '';
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  margin: auto;
+}
+
+.croc-prev::before {
+  transform: rotate(-135deg);
+}
+.croc-next::before {
+  transform: rotate(45deg);
+}
+
+/* Ocultar flechas en mobile si quieres */
 @media (max-width: 991px) {
-  .croc-nav { display: none; }
+  .croc-prev, .croc-next { display: none; }
 }
