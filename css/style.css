@@ -25488,81 +25488,22 @@ body, html {
   }
 }
 
-/* Full width slider */
-.clean-slider {
-  width: 100%;
-  max-width: 1600px;    /* ancho máximo opcional */
-  margin: 0 auto;
-  border-radius: 12px;
-  overflow: hidden;
-  position: relative;
-}
+/* Scope */
+.croc-slider-scope { position: relative; width: 100%; margin: 0 auto; }
 
-/* Slides con relación 16:9 */
-.clean-slider .swiper-slide {
-  aspect-ratio: 16 / 9; /* ✅ mantiene proporción */
-  width: 100%;
-}
-
-/* Imágenes */
-.clean-slider .swiper-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;  /* llena el espacio sin deformarse */
-  object-position: center;
-  display: block;
-}
-
-/* Dots */
-.clean-slider .swiper-pagination-bullet {
-  background: rgba(255,255,255,0.8);
-  opacity: 1;
-}
-.clean-slider .swiper-pagination-bullet-active {
-  background: #007bff;
-}
-
-/* Flechas */
-.clean-slider .swiper-button-next,
-.clean-slider .swiper-button-prev {
-  color: #fff;
-  top: 50%;                  /* ✅ siempre centradas */
-  transform: translateY(-50%);
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: rgba(0,0,0,0.4); /* fondo semitransparente */
-}
-
-.clean-slider .swiper-button-next::after,
-.clean-slider .swiper-button-prev::after {
-  font-size: 20px;  /* flechas más pequeñas */
-}
-
-/* Ocultar flechas en móviles */
-@media (max-width: 991px) {
-  .clean-slider .swiper-button-next,
-  .clean-slider .swiper-button-prev {
-    display: none !important;
-  }
-}
-
-/* Scope para evitar choques */
-.croc-slider-scope { position: relative; width: 100%; }
-
-/* Desactiva flechas por defecto de Swiper */
-.croc-slider-scope :where(.swiper-button-next, .swiper-button-prev) {
+/* Desactivar flechas default de Swiper */
+.swiper-button-next, .swiper-button-prev {
   display: none !important;
 }
 
-/* Slider full width */
+/* Slider ancho completo y altura controlada */
 .croc-slider {
   width: 100%;
-  height: 450px; /* ✅ altura fija en desktop */
+  height: 400px; /* ✅ fija altura en desktop */
 }
 
 @media (max-width: 991px) {
-  .croc-slider { height: 280px; } /* ✅ más baja en móviles */
+  .croc-slider { height: 250px; } /* ✅ más baja en móviles */
 }
 
 /* Slides */
@@ -25575,9 +25516,10 @@ body, html {
 .croc-slider .swiper-slide img {
   width: 100%;
   height: 100%;
-  object-fit: cover;  /* rellena el espacio sin deformarse */
+  object-fit: cover;
   object-position: center;
   display: block;
+  pointer-events: none; /* ✅ evita el overlay de “pausa/play” */
 }
 
 /* Dots */
