@@ -166,25 +166,31 @@
 </header>
 <div class="page">
 
-<div class="croc-slider swiper">
+<!-- SLIDER -->
+<section class="swiper-container">
   <div class="swiper-wrapper">
-    <div class="swiper-slide"><img src="images/jason-1.jpeg" alt=""></div>
-    <div class="swiper-slide"><img src="images/jason-2.jpeg" alt=""></div>
-    <div class="swiper-slide"><img src="images/jason-3.jpeg" alt=""></div>
-    <div class="swiper-slide"><img src="images/jason-4.jpeg" alt=""></div>
+
+    <!-- Slide 1 -->
+    <div class="swiper-slide" style="background-image: url('images/jason-1.jpeg');"></div>
+
+    <!-- Slide 2 -->
+    <div class="swiper-slide" style="background-image: url('images/jason-2.jpeg');"></div>
+
+    <!-- Slide 3 -->
+    <div class="swiper-slide" style="background-image: url('images/jason-3.jpeg');"></div>
+
+    <!-- Slide 4 -->
+    <div class="swiper-slide" style="background-image: url('images/jason-4.jpeg');"></div>
+
   </div>
+
+  <!-- Flechas -->
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
 
   <!-- Paginación -->
   <div class="swiper-pagination"></div>
-
-  <!-- Flechas personalizadas -->
-  <button class="croc-prev" aria-label="Anterior">
-    <svg viewBox="0 0 20 20"><polyline points="12 4 6 10 12 16" fill="none" stroke="#fff" stroke-width="2"/></svg>
-  </button>
-  <button class="croc-next" aria-label="Siguiente">
-    <svg viewBox="0 0 20 20"><polyline points="8 4 14 10 8 16" fill="none" stroke="#fff" stroke-width="2"/></svg>
-  </button>
-</div>
+</section
 
 <!-- Discover New Horizons-->
 <section class="section section-sm section-first bg-default text-md-left" style="background-color: #010101;">
@@ -646,27 +652,29 @@
     <!-- Javascript-->
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
-<!-- Swiper JS -->
+<!-- Swiper JS (CDN) -->
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-  new Swiper(".croc-slider", {
-    loop: true,
-    autoplay: { delay: 5000, disableOnInteraction: false },
-    effect: "fade",
-    fadeEffect: { crossFade: true },
-    slidesPerView: 1,
-    pagination: {
-      el: ".croc-slider .swiper-pagination",
-      clickable: true
-    },
-    navigation: {
-      nextEl: ".croc-next",
-      prevEl: ".croc-prev"
-    }
+  document.addEventListener("DOMContentLoaded", function () {
+    new Swiper('.swiper-container', {
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      },
+      simulateTouch: true,
+      effect: 'slide' // puedes cambiar a 'fade' si quieres un efecto más suave
+    });
   });
-});
 </script>
 
   </body>
