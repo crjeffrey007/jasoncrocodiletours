@@ -165,24 +165,20 @@
   </div>
 </header>
 <div class="page">
-<div class="croc-slider-scope">
-  <div class="swiper croc-slider" id="crocSlider">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="images/jason-1.jpeg" alt=""></div>
-      <div class="swiper-slide"><img src="images/jason-2.jpeg" alt=""></div>
-      <div class="swiper-slide"><img src="images/jason-3.jpeg" alt=""></div>
-      <div class="swiper-slide"><img src="images/jason-4.jpeg" alt=""></div>
-    </div>
-    <div class="swiper-pagination"></div>
+<div class="croc-slider">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"><img src="images/jason-1.jpeg" alt=""></div>
+    <div class="swiper-slide"><img src="images/jason-2.jpeg" alt=""></div>
+    <div class="swiper-slide"><img src="images/jason-3.jpeg" alt=""></div>
+    <div class="swiper-slide"><img src="images/jason-4.jpeg" alt=""></div>
   </div>
 
+  <!-- Dots -->
+  <div class="swiper-pagination"></div>
+
   <!-- Flechas propias -->
-  <button class="croc-nav croc-prev" aria-label="Anterior" type="button">
-    <svg viewBox="0 0 24 24"><path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
-  </button>
-  <button class="croc-nav croc-next" aria-label="Siguiente" type="button">
-    <svg viewBox="0 0 24 24"><path d="M8.59 16.59 10 18l6-6-6-6-1.41 1.41L13.17 12z"/></svg>
-  </button>
+  <button class="croc-prev" aria-label="Anterior"></button>
+  <button class="croc-next" aria-label="Siguiente"></button>
 </div>
 <!-- Discover New Horizons-->
 <section class="section section-sm section-first bg-default text-md-left" style="background-color: #010101;">
@@ -648,21 +644,18 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    new Swiper('#crocSlider', {
-      loop: true,
-      autoplay: { delay: 5000, disableOnInteraction: false },
-      slidesPerView: 1,
-      pagination: {
-        el: '.croc-slider .swiper-pagination',
-        clickable: true
-      },
-      navigation: {
-        nextEl: '.croc-slider-scope .croc-next',
-        prevEl: '.croc-slider-scope .croc-prev'
-      }
-    });
+document.addEventListener("DOMContentLoaded", () => {
+  new Swiper(".croc-slider", {
+    loop: true,
+    autoplay: { delay: 5000, disableOnInteraction: false },
+    pagination: { el: ".croc-slider .swiper-pagination", clickable: true },
+    navigation: {
+      nextEl: ".croc-next",
+      prevEl: ".croc-prev"
+    }
   });
+});
 </script>
+
   </body>
 </html>
