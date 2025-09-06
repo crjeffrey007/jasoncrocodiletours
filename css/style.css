@@ -25202,14 +25202,6 @@ video {
   }
 }
 
-/* Quitar borde feo azul */
-.swiper-button-next:after,
-.swiper-button-prev:after {
-  font-size: 20px;
-  font-weight: bold;
-  color: #ff0; /* amarillo Jason */
-}
-
 /* Márgenes móviles */
 @media (max-width: 991px) {
   .mobile-slider {
@@ -25419,3 +25411,82 @@ body, html {
   }
 }
 
+/* Altura del slider */
+.swiper-container {
+  width: 100%;
+  height: 80vh;       /* ✅ alto en escritorio */
+  max-height: 900px;
+}
+
+@media (max-width: 768px) {
+  .swiper-container {
+    height: 55vh;     /* ✅ más bajo en móviles */
+  }
+}
+
+/* Slides con fondo */
+.swiper-slide {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Dots */
+.swiper-pagination-bullet {
+  background: rgba(255,255,255,0.8);
+  opacity: 1;
+}
+.swiper-pagination-bullet-active {
+  background: #0ea5e9;
+}
+
+/* Flechas personalizadas */
+.croc-prev,
+.croc-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.5);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.croc-prev::before,
+.croc-next::before {
+  content: '';
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+}
+
+.croc-prev::before {
+  transform: rotate(-135deg);
+}
+.croc-next::before {
+  transform: rotate(45deg);
+}
+
+.croc-prev { left: 20px; }
+.croc-next { right: 20px; }
+
+/* Hover efecto */
+.croc-prev:hover,
+.croc-next:hover {
+  background: rgba(14,165,233,0.8);
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* Ocultar flechas en móvil */
+@media (max-width: 768px) {
+  .croc-prev,
+  .croc-next { display: none; }
+}
