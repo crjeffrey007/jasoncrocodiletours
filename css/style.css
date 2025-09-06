@@ -17363,7 +17363,7 @@ html.rd-navbar-fixed-linked .page {
 	margin: 0 auto;
 	position: relative;
 	overflow: hidden;
-	height: 80vh;   
+	height: 100vh;   
 	width: 100%;
 	/* Fix of Webkit flickering */
 	z-index: 1;
@@ -25412,6 +25412,15 @@ body, html {
   }
 }
 
+  /* Cada slide debe ocupar toda la altura */
+.swiper-slide {
+  width: 100%;
+  height: 100%;         /* ✅ sin esto no se ve el fondo */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 /* Contenedor del slider */
 .swiper-container {
   width: 100%;
@@ -25419,9 +25428,17 @@ body, html {
   max-height: 900px;
 }
 
+@media (max-width: 991px) {
+  .swiper-container {
+    height: 60vh;       /* tablets */
+  }
+}
+
 @media (max-width: 768px) {
   .swiper-container {
-    height: 40vh;     /* ✅ más bajo en móviles */
+    height: auto;       /* en móviles ajustamos según proporción */
+    aspect-ratio: 16 / 9; /* proporción fija en móvil */
+    max-height: 55vh;   /* evita que sea muy alto */
   }
 }
 
@@ -25430,6 +25447,14 @@ body, html {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+/* En móvil: evitar corte, mostrar completa */
+@media (max-width: 768px) {
+  .swiper-slide {
+    background-size: contain;
+    background-color: #000; /* relleno negro alrededor */
+  }
 }
 
 /* Dots */
@@ -25492,13 +25517,4 @@ body, html {
   .croc-next { display: none; }
 }
 
-
-  /* Cada slide debe ocupar toda la altura */
-.swiper-slide {
-  width: 100%;
-  height: 100%;         /* ✅ sin esto no se ve el fondo */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
 
