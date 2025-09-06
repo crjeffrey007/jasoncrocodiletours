@@ -17534,6 +17534,7 @@ html.rd-navbar-fixed-linked .page {
 	background: #ffffff;
 	transition: inherit;
 	z-index: -1;
+	display: none;
 }
 
 .swiper-button-prev:hover::before,
@@ -25414,13 +25415,13 @@ body, html {
 /* Contenedor del slider */
 .swiper-container {
   width: 100%;
-  height: 70vh;        /* más alto en escritorio */
-  max-height: 700px;
+  height: 80vh;        /* más alto en escritorio */
+  max-height: 800px;
 }
 
 @media (max-width: 768px) {
   .swiper-container {
-    height: 55vh;     /* ✅ más bajo en móviles */
+    height: 50vh;     /* ✅ más bajo en móviles */
   }
 }
 
