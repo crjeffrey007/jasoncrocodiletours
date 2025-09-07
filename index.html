@@ -166,37 +166,38 @@
 </header>
 <div class="page">
 
-<section class="section swiper-container swiper-slider swiper-slider-corporate"
+<!-- SLIDER DESKTOP -->
+<section class="slider-desktop swiper-container"
          data-loop="true"
          data-autoplay="5000"
          data-simulate-touch="true"
          data-nav="true">
   <div class="swiper-wrapper">
-
-    <!-- Slide 1 -->
     <div class="swiper-slide" style="background-image: url('images/jason-1.jpeg');"></div>
-
-    <!-- Slide 2 -->
     <div class="swiper-slide" style="background-image: url('images/jason-2.jpeg');"></div>
-
-    <!-- Slide 3 -->
     <div class="swiper-slide" style="background-image: url('images/jason-3.jpeg');"></div>
-
-    <!-- Slide 4 -->
     <div class="swiper-slide" style="background-image: url('images/jason-4.jpeg');"></div>
-
   </div>
-
-  <!-- Dots -->
   <div class="swiper-pagination"></div>
+  <button class="arrow-prev-desktop" aria-label="Anterior">‹</button>
+  <button class="arrow-next-desktop" aria-label="Siguiente">›</button>
+</section>
 
-  <!-- Flechas nuevas -->
-  <button class="arrow-prev" aria-label="Anterior">
-    <svg viewBox="0 0 24 24"><polyline points="15 6 9 12 15 18" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-  </button>
-  <button class="arrow-next" aria-label="Siguiente">
-    <svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-  </button>
+<!-- SLIDER MOBILE -->
+<section class="slider-mobile swiper-container"
+         data-loop="true"
+         data-autoplay="4000"
+         data-simulate-touch="true"
+         data-nav="true">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide" style="background-image: url('images/jason-1.jpeg');"></div>
+    <div class="swiper-slide" style="background-image: url('images/jason-2.jpeg');"></div>
+    <div class="swiper-slide" style="background-image: url('images/jason-3.jpeg');"></div>
+    <div class="swiper-slide" style="background-image: url('images/jason-4.jpeg');"></div>
+  </div>
+  <div class="swiper-pagination"></div>
+  <button class="arrow-prev-mobile" aria-label="Anterior">‹</button>
+  <button class="arrow-next-mobile" aria-label="Siguiente">›</button>
 </section>
 
 <!-- Discover New Horizons-->
@@ -663,21 +664,27 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    new Swiper('.swiper-container', {
+    // Desktop slider
+    new Swiper('.slider-desktop', {
       loop: true,
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: false
-      },
+      autoplay: { delay: 5000, disableOnInteraction: false },
       navigation: {
-        nextEl: '.arrow-next', // ✅ flechas nuevas
-        prevEl: '.arrow-prev'
+        nextEl: '.arrow-next-desktop',
+        prevEl: '.arrow-prev-desktop'
       },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true
+      pagination: { el: '.slider-desktop .swiper-pagination', clickable: true },
+      effect: 'slide'
+    });
+
+    // Mobile slider
+    new Swiper('.slider-mobile', {
+      loop: true,
+      autoplay: { delay: 4000, disableOnInteraction: false },
+      navigation: {
+        nextEl: '.arrow-next-mobile',
+        prevEl: '.arrow-prev-mobile'
       },
-      simulateTouch: true,
+      pagination: { el: '.slider-mobile .swiper-pagination', clickable: true },
       effect: 'slide'
     });
   });
