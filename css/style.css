@@ -25500,71 +25500,42 @@ body, html {
   transform: translateY(-50%) scale(1.1);
 }
 
-/* === Altura === */
-.slider-desktop {
-  width: 100%;
-  height: 80vh;      /* escritorio alto */
+/* Por defecto, ocultamos el slider mobile */
+.slider-mobile-only { display: none !important; }
+.slider-desktop-only { display: block !important; }
+
+/* En móviles: ocultamos desktop y mostramos mobile */
+@media screen and (max-width: 768px) {
+  .slider-desktop-only { display: none !important; }
+  .slider-mobile-only { display: block !important; }
+}
+
+/* Altura distinta */
+.slider-desktop-only {
+  height: 80vh;
   max-height: 850px;
 }
-
-.slider-mobile {
-  width: 100%;
-  height: 40vh;      /* móvil más bajo */
+.slider-mobile-only {
+  height: 40vh;
   max-height: 320px;
 }
-
-	/* Por defecto, solo mostrar desktop */
-.slider-desktop { display: block !important; }
-.slider-mobile { display: none !important; }
-
-/* En móviles, mostrar solo el slider mobile */
-@media (max-width: 768px) {
-  .slider-desktop { display: none !important; }
-  .slider-mobile { display: block !important; }
-}
 	
-/* Flechas base */
-.arrow-prev-desktop,
-.arrow-next-desktop,
-.arrow-prev-mobile,
-.arrow-next-mobile {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 99;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-  border-radius: 50%;
-  background: rgba(0,0,0,0.6);
-  transition: background 0.3s, transform 0.3s;
-}
-
-/* Desktop flechas */
-.arrow-prev-desktop,
-.arrow-next-desktop {
-  width: 42px;
-  height: 42px;
-  font-size: 22px;
+/* Flechas desktop */
+.arrow-prev-desktop, .arrow-next-desktop {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  z-index: 9999; width: 42px; height: 42px;
+  background: rgba(0,0,0,0.6); border-radius: 50%; color: #fff;
+  border: none; font-size: 22px; cursor: pointer;
 }
 .arrow-prev-desktop { left: 20px; }
 .arrow-next-desktop { right: 20px; }
 
-/* Mobile flechas */
-.arrow-prev-mobile,
-.arrow-next-mobile {
-  width: 32px;
-  height: 32px;
-  font-size: 18px;
+/* Flechas mobile */
+.arrow-prev-mobile, .arrow-next-mobile {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  z-index: 9999; width: 32px; height: 32px;
+  background: rgba(0,0,0,0.6); border-radius: 50%; color: #fff;
+  border: none; font-size: 18px; cursor: pointer;
 }
 .arrow-prev-mobile { left: 10px; }
 .arrow-next-mobile { right: 10px; }
-
-/* Hover efecto */
-.arrow-prev-desktop:hover,
-.arrow-next-desktop:hover,
-.arrow-prev-mobile:hover,
-.arrow-next-mobile:hover {
-  background: rgba(14,165,233,0.85);
-  transform: translateY(-50%) scale(1.1);
-}
