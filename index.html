@@ -166,31 +166,22 @@
 </header>
 <div class="page">
 
-<!-- SLIDER DESKTOP -->
-<section class="swiper-container slider-desktop-only">
-  <div class="swiper-wrapper">
-    <div class="swiper-slide" style="background-image: url('images/jason-1.jpeg');"></div>
-    <div class="swiper-slide" style="background-image: url('images/jason-2.jpeg');"></div>
-    <div class="swiper-slide" style="background-image: url('images/jason-3.jpeg');"></div>
-    <div class="swiper-slide" style="background-image: url('images/jason-4.jpeg');"></div>
-  </div>
-  <div class="swiper-pagination"></div>
-  <button class="arrow-prev-desktop" aria-label="Anterior">‹</button>
-  <button class="arrow-next-desktop" aria-label="Siguiente">›</button>
-</section>
+  <!-- SLIDER ÚNICO -->
+  <section class="swiper-container slider-hero">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" style="background-image: url('images/jason-1.jpeg');"></div>
+      <div class="swiper-slide" style="background-image: url('images/jason-2.jpeg');"></div>
+      <div class="swiper-slide" style="background-image: url('images/jason-3.jpeg');"></div>
+      <div class="swiper-slide" style="background-image: url('images/jason-4.jpeg');"></div>
+    </div>
 
-<!-- SLIDER MOBILE -->
-<section class="swiper-container slider-mobile-only">
-  <div class="swiper-wrapper">
-    <div class="swiper-slide" style="background-image: url('images/jason-1.jpeg');"></div>
-    <div class="swiper-slide" style="background-image: url('images/jason-2.jpeg');"></div>
-    <div class="swiper-slide" style="background-image: url('images/jason-3.jpeg');"></div>
-    <div class="swiper-slide" style="background-image: url('images/jason-4.jpeg');"></div>
-  </div>
-  <div class="swiper-pagination"></div>
-  <button class="arrow-prev-mobile" aria-label="Anterior">‹</button>
-  <button class="arrow-next-mobile" aria-label="Siguiente">›</button>
-</section>
+    <!-- Dots -->
+    <div class="swiper-pagination"></div>
+
+    <!-- Flechas -->
+    <button class="arrow-prev" aria-label="Anterior">‹</button>
+    <button class="arrow-next" aria-label="Siguiente">›</button>
+  </section>
 
 <!-- Discover New Horizons-->
 <section class="section section-sm section-first bg-default text-md-left" style="background-color: #010101;">
@@ -652,33 +643,21 @@
     <!-- Javascript-->
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
-    <!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    // Slider Desktop
-    new Swiper('.slider-desktop-only', {
-      loop: true,
-      autoplay: { delay: 5000, disableOnInteraction: false },
-      navigation: {
-        nextEl: '.arrow-next-desktop',
-        prevEl: '.arrow-prev-desktop'
-      },
-      pagination: { el: '.slider-desktop-only .swiper-pagination', clickable: true }
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      new Swiper('.slider-hero', {
+        loop: true,
+        autoplay: { delay: 5000, disableOnInteraction: false },
+        navigation: {
+          nextEl: '.arrow-next',
+          prevEl: '.arrow-prev'
+        },
+        pagination: { el: '.swiper-pagination', clickable: true }
+      });
     });
-
-    // Slider Mobile
-    new Swiper('.slider-mobile-only', {
-      loop: true,
-      autoplay: { delay: 4000, disableOnInteraction: false },
-      navigation: {
-        nextEl: '.arrow-next-mobile',
-        prevEl: '.arrow-prev-mobile'
-      },
-      pagination: { el: '.slider-mobile-only .swiper-pagination', clickable: true }
-    });
-  });
-</script>
+  </script>
 
   </body>
 </html>
