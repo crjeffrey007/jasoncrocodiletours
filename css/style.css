@@ -25466,44 +25466,95 @@ body, html {
   background: #0ea5e9;
 }
 
-/* === Flechas personalizadas === */
-.croc-prev,
-.croc-next {
-  position: absolute !important; /* fuerza posición */
-  top: 50% !important;
-  transform: translateY(-50%) !important;
-  z-index: 9999 !important;       /* ✅ forzamos arriba de todo */
-  width: 38px;
-  height: 38px;
+/* === Flechas nuevas === */
+.arrow-prev,
+.arrow-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 9999;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   background: rgba(0,0,0,0.6);
   border: none;
-  display: flex !important;
+  display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   transition: background 0.3s, transform 0.3s;
 }
 
-.croc-prev svg,
-.croc-next svg {
+.arrow-prev svg,
+.arrow-next svg {
   width: 20px;
   height: 20px;
 }
 
-.croc-prev { left: 15px !important; }
-.croc-next { right: 15px !important; }
+.arrow-prev { left: 15px; }
+.arrow-next { right: 15px; }
 
-.croc-prev:hover,
-.croc-next:hover {
+.arrow-prev:hover,
+.arrow-next:hover {
   background: rgba(14,165,233,0.85);
-  transform: translateY(-50%) scale(1.1) !important;
+  transform: translateY(-50%) scale(1.1);
 }
 
-/* Si no quieres flechas en mobile, activa esto: */
-/*
-@media (max-width: 768px) {
-  .croc-prev,
-  .croc-next { display: none !important; }
+/* === Altura === */
+.slider-desktop {
+  width: 100%;
+  height: 80vh;      /* escritorio alto */
+  max-height: 850px;
 }
-*/
+
+.slider-mobile {
+  width: 100%;
+  height: 40vh;      /* móvil más bajo */
+  max-height: 320px;
+}
+
+/* Flechas base */
+.arrow-prev-desktop,
+.arrow-next-desktop,
+.arrow-prev-mobile,
+.arrow-next-mobile {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 99;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.6);
+  transition: background 0.3s, transform 0.3s;
+}
+
+/* Desktop flechas */
+.arrow-prev-desktop,
+.arrow-next-desktop {
+  width: 42px;
+  height: 42px;
+  font-size: 22px;
+}
+.arrow-prev-desktop { left: 20px; }
+.arrow-next-desktop { right: 20px; }
+
+/* Mobile flechas */
+.arrow-prev-mobile,
+.arrow-next-mobile {
+  width: 32px;
+  height: 32px;
+  font-size: 18px;
+}
+.arrow-prev-mobile { left: 10px; }
+.arrow-next-mobile { right: 10px; }
+
+/* Hover efecto */
+.arrow-prev-desktop:hover,
+.arrow-next-desktop:hover,
+.arrow-prev-mobile:hover,
+.arrow-next-mobile:hover {
+  background: rgba(14,165,233,0.85);
+  transform: translateY(-50%) scale(1.1);
+}
