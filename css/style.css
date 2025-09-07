@@ -25513,6 +25513,16 @@ body, html {
   max-height: 320px;
 }
 
+	/* Por defecto, solo mostrar desktop */
+.slider-desktop { display: block !important; }
+.slider-mobile { display: none !important; }
+
+/* En móviles, mostrar solo el slider mobile */
+@media (max-width: 768px) {
+  .slider-desktop { display: none !important; }
+  .slider-mobile { display: block !important; }
+}
+	
 /* Flechas base */
 .arrow-prev-desktop,
 .arrow-next-desktop,
