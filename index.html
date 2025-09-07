@@ -167,11 +167,7 @@
 <div class="page">
 
 <!-- SLIDER DESKTOP -->
-<section class="slider-desktop swiper-container"
-         data-loop="true"
-         data-autoplay="5000"
-         data-simulate-touch="true"
-         data-nav="true">
+<section class="swiper-container slider-desktop-only">
   <div class="swiper-wrapper">
     <div class="swiper-slide" style="background-image: url('images/jason-1.jpeg');"></div>
     <div class="swiper-slide" style="background-image: url('images/jason-2.jpeg');"></div>
@@ -184,11 +180,7 @@
 </section>
 
 <!-- SLIDER MOBILE -->
-<section class="slider-mobile swiper-container"
-         data-loop="true"
-         data-autoplay="4000"
-         data-simulate-touch="true"
-         data-nav="true">
+<section class="swiper-container slider-mobile-only">
   <div class="swiper-wrapper">
     <div class="swiper-slide" style="background-image: url('images/jason-1.jpeg');"></div>
     <div class="swiper-slide" style="background-image: url('images/jason-2.jpeg');"></div>
@@ -664,28 +656,26 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    // Desktop slider
-    new Swiper('.slider-desktop', {
+    // Slider Desktop
+    new Swiper('.slider-desktop-only', {
       loop: true,
       autoplay: { delay: 5000, disableOnInteraction: false },
       navigation: {
         nextEl: '.arrow-next-desktop',
         prevEl: '.arrow-prev-desktop'
       },
-      pagination: { el: '.slider-desktop .swiper-pagination', clickable: true },
-      effect: 'slide'
+      pagination: { el: '.slider-desktop-only .swiper-pagination', clickable: true }
     });
 
-    // Mobile slider
-    new Swiper('.slider-mobile', {
+    // Slider Mobile
+    new Swiper('.slider-mobile-only', {
       loop: true,
       autoplay: { delay: 4000, disableOnInteraction: false },
       navigation: {
         nextEl: '.arrow-next-mobile',
         prevEl: '.arrow-prev-mobile'
       },
-      pagination: { el: '.slider-mobile .swiper-pagination', clickable: true },
-      effect: 'slide'
+      pagination: { el: '.slider-mobile-only .swiper-pagination', clickable: true }
     });
   });
 </script>
